@@ -508,20 +508,10 @@
             flex-shrink: 0;
         }
 
-        .footer-lockup {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-            line-height: 1.2;
-        }
-
-        .footer-lockup .wordmark {
-            font-weight: 700;
-            color: var(--text);
-        }
-
-        .footer-lockup .wordmark .regular {
-            font-weight: 400;
+        .footer-wordmark-img {
+            height: 20px;
+            width: auto;
+            display: block;
         }
 
         .footer-right {
@@ -618,7 +608,7 @@
             <p class="section-label reveal">What we do</p>
             <h2 class="section-heading reveal">Cohort-based AI intensives.</h2>
             <p class="section-body reveal">Small groups learning the methodology together. Participants build tools using a simulated company&thinsp;&mdash;&thinsp;dashboards, planners, content engines, reports&thinsp;&mdash;&thinsp;learning the system before applying it to their own work. Everyone leaves with working examples, practical outputs, and the skills to keep building.</p>
-            <p class="section-body reveal"><strong>Who is this for?</strong> For professionals who have to get things done, are not afraid of tech, and know that mastering AI tools is essential for ongoing professional success.</p>
+            <p class="section-body reveal"><strong>Who is this for?</strong> For professionals who have to get things done, are not afraid of tech, and know that mastering AI tools is essential for professional success.</p>
             <p class="service-additional reveal">Team implementation support and ongoing advisory are available for organizations that want the methodology applied directly to their operations.</p>
         </div>
     </section>
@@ -727,11 +717,10 @@
     <footer>
         <div class="container">
             <div class="footer-left">
-                <img src="assets/mark.svg" alt="Agency State" class="footer-mark">
-                <div class="footer-lockup">
-                    <span class="wordmark">agency<span class="regular">state</span></span>
-                    <span>agencystate.ai</span>
-                </div>
+                <img src="assets/mark.svg" alt="" class="footer-mark">
+                <a href="#" aria-label="Agency State">
+                    <img src="assets/agency-state-wordmark.svg" alt="Agency State" class="footer-wordmark-img">
+                </a>
             </div>
             <p class="footer-right">Built with Claude Code</p>
         </div>
