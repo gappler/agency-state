@@ -1,232 +1,268 @@
+---
+title: Agency State — Cohort Curriculum
+date: 2026-04-16
+version: 2.0
+status: active
+---
+
 # Agency State — Cohort Curriculum
 
 ## Format
 
-**Live online cohort.** 8–12 participants. Four 2-hour sessions, once a week, over four weeks. Office hours between sessions. Prework required before session one.
+**Live online cohort.** 8–12 participants. Four 2-hour sessions across two weeks, plus office hours on the Wednesday of each week. Prework required before Session 1.
 
-**Price:** $1,500–$2,000 per seat (founding cohorts at $500)
-**Revenue per cohort:** $12,000–$24,000 at standard pricing
+**Schedule:**
+- **Week 1:** Monday (Session 1, 10am ET), Tuesday (Session 2, 10am ET), Wednesday (office hours)
+- **Between-session build window:** Tuesday evening through Sunday — five days to build something independently
+- **Week 2:** Monday (Session 3, 10am ET), Tuesday (Session 4 — demo day, 10am ET), Wednesday (office hours)
 
-**Scheduling:** Same day, same time, four consecutive weeks. Cohorts can overlap on the calendar with staggered start dates.
-- Example: Cohort A on Tuesdays 10am, Cohort B on Thursdays 2pm, starting two weeks apart
-- Office hours on a neutral day (e.g., Wednesday) serve both cohorts
+**Price:**
+- **Cohort 1 (intro):** $500 per seat
+- **Future cohorts:** $899–$1,200 per seat
+
+**Scheduling:** The compressed two-week format is the point — it fits inside a single sprint or planning cycle, and the back-to-back Mon/Tue sessions force the methodology to land before participants drift. Cohorts can run on staggered calendars (e.g., Cohort A starts the first Monday of the month, Cohort B the third Monday). Office hours can be shared across overlapping cohorts on the Wednesday slot if needed.
 
 ---
 
 ## Prework (completed before Session 1)
 
-Participants complete this independently. Office hours are available for anyone who gets stuck.
+Participants complete this independently using **regular Claude chat** (claude.ai) — not Claude Code. The terminal setup is intentionally moved into Session 1 so that prework filters for thinking, not tooling.
 
-**Setup:**
-- Install Claude Code
-- Confirm terminal access and basic comfort
-- Create a project folder
-- Create a CLAUDE.md file with project rules (process logging, commit after each tool)
+**Foundation building (in Claude chat):**
+- Choose a fictional or real company to use throughout the intensive (Agency State provides a starter prompt)
+- Build a brand/business definition — company overview, product or service definition, audience profiles, brand voice, objectives. The output is a single document the participant will bring to Session 1.
+- Generate 6–12 months of synthetic historical data relevant to their business context — performance data, customer records, campaign results, whatever fits. Save as CSV or markdown tables.
 
-**Foundation building:**
-- Choose a fictional company to use throughout the intensive (Agency State provides a template prompt)
-- Build a brand/business definition using Claude Code — company overview, product or service definition, audience profiles, brand voice, objectives
-- Generate 6–12 months of synthetic historical data relevant to their business context
+**Deliverable at Session 1:** Every participant arrives with (a) a brand/business definition document and (b) a synthetic data set. Both are saved locally and ready to drop into a project folder once Claude Code is installed in Session 1.
 
-**Deliverable at Session 1:** Every participant arrives with a working Claude Code environment, a business definition, and data. Session 1 starts with building, not setup.
-
-**Prework also filters:** Anyone who can't complete the prework isn't ready for the intensive. This is intentional — the target is martech-aware professionals ready to get to work.
+**Prework filters intentionally:** If someone can't produce a coherent business definition using Claude chat, they're not ready for the intensive. The bar is conversational fluency with a frontier model — if that bar isn't met, the cohort isn't the right starting point.
 
 ---
 
-## Session 1: From Data to Insight (2 hours)
+## The Knowledge Base — A Through-Line
 
-*Week 1*
+A core thread runs through all four sessions: **the personal knowledge base.** This is the set of files in the participant's project that describe their business, voice, audience, and rules. Claude Code reads from it on every build.
+
+- **Session 1:** You build the foundation. The prework brand definition becomes the seed of your knowledge base.
+- **Session 2:** You see the payoff — the tools you build are customized to your business *because* they read from your knowledge base.
+- **Session 3:** You add to it — brand voice rules, content guidelines, deeper audience data, output preferences.
+- **Session 4:** You show how your knowledge base shaped what you built independently — the demos surface the principle.
+
+**The principle: context compounds.** The more your knowledge base grows, the better everything Claude Code builds for you — and the less prompting you have to do.
+
+---
+
+## Session 1: Setup, Foundation, and First Build (2 hours)
+
+*Week 1, Monday, 10am ET*
 
 ### Objectives
-- Understand why foundation first matters
-- Build the first tools from existing data
-- Learn the understand → build → reflect cycle
+- Get every participant into a working Claude Code environment
+- Seed the knowledge base from prework
+- Build the first tool and learn the understand → build → reflect cycle
 
 ### Flow
 
-**Review prework (20 min)**
-- Quick round-robin: each participant shares their company and data set in 1–2 minutes
-- Facilitator spots any foundation gaps and addresses them
-- Group sees the range of business contexts — reinforces that the methodology is industry-agnostic
+**Guided setup (30 min)**
+- Install Claude Code, confirm terminal access
+- Create the project folder
+- Create a CLAUDE.md file with project rules (process logging, commit after each tool, file naming conventions)
+- Drop the prework brand definition and synthetic data into the project — this is now the seed of the participant's knowledge base
+- Facilitator screen-shares each step; co-facilitator (if available) helps anyone stuck without slowing the group
+- **If your install isn't working by the end of setup:** stay on for Wednesday office hours and we'll get you sorted before Session 2. A failed Node version or terminal config shouldn't derail your cohort — we'll fix it 1:1.
 
-**Understand (15 min)**
-- What are we about to build and why? What inputs does it need? What should the output look like?
+**Quick share (5 min)**
+- One sentence each: who's the company, what's the data
+- Reinforces that the methodology is industry-agnostic — same toolchain, different inputs
+
+**Understand (10 min)**
+- What are we about to build and why? What inputs does it read? What should the output look like?
 - Framework for writing prompts: what are you building, what data does it read, what should the user see, what format should it take?
-- Participants write their own prompt before seeing the reference
+- Participants write their own first prompt before seeing the reference
 
 **Build (30 min)**
-- Participants paste their prompt (or the reference prompt) into Claude Code
-- Build a performance dashboard from their data
-- Facilitator monitors progress, helps anyone stuck
+- Build a performance dashboard from the participant's synthetic data
+- Facilitator monitors progress, drops anyone stuck into a breakout
 
 **Reflect (15 min)**
-- What did Claude Code produce? Was it right?
-- Compare outputs across participants — different data, same methodology, different results
+- What did Claude Code produce? Was it right? Did it pull from your knowledge base correctly?
+- Cross-compare a few outputs — different data, same methodology, different results
 - What would you change about your prompt?
 
-**Second build (30 min)**
-- Build an automated report generator that reads the same data and produces a written narrative
-- This demonstrates sequential building — the report interprets the dashboard's data
-- Participants modify the prompt to match their business context
+**Second build (20 min)**
+- Build a written report generator that reads the same data and produces a narrative interpretation
+- Demonstrates sequential building — the report depends on the dashboard's data
+- Participants modify the reference prompt to fit their business context
 
 **Wrap and preview (10 min)**
-- What we built: two tools, one feeding the other
-- Homework: modify the dashboard to add a metric, and build a third tool from the same data. Required, not optional. Bring it to Session 2.
+- What we built: two tools, one feeding the other, both reading from your knowledge base
+- Tomorrow we go deeper — planning tools and decision tools
 
 ---
 
-## Session 2: Planning and Strategy Tools (2 hours)
+## Session 2: Planning, Decision Tools, and the Knowledge Base Payoff (2 hours)
 
-*Week 2*
+*Week 1, Tuesday, 10am ET*
 
 ### Objectives
 - Build tools that help make decisions, not just display data
-- Understand how tools feed each other sequentially
-- Start writing prompts independently
+- See how the knowledge base customizes outputs without you re-prompting every time
+- Set up the between-session build with confidence
 
 ### Flow
 
-**Homework review (15 min)**
-- Who built what? What worked? What broke?
-- Surface debugging experiences — these are teaching moments for the group
-- Participants who struggled get help from peers, not just the facilitator
+**Open (10 min)**
+- Quick recap of yesterday — what landed, what didn't
+- Frame the session: yesterday's tools displayed history. Today's tools model decisions.
 
 **Understand (15 min)**
-- What makes a planning tool different from a reporting tool? It takes inputs and models outcomes, not just displays history
-- Framework: what decisions does your team make that could be modeled?
+- What makes a planning tool different from a reporting tool? It takes inputs and models outcomes, not just displays history.
+- Framework: what decisions does your team make repeatedly that could be modeled?
 - Participants write their own prompt for a planning tool relevant to their business
 
 **Build (35 min)**
-- Build a budget allocator, scenario modeler, or capacity planner — participant chooses based on their business context
+- Build a budget allocator, scenario modeler, capacity planner, or roadmap prioritizer — participant chooses based on their business
 - Less hand-holding than Session 1 — participants are expected to modify the reference prompt
 - Facilitator circulates, helps with specific issues
 
 **Group review (15 min)**
 - 2–3 participants share their screen and walk through what they built
 - Group feedback: what's working, what's missing, what would you change
-- Peer learning starts here — the facilitator isn't the only voice
+- Facilitator points out where the knowledge base is doing the work — "notice your tool used your audience profiles without you re-pasting them"
 
-**Second build (30 min)**
-- Build a tool that feeds from the first one — the planning tool's output becomes input for the next tool
+**Second build (25 min)**
+- Build a tool that takes the planning tool's output as input — e.g., the budget allocator's output feeds a campaign plan generator
 - Demonstrates the compounding effect: each tool makes the next one smarter
+- Reinforces the knowledge base principle — the same brand definition shapes every tool
 
-**Wrap and preview (10 min)**
-- Homework: build a tool that doesn't exist in the reference curriculum — something specific to their team's needs. Required. Come to Session 3 ready to show it.
+**Set up the between-session build (15 min)**
+- Identify the single most time-consuming recurring task in the participant's actual job — the thing they'd genuinely build a tool for
+- Frame it: this is not practice. You're building a portfolio asset for your real work.
+- Five-day window: Tuesday evening through Sunday. Office hours Wednesday for stuck-points.
+- Bring it to Session 3 ready to discuss what you built and where you got stuck
+
+### Between-session build (Tue evening – Sunday)
+
+**This is your build, not homework.** The work is real: identify a recurring task in your job, build a tool that addresses it, and bring it back. The knowledge base you've seeded with your business definition powers it. The portfolio asset you produce belongs to you.
+
+- **Required, not optional.** Sessions 3 and 4 assume you've done it.
+- **Stuck:** Wednesday office hours. Slack channel between then and Sunday.
+- **Output:** a working tool plus a few notes on what worked, what broke, and what you'd change. The notes matter as much as the tool.
 
 ---
 
-## Session 3: Content, Outputs, and Live Data (2 hours)
+## Session 3: Making Your Tools Smarter (2 hours)
 
-*Week 3*
+*Week 2, Monday, 10am ET*
 
 ### Objectives
-- Build tools that produce content and practical deliverables
-- Learn to choose the right output format for the problem — dashboard, file, report, brief, or a combination
-- See what happens when AI connects to live external data
+- Bring the between-session builds into the room and surface lessons
+- Add brand voice rules, content guidelines, and richer audience data to the knowledge base
+- See how a deeper knowledge base produces sharper outputs without more prompting
 
 ### Flow
 
-**Show and tell (20 min)**
-- Participants share the tool they built for homework
-- Group learns from each other's approaches — different problems, same methodology
-- Facilitator highlights patterns: what makes a good prompt, what makes a good tool
+**Build review (20 min)**
+- Each participant shares in 90 seconds: what they built, what surprised them, where they got stuck
+- Facilitator captures common patterns — same kinds of breakage tend to repeat
+- Group sees the range — different jobs, same methodology, different outputs
 
 **Understand (15 min)**
-- Output format matters: when does your team need a dashboard? A CSV? A brief? A report? A project plan? Sometimes the answer is a combination.
-- Introduction to brand configuration: how to encode voice, terminology, and rules so outputs are consistent
-- Framework: what does your team actually open on Monday morning?
+- The knowledge base is doing more work than you've used so far. The leap is going from "facts about my business" to "rules my outputs follow."
+- What goes in: brand voice rules, terminology dictionaries, audience personas with deeper detail, output format preferences, things to never say
+- Framework: what does your team's published work assume that nobody writes down?
 
-**Build (30 min)**
-- Build a content engine, email sequence generator, or brief builder
-- Focus on choosing the right output format — the tool should produce something the participant's existing systems can ingest
-- Participants are writing their own prompts with less reference to templates
+**Build the voice and rules layer (30 min)**
+- Build out brand voice rules — examples of how to phrase things, examples of how *not* to phrase things, terminology rules
+- Add audience persona depth — what each persona cares about, what they ignore, what they'd find condescending
+- Add output rules — formats, lengths, banned phrases, required disclaimers if applicable
+- These get saved into the knowledge base and committed
 
-**Group review (10 min)**
-- Focus on outputs: what did the tool produce? Is it usable? Would your team actually use this?
+**Apply (30 min)**
+- Re-run one of the participant's existing tools (the dashboard, the report generator, or their independent build) with the richer knowledge base in place
+- Compare before/after — same prompt, same data, sharper output, less manual editing
+- Optional: build a content engine, email sequence generator, or brief builder that leans heavily on the new voice rules
 
-**API teaser (25 min)**
-- Live demo: connect to a public API (FEC contribution data) and pull real data into a tool
-- Build something simple in 15 minutes — the group sees the leap from static files to live data
-- Brief discussion: connecting to your own systems — CRMs, analytics platforms, project management tools — is what the advanced cohort covers
-- Frame as a taste, not a lesson. Show the result, spark the curiosity.
-
-**Wrap and preview (10 min)**
-- Session 4 is the final session: bring your own real data and build your own tool
-- Homework: identify the single most time-consuming recurring task on your team. Bring a real data set from your work — a spreadsheet, a CSV export, a CRM dump, whatever is relevant. Come ready to build a tool that addresses the problem using your actual data.
+**Wrap and prepare for demo day (15 min)**
+- Tomorrow is demo day — everyone presents what they built in the between-session window
+- Tonight: polish the demo, prepare a short walkthrough (3 min), think about what the knowledge base did for you that you didn't have to ask for
+- Facilitator hands out a one-page demo prep sheet
 
 ---
 
-## Session 4: Real Data, Independent Build, and Graduation (2 hours)
+## Session 4: Demo Day (2 hours)
 
-*Week 4*
+*Week 2, Tuesday, 10am ET*
 
 ### Objectives
-- Bridge from simulated data to actual business data
-- Build a tool independently for a real problem
-- Demonstrate the full methodology without hand-holding
+- Every participant presents the tool they built independently
+- Surface how the knowledge base shaped the build
+- Live teardowns from the facilitator show what to refine next
 
 ### Flow
 
-**Data check-in (15 min)**
-- What did everyone bring? Quick round of data descriptions
-- Facilitator helps frame each person's data: what's usable, what needs cleaning, what's missing
-- Normalize the mess: "This is what real data looks like. The skill is knowing how to describe it to Claude Code."
+**Open and framing (5 min)**
+- The point of demo day: not to perform, but to show the work and learn from each other's choices
+- Reminder: this isn't a test. The tool is yours, and the feedback is to make it sharper.
 
-**Guided data work (20 min)**
-- Each participant works with their own real data
-- Clean, structure, and prepare the data for tool building
-- Facilitator helps with common issues: inconsistent formats, missing fields, messy column names
-- Framework: how to describe your data to Claude Code so it can work with it
+**Demos with feedback (60 min)**
+- Each participant gets ~6 minutes: 3 minutes to demo, 3 minutes for group feedback
+- Demos cover: the problem they were solving, what they built, what role the knowledge base played, what surprised them
+- Group feedback is structured — what's working, what's missing, what would make it sharper
 
-**Independent build (40 min)**
-- Each participant builds a tool that solves their identified problem using their real data
-- Facilitator is available for questions but doesn't guide — the participant owns the build
-- Breakout rooms available for anyone who hits a wall and needs focused help without slowing the group
+**Live code reviews and strategic teardowns (30 min)**
+- Facilitator picks 2–3 builds (selected for teaching value, not quality) and walks through them live
+- Code review: what's well-structured, what could be cleaner, what's a future maintenance trap
+- Strategic teardown: where this tool fits in the participant's actual workflow, what to add next, what to never bother building
+- Group sees the moves an experienced builder would make next
 
-**Presentations and feedback (35 min)**
-- Each participant demos their tool (3–4 minutes each for a cohort of 10)
-- Group feedback: what works, what's missing, what would make it better
-- Facilitator adds suggestions: "you could connect this to your CRM" or "this would be stronger with a brand configuration layer"
+**What's next and close (15 min)**
+- What you built across two weeks: a working knowledge base, several tools, and one portfolio asset for your actual job
+- How to keep going: the project folder, the process logs, the session recordings, and the Slack channel all stay live
+- Community: shared Slack channel persists, monthly check-in for graduates
+- Advanced cohort preview: custom skills, agents, MCP server connections, API integrations — for graduates who want to go further
+- Celebration: this is graduation. Acknowledge it.
 
-**Wrap and next steps (10 min)**
-- What you built over four weeks: 6–8 working tools plus the methodology to keep building
-- How to keep going: project notes, process logs, and tutorials from the sessions as reference
-- Community: shared Slack channel stays active, monthly check-in
-- What's next: team implementation support and ongoing advisory for organizations that want to go deeper
-- Advanced cohort: custom skills, agents, MCP server connections, API integrations — for graduates who want to go further
+**Optional close (10 min)**
+- Open Q&A if time, retro questions on the curriculum itself, photo if the cohort is up for it
 
 ---
 
-## Homework Policy
+## Between-Session Builds — The One Window
 
-Homework is required, not optional. Each session builds on what was done between sessions. Participants who skip homework fall behind and slow the group.
+Unlike a multi-week course, this format has **one independent build window**: Tuesday evening of Week 1 through Sunday. Five days. It's the only stretch where participants build solo, and the deliverable is the centerpiece of demo day.
 
-| After | Assignment | Purpose |
-|-------|-----------|---------|
-| Session 1 | Modify the dashboard and build a third tool from the same data | Reinforces sequential building and independent prompting |
-| Session 2 | Build a tool not in the curriculum — something specific to their team | Forces independent problem-solving and prompt writing |
-| Session 3 | Identify a real problem, bring real data, prepare to build | Bridges from simulation to real-world application |
+**The framing matters:** these are not practice exercises. Participants are building portfolio assets for their actual job — tools they'll keep using after the cohort ends. The knowledge base they've seeded in Sessions 1 and 2 powers the build.
+
+**What's expected:**
+- A working tool that addresses a real recurring task in the participant's job
+- Notes on what worked, what broke, and what they'd change
+- Willingness to demo it on Tuesday of Week 2
+
+**Support during the window:**
+- Wednesday office hours of Week 1 (the day after Session 2)
+- Slack channel for asynchronous questions
+- Reference prompts and session recordings available throughout
 
 ---
 
 ## Between-Session Support
 
 ### Office hours
-- 30-minute optional session each week between main sessions
+- 30–60 minute optional drop-in on the **Wednesday of each week** (after Session 2 in Week 1, after Session 4 in Week 2)
 - Open to anyone stuck, confused, or wanting to go deeper
-- Drop in, ask questions, get 1:1 help
-- Scheduled at a consistent time on a neutral day (e.g., Wednesday noon if sessions are Tuesday evenings)
+- Week 1's Wednesday office hours is the most important — it's the launch pad for the between-session build, and the safety net for anyone whose Claude Code install didn't fully work in Session 1
+- Week 2's Wednesday office hours is for graduates — wrap-up questions, what to build next, how to bring this back to a team
 
 ### Breakout rooms (during sessions)
-- If a participant hits a technical wall during a build phase, drop them into a breakout room
+- If a participant hits a wall during a build phase, drop them into a breakout
 - Facilitator or co-facilitator helps them catch up while the main group continues
-- In a cohort of 8–12, this should happen rarely — prework eliminates most setup issues
+- Session 1's setup phase is the most likely moment for this — the Claude Code install can hit edge cases on individual machines
 
 ### Shared channel (Slack or similar)
 - Created at Session 1, persists after the cohort ends
+- Most active during the five-day between-session build window
 - Participants share wins, ask questions, post screenshots of tools they're building
-- Facilitator checks in periodically but doesn't need to be always-on
 - Peer support becomes the primary value over time
 
 ---
@@ -234,45 +270,53 @@ Homework is required, not optional. Each session builds on what was done between
 ## Materials Provided
 
 ### Before prework
-- Setup guide: installing Claude Code, creating a project folder, basic terminal orientation
-- CLAUDE.md template with project rules
-- Brand/business definition prompt template (participants customize for their company)
-- Data generation prompt template
+- A prework guide that explains the brand definition and synthetic data steps in Claude chat (no terminal, no install)
+- Brand/business definition prompt template (used inside Claude chat)
+- Synthetic data prompt template (used inside Claude chat)
 
-### At each session
+### At Session 1
+- Claude Code installation walkthrough (terminal commands, troubleshooting common issues by OS)
+- CLAUDE.md template with project rules
+- Reference prompts for the dashboard and report generator builds
+
+### Throughout the cohort
 - Reference prompts for each build exercise
-- Prompt-writing framework: what are you building, what data does it need, what should the output look like, what format
-- Session recording (for review between sessions)
+- The prompt-writing framework: what are you building, what data does it read, what should the user see, what format
+- Session recordings (typically posted same-day for the back-to-back format)
 
 ### After the cohort
 - All reference prompts and frameworks
 - Session recordings
 - Process logs and tutorials from the facilitator's builds
-- Access to the shared Slack channel
+- Access to the persistent Slack channel
 - Links to the four Agency State demo suites as reference implementations
+- A demo-day recap doc with the facilitator's strategic teardown notes
 
 ---
 
 ## On-Demand Adaptation
 
-The same curriculum works as an on-demand course with modifications:
+The same curriculum works as an on-demand course with modifications to fit the compressed two-week structure:
 
-**Each module has three parts:**
+**Each module mirrors a session and has three parts:**
 1. **Watch** — short video showing the build with narration explaining the thinking behind the prompt
-2. **Build** — the student gets the prompt and data files, uses as-is or modifies
+2. **Build** — the student gets the prompt and data files, uses as-is or modifies for their own context
 3. **Explore** — challenges that push beyond copying: modify the tool, change the inputs, build a variation for their own use case
+
+**The independent build phase is preserved:** between Modules 2 and 3, students take a five-day pause to build something for their actual job. Module 4 in the on-demand version is a recorded demo-day walkthrough plus written teardowns of submitted builds.
 
 **What's lost without live interaction:**
 - Peer learning from seeing other participants' builds
-- Real-time troubleshooting
+- Real-time troubleshooting during the Claude Code setup phase (Module 1's biggest risk)
 - Accountability to show up prepared
-- The real-data guidance in Session 4 — hardest to replicate on-demand
+- The live demo-day energy and facilitator teardowns
 
 **What compensates:**
 - Monthly live Q&A session for all on-demand buyers (no additional cost, creates community)
 - Discussion forum or Slack channel for peer support
 - Built-in pause points: "Before watching the next section, write your own prompt. Then compare it to mine."
-- "What went wrong" troubleshooting sections for common issues
+- "What went wrong" troubleshooting sections for common Claude Code install issues
+- Optional async demo submission with written facilitator feedback
 
 **Price:** $297–$497 for on-demand access
 **Upsell:** On-demand buyers can apply their purchase price toward a live cohort seat
@@ -302,20 +346,23 @@ Not built yet. Offered when demand from foundational cohort graduates supports i
 ### What to watch for
 - Participants who copy prompts without reading them — pause and ask "what does this prompt tell Claude Code to do?"
 - Participants who get a working tool and want to move on without understanding why it works — the reflect phase matters
-- One participant dominating show-and-tell — rotate deliberately
-- Technical issues consuming group time — move to breakout immediately, don't debug in front of everyone
-- Session 4 (real data) will surface the most frustration — messy data is humbling. Normalize it: "This is what real data looks like. The skill is knowing how to describe the mess to Claude Code."
+- One participant dominating the demo or feedback rounds — rotate deliberately
+- Technical issues in Session 1 setup consuming group time — move to breakout immediately, don't debug in front of everyone
+- Participants who treat the between-session build as practice rather than real work — reframe early: this is a portfolio asset for your actual job, not a homework exercise
+- Participants who arrive at Session 3 having not done the between-session build — there's no graceful recovery in a two-week format. Address it directly: they can still get value from Sessions 3 and 4, but they should know the cohort assumes the build was done.
 
 ### What makes a great session
 - Participants modifying prompts on their own and getting different (sometimes better) results
 - Participants helping each other debug
-- The "wait, I could build that for my team" moment — usually happens in Session 2 or 3
+- The "wait, I could build that for my team" moment — usually happens in Session 2 when the knowledge base starts paying off
 - Participants asking questions about problems the curriculum doesn't cover — means they're thinking beyond the exercises
-- Session 4 presentations that solve real problems the participant actually has — that's the graduation moment
+- Demo day presentations that solve real recurring tasks the participant actually has — that's the graduation moment
+- A demo where a participant says "I didn't have to re-paste my brand voice — it just used it" — the knowledge base concept landed
 
 ### What to avoid
 - Reading prompts aloud instead of building
 - Over-explaining Claude Code internals (skills, agents, sub-agents) — participants learn these organically through use, and the advanced cohort covers them deliberately
-- Trying to cover too much in one session — depth beats breadth
+- Trying to cover too much in one session — depth beats breadth, especially in the back-to-back Mon/Tue format where participants don't have time to digest between sessions
 - Promising that Claude Code will always produce perfect output — it won't, and the ability to evaluate and iterate is the real skill
-- Teaching the API/MCP layer in depth during the teaser — show the result, spark the curiosity, save the how for the advanced cohort
+- Letting demo day turn into a performance — the point is feedback and teardowns, not polish theater
+- Skipping the strategic teardown in Session 4 to fit more demos in — the teardowns are where the next-step thinking happens
