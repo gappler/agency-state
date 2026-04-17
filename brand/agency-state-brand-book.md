@@ -1,8 +1,8 @@
 ---
 title: Agency State — Brand Guide
-version: 1
+version: 1.1
 status: Working draft
-date: 2026-04-16
+date: 2026-04-17
 replaces: agency-state-positioning-brief.md, agency-state-messaging-framework.md
 ---
 
@@ -15,6 +15,8 @@ The single working resource for writing Agency State copy. When copy decisions a
 ## 1. The offer
 
 Agency State teaches business and marketing professionals how to produce the strategic, operational, or deliverable outputs their business and clients demand — using Claude and Claude Code.
+
+**The promise.** Practically, you ship the outputs your work demands. Aspirationally, you get back to the strategic work you got into this for.
 
 ## 2. Audience
 
