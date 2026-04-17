@@ -1,7 +1,7 @@
 ---
 title: Agency State — Cohort Curriculum
 date: 2026-04-17
-version: 2.2
+version: 2.6
 status: active
 ---
 
@@ -35,14 +35,25 @@ Participants complete this independently using **regular Claude chat** (claude.a
 
 ---
 
-## The Knowledge Base — A Through-Line
+## The Method: Context. Conversation. Outputs.
 
-A core thread runs through all four sessions: **the knowledge base.** This is the set of files in the participant's project that describe their business, voice, audience, and rules. Claude Code reads from it on every build.
+Across four sessions, participants practice two skills that compound into the outputs their work demands.
 
-- **Session 1:** You build the foundation. The prework brand definition becomes the seed of your knowledge base.
-- **Session 2:** You see the payoff — the outputs you build are customized to your business *because* they read from your knowledge base.
-- **Session 3:** You add to it — brand voice rules, content guidelines, deeper audience data, output preferences.
-- **Session 4:** You show how your knowledge base shaped what you built independently — the demos surface the principle.
+**Context** is what Claude reads when it works for you — your brand, your audience, your rules, your workflows. You build it as a **knowledge base** inside your project folder. The knowledge base has two layers:
+
+- **Configuration layer** — CLAUDE.md, folder structure, and file conventions. The rules Claude follows.
+- **Content layer** — your brand definition, audience profiles, voice rules, synthetic data. The material Claude draws from.
+
+**Conversation** is how you direct Claude's work — writing prompts that set scope, evaluating what comes back, iterating until the output fits.
+
+**Outputs** are what you produce. Strategies, plans, briefs, campaigns, dashboards, reports, content — each one shaped by your context, built through conversation.
+
+### The knowledge base through all four sessions
+
+- **Session 1:** You build the foundation. Prework brand definition, synthetic data, and CLAUDE.md seed your knowledge base.
+- **Session 2:** You see the payoff — outputs customized to your business *because* they read from your knowledge base, no re-prompting.
+- **Session 3:** You deepen it — brand voice rules, content guidelines, audience depth, output preferences.
+- **Session 4:** You show how your knowledge base shaped what you built independently.
 
 **The principle: context compounds.** The more your knowledge base grows, the better everything Claude Code builds for you — and the less prompting you have to do.
 
@@ -80,7 +91,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 **Build (30 min)**
 - Build a performance dashboard from the participant's synthetic data
-- Facilitator monitors progress, drops anyone stuck into a breakout
+- Facilitator stays in the main room and takes questions as they come up. Deeper stuck-points go to a breakout with reference materials; the deepest go to Wednesday office hours.
 
 **Reflect (15 min)**
 - What did Claude Code produce? Was it right? Did it pull from your knowledge base correctly?
@@ -93,7 +104,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 - Participants modify the reference prompt to fit their business context
 
 **Wrap and preview (10 min)**
-- What we built: two tools, one feeding the other, both reading from your knowledge base
+- What you did today: built your context (the knowledge base), practiced conversation (the prompt-writing cycle), and produced two outputs that read from your context
 - Tomorrow we go deeper — planning and decision outputs
 
 ---
@@ -113,7 +124,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 **Open (10 min)**
 - Quick recap of yesterday — what landed, what didn't
-- Frame the session: yesterday's outputs displayed history. Today's outputs model decisions.
+- Frame the session: yesterday you built context and practiced conversation. Today those two skills compound — outputs that don't just display history, but model decisions.
 
 **Understand (15 min)**
 - What makes a planning output different from a reporting output? It takes inputs and models outcomes, not just displays history.
@@ -133,7 +144,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 **Second build (25 min)**
 - Build a tool that takes the planning tool's output as input — e.g., the budget allocator's output feeds a campaign plan generator
 - Demonstrates the compounding effect: each output makes the next one smarter
-- Reinforces the knowledge base principle — the same brand definition shapes every tool
+- Reinforces the knowledge base principle — the same brand definition shapes every output
 
 **Set up the between-session build (15 min)**
 - Identify the single most time-consuming recurring task in the participant's actual job — the thing they'd genuinely build a tool for
@@ -159,8 +170,8 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 ### Objectives
 - Bring the between-session builds into the room and surface lessons
-- Add brand voice rules, content guidelines, and richer audience data to the knowledge base
-- See how a deeper knowledge base produces sharper outputs without more prompting
+- Deepen your context with brand voice, rules, and richer audience detail
+- Build an on-brand piece of content that shows what deeper context produces
 
 ### Flow
 
@@ -170,7 +181,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 - Group sees the range — different jobs, same methodology, different outputs
 
 **Understand (15 min)**
-- The knowledge base is doing more work than you've used so far. The leap is going from "facts about my business" to "rules my outputs follow."
+- You're deepening your context — going from "facts about my business" to "rules my outputs follow." Deeper context, sharper outputs, less manual editing.
 - What goes in: brand voice rules, terminology dictionaries, audience personas with deeper detail, output format preferences, things to never say
 - Framework: what does your team's published work assume that nobody writes down?
 
@@ -180,10 +191,10 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 - Add output rules — formats, lengths, banned phrases, required disclaimers if applicable
 - These get saved into the knowledge base and committed
 
-**Apply (30 min)**
-- Re-run one of the participant's existing tools (the dashboard, the report generator, or their independent build) with the richer knowledge base in place
-- Compare before/after — same prompt, same data, sharper output, less manual editing
-- Optional: build a content engine, email sequence generator, or brief builder that leans heavily on the new voice rules
+**Build on-brand content (30 min)**
+- Build a piece of content that leans on your new voice rules — email sequence, social post series, newsletter, landing page, or editorial brief. Participants choose based on what their work actually requires.
+- The build surfaces the KB-depth payoff: same prompt shape as Session 1's writing exercise, deeper context, dramatically sharper output. Facilitator points out where the voice rules are doing work the participant didn't have to re-paste.
+- Quick compare moment: what would you have gotten from this prompt before today's voice rules? That gap is what deeper context buys you.
 
 **Wrap and prepare for demo day (15 min)**
 - Tomorrow is demo day — everyone presents what they built in the between-session window
@@ -200,7 +211,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 ### Objectives
 - Every participant presents the tool they built independently
-- Surface how the knowledge base shaped the build
+- Surface how context and conversation produced each participant's outputs — same method, different jobs, different outputs
 - Live teardowns from the facilitator show what to refine next
 
 ### Flow
@@ -218,10 +229,12 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 - Facilitator picks 2–3 builds (selected for teaching value, not quality) and walks through them live
 - Code review: what's well-structured, what could be cleaner, what's a future maintenance trap
 - Strategic teardown: where this tool fits in the participant's actual workflow, what to add next, what to never bother building
+- Name the method moves — where context did the work, where conversation shaped the output, where deeper context would have shortcut more of the conversation
 - Group sees the moves an experienced builder would make next
 
 **What's next and close (15 min)**
-- What you built across two weeks: a working knowledge base, several tools, and one portfolio asset for your actual job
+- Synthesis: different companies, different data, different outputs — one method, seen working. Name it: context and conversation produced every output in the room.
+- What you built across two weeks: a working knowledge base (your context), the practice of conversation (directing Claude), and a portfolio of outputs — including one built independently for your actual job
 - How to keep going: the project folder, the process logs, the session recordings, and the Slack channel all stay live
 - Community: shared Slack channel persists, monthly check-in for graduates
 - Advanced cohort preview: custom skills, agents, MCP server connections, API integrations — for graduates who want to go further
@@ -236,7 +249,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 Unlike a multi-week course, this format has **one independent build window**: Tuesday evening of Week 1 through Sunday. Five days. It's the only stretch where participants build solo, and the deliverable is the centerpiece of demo day.
 
-**The framing matters:** these are not practice exercises. Participants are building portfolio assets for their actual job — tools they'll keep using after the cohort ends. The knowledge base they've seeded in Sessions 1 and 2 powers the build.
+**The framing matters:** these are not practice exercises. Participants are building portfolio assets for their actual job — outputs they'll keep using after the cohort ends. The knowledge base they've seeded in Sessions 1 and 2 powers the build.
 
 **What's expected:**
 - A working tool that addresses a real recurring task in the participant's job
@@ -266,7 +279,7 @@ Unlike a multi-week course, this format has **one independent build window**: Tu
 ### Shared channel (Slack or similar)
 - Created at Session 1, persists after the cohort ends
 - Most active during the five-day between-session build window
-- Participants share wins, ask questions, post screenshots of tools they're building
+- Participants share wins, ask questions, post screenshots of what they're building
 - Peer support becomes the primary value over time
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: Agency State — Brand Guide
-version: 1.2
+version: 1.3
 status: Working draft
 date: 2026-04-17
 replaces: agency-state-positioning-brief.md, agency-state-messaging-framework.md
@@ -107,7 +107,5 @@ Most AI courses teach the tool. Agency State teaches the method — context and 
 Flagged so they don't drift silently.
 
 - **"Scale yourself" in the hero.** On the never-say list (SaaS cliché; treats the human as an asset to be multiplied). Currently working because it's the punchline of a three-beat rhythm and literally describes what the program delivers. Pressure-test against: "Learn Claude Code. Build real outputs. Work like a team of one." If the original still feels stronger after trying the alternative, keep it and let this exception stand.
-
-- **Tool-forward framing on the site.** The hero and body copy lead with "build working tools," which contradicts section 4, 5, and 8 of this guide. Site needs to evolve toward outputs-first language.
 
 - **Pricing and curriculum format.** Research (in `research/`) says $500 is bottom-of-market for this curriculum and that 8 hours of live instruction over 4 weeks is heavier than competitors at this price. Not a brand-guide decision, but affects how aggressively you can claim value in copy. Current pricing may need revisiting before Cohort 2.
