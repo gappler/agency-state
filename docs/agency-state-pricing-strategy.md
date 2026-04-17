@@ -71,6 +71,18 @@
 
 ---
 
+### Advanced Cohort
+
+**Purpose:** Deeper technical training for foundational cohort graduates — custom Claude Code skills, sub-agents, MCP server connections, API integrations, automated workflows, security and governance.
+
+**Price:** $2,000–$2,500 per seat
+
+**Prerequisite:** Completion of the foundational cohort or demonstrated equivalent experience.
+
+**Status:** Not built yet. Offered when demand from foundational cohort graduates supports it. Revisit pricing when the first advanced cohort is scoped — the range here is a placeholder based on curriculum depth, not market validation.
+
+---
+
 ## Cohort Frequency
 
 ### Phase 1 (founding, months 1–3)
