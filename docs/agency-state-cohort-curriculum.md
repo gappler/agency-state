@@ -1,7 +1,7 @@
 ---
 title: Agency State — Cohort Curriculum
-date: 2026-04-16
-version: 2.0
+date: 2026-04-17
+version: 2.2
 status: active
 ---
 
@@ -9,16 +9,12 @@ status: active
 
 ## Format
 
-**Live online cohort.** 8–12 participants. Four 2-hour sessions across two weeks, plus office hours on the Wednesday of each week. Prework required before Session 1.
+**Live online cohort.** 10 participants. Four 2-hour sessions across two weeks, plus office hours on the Wednesday of each week. Prework required before Session 1.
 
 **Schedule:**
 - **Week 1:** Monday (Session 1, 10am ET), Tuesday (Session 2, 10am ET), Wednesday (office hours)
 - **Between-session build window:** Tuesday evening through Sunday — five days to build something independently
 - **Week 2:** Monday (Session 3, 10am ET), Tuesday (Session 4 — demo day, 10am ET), Wednesday (office hours)
-
-**Price:**
-- **Cohort 1 (intro):** $500 per seat
-- **Future cohorts:** $899–$1,200 per seat
 
 **Scheduling:** The compressed two-week format is the point — it fits inside a single sprint or planning cycle, and the back-to-back Mon/Tue sessions force the methodology to land before participants drift. Cohorts can run on staggered calendars (e.g., Cohort A starts the first Monday of the month, Cohort B the third Monday). Office hours can be shared across overlapping cohorts on the Wednesday slot if needed.
 
@@ -44,7 +40,7 @@ Participants complete this independently using **regular Claude chat** (claude.a
 A core thread runs through all four sessions: **the knowledge base.** This is the set of files in the participant's project that describe their business, voice, audience, and rules. Claude Code reads from it on every build.
 
 - **Session 1:** You build the foundation. The prework brand definition becomes the seed of your knowledge base.
-- **Session 2:** You see the payoff — the tools you build are customized to your business *because* they read from your knowledge base.
+- **Session 2:** You see the payoff — the outputs you build are customized to your business *because* they read from your knowledge base.
 - **Session 3:** You add to it — brand voice rules, content guidelines, deeper audience data, output preferences.
 - **Session 4:** You show how your knowledge base shaped what you built independently — the demos surface the principle.
 
@@ -52,14 +48,16 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 ---
 
-## Session 1: Setup, Foundation, and First Build (2 hours)
+## Session 1: Build your knowledge base (2 hours)
+
+*Setup, foundation, and your first outputs.*
 
 *Week 1, Monday, 10am ET*
 
 ### Objectives
 - Get every participant into a working Claude Code environment
 - Seed the knowledge base from prework
-- Build the first tool and learn the understand → build → reflect cycle
+- Build your first output
 
 ### Flow
 
@@ -68,7 +66,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 - Create the project folder
 - Create a CLAUDE.md file with project rules (process logging, commit after each tool, file naming conventions)
 - Drop the prework brand definition and synthetic data into the project — this is now the seed of the participant's knowledge base
-- Facilitator screen-shares each step; co-facilitator (if available) helps anyone stuck without slowing the group
+- Facilitator screen-shares each step. Common issues get solved in front of the group; deeper install problems go to Wednesday office hours rather than blocking the cohort
 - **If your install isn't working by the end of setup:** stay on for Wednesday office hours and we'll get you sorted before Session 2. A failed Node version or terminal config shouldn't derail your cohort — we'll fix it 1:1.
 
 **Quick share (5 min)**
@@ -96,16 +94,18 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 **Wrap and preview (10 min)**
 - What we built: two tools, one feeding the other, both reading from your knowledge base
-- Tomorrow we go deeper — planning tools and decision tools
+- Tomorrow we go deeper — planning and decision outputs
 
 ---
 
-## Session 2: Planning, Decision Tools, and the Knowledge Base Payoff (2 hours)
+## Session 2: Build the outputs your work demands (2 hours)
+
+*Planning and decision outputs.*
 
 *Week 1, Tuesday, 10am ET*
 
 ### Objectives
-- Build tools that help make decisions, not just display data
+- Build outputs that help make decisions, not just display data
 - See how the knowledge base customizes outputs without you re-prompting every time
 - Set up the between-session build with confidence
 
@@ -113,12 +113,12 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 **Open (10 min)**
 - Quick recap of yesterday — what landed, what didn't
-- Frame the session: yesterday's tools displayed history. Today's tools model decisions.
+- Frame the session: yesterday's outputs displayed history. Today's outputs model decisions.
 
 **Understand (15 min)**
-- What makes a planning tool different from a reporting tool? It takes inputs and models outcomes, not just displays history.
+- What makes a planning output different from a reporting output? It takes inputs and models outcomes, not just displays history.
 - Framework: what decisions does your team make repeatedly that could be modeled?
-- Participants write their own prompt for a planning tool relevant to their business
+- Participants write their own prompt for a planning output relevant to their business
 
 **Build (35 min)**
 - Build a budget allocator, scenario modeler, capacity planner, or roadmap prioritizer — participant chooses based on their business
@@ -132,7 +132,7 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 **Second build (25 min)**
 - Build a tool that takes the planning tool's output as input — e.g., the budget allocator's output feeds a campaign plan generator
-- Demonstrates the compounding effect: each tool makes the next one smarter
+- Demonstrates the compounding effect: each output makes the next one smarter
 - Reinforces the knowledge base principle — the same brand definition shapes every tool
 
 **Set up the between-session build (15 min)**
@@ -151,7 +151,9 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 ---
 
-## Session 3: Making Your Tools Smarter (2 hours)
+## Session 3: Build content that sounds like you (2 hours)
+
+*Voice, rules, and on-brand content.*
 
 *Week 2, Monday, 10am ET*
 
@@ -190,7 +192,9 @@ A core thread runs through all four sessions: **the knowledge base.** This is th
 
 ---
 
-## Session 4: Demo Day (2 hours)
+## Session 4: Show what you built (2 hours)
+
+*Demo day.*
 
 *Week 2, Tuesday, 10am ET*
 
@@ -255,8 +259,8 @@ Unlike a multi-week course, this format has **one independent build window**: Tu
 - Week 2's Wednesday office hours is for graduates — wrap-up questions, what to build next, how to bring this back to a team
 
 ### Breakout rooms (during sessions)
-- If a participant hits a wall during a build phase, drop them into a breakout
-- Facilitator or co-facilitator helps them catch up while the main group continues
+- If a participant hits a wall during a build phase, send them to a breakout with the reference prompts and session materials
+- Facilitator checks in at natural pauses in the main flow; deeper troubleshooting moves to Wednesday office hours
 - Session 1's setup phase is the most likely moment for this — the Claude Code install can hit edge cases on individual machines
 
 ### Shared channel (Slack or similar)
@@ -318,9 +322,6 @@ The same curriculum works as an on-demand course with modifications to fit the c
 - "What went wrong" troubleshooting sections for common Claude Code install issues
 - Optional async demo submission with written facilitator feedback
 
-**Price:** $297–$497 for on-demand access
-**Upsell:** On-demand buyers can apply their purchase price toward a live cohort seat
-
 ---
 
 ## Future: Advanced Cohort
@@ -336,8 +337,6 @@ Not built yet. Offered when demand from foundational cohort graduates supports i
 - Security and governance — what to review before deploying AI-built tools
 
 **Prerequisite:** Completion of the foundational cohort or demonstrated equivalent experience.
-
-**Price:** $2,000–$2,500 per seat.
 
 ---
 

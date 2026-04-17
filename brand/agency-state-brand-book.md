@@ -1,6 +1,6 @@
 ---
 title: Agency State — Brand Guide
-version: 1.1
+version: 1.2
 status: Working draft
 date: 2026-04-17
 replaces: agency-state-positioning-brief.md, agency-state-messaging-framework.md
@@ -38,6 +38,8 @@ They got into the work to do strategy. The work keeps pulling them into output. 
 - **Conversation** is how you direct the work, draw out Claude's thinking, and shape the output into something useful.
 
 Context without conversation produces a well-briefed partner with nothing to aim at. Conversation without context produces articulate output that misses your reality. Together they produce work that actually serves your business.
+
+**Context. Conversation. Outputs.**
 
 **Four steps in the cohort:**
 
