@@ -1,7 +1,7 @@
 ---
 title: Agency State — Cohort Curriculum
 date: 2026-04-17
-version: 2.6
+version: 2.7
 status: active
 ---
 
@@ -66,19 +66,18 @@ Across four sessions, participants practice two skills that compound into the ou
 *Week 1, Monday, 10am ET*
 
 ### Objectives
-- Get every participant into a working Claude Code environment
-- Seed the knowledge base from prework
-- Build your first output
+- Seed your knowledge base from your prework files
+- Build your first two outputs — a dashboard and a written report — that read from your context
 
 ### Flow
 
-**Guided setup (30 min)**
-- Install Claude Code, confirm terminal access
+**Project setup (15 min)**
+- Confirm Claude Code is installed and authenticated (from prework — should already be working)
 - Create the project folder
 - Create a CLAUDE.md file with project rules (process logging, commit after each tool, file naming conventions)
 - Drop the prework brand definition and synthetic data into the project — this is now the seed of the participant's knowledge base
-- Facilitator screen-shares each step. Common issues get solved in front of the group; deeper install problems go to Wednesday office hours rather than blocking the cohort
-- **If your install isn't working by the end of setup:** stay on for Wednesday office hours and we'll get you sorted before Session 2. A failed Node version or terminal config shouldn't derail your cohort — we'll fix it 1:1.
+- Facilitator screen-shares each step; participants follow along in their own terminal
+- **If your install unexpectedly fails at this stage:** move to a breakout with reference materials; Wednesday office hours handles deeper resolution. Install itself is prework — arriving with a working install is expected.
 
 **Quick share (5 min)**
 - One sentence each: who's the company, what's the data
@@ -98,12 +97,12 @@ Across four sessions, participants practice two skills that compound into the ou
 - Cross-compare a few outputs — different data, same methodology, different results
 - What would you change about your prompt?
 
-**Second build (20 min)**
+**Second build (30 min)**
 - Build a written report generator that reads the same data and produces a narrative interpretation
 - Demonstrates sequential building — the report depends on the dashboard's data
 - Participants modify the reference prompt to fit their business context
 
-**Wrap and preview (10 min)**
+**Wrap and preview (15 min)**
 - What you did today: built your context (the knowledge base), practiced conversation (the prompt-writing cycle), and produced two outputs that read from your context
 - Tomorrow we go deeper — planning and decision outputs
 
@@ -268,7 +267,7 @@ Unlike a multi-week course, this format has **one independent build window**: Tu
 ### Office hours
 - 30–60 minute optional drop-in on the **Wednesday of each week** (after Session 2 in Week 1, after Session 4 in Week 2)
 - Open to anyone stuck, confused, or wanting to go deeper
-- Week 1's Wednesday office hours is the most important — it's the launch pad for the between-session build, and the safety net for anyone whose Claude Code install didn't fully work in Session 1
+- Week 1's Wednesday office hours is the most important — it's the launch pad for the between-session build, and a catch-all for any Claude Code issues that surfaced during Sessions 1–2
 - Week 2's Wednesday office hours is for graduates — wrap-up questions, what to build next, how to bring this back to a team
 
 ### Breakout rooms (during sessions)
