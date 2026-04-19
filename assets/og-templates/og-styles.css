@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #FAF9F7;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.accent-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-name {
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+.demo-category {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #6b6b6b;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+}
+
+.demo-description {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #1A1A1A;
+    max-width: 1000px;
+    letter-spacing: -0.01em;
+}
+
+.wordmark {
+    width: 200px;
+    height: auto;
+    display: block;
+}
