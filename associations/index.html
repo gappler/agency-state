@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude for Associations 101 — Agency State</title>
-    <meta name="description" content="Claude for Associations 101 — a four-session Agency State cohort for association marketing teams. Build Claude-powered AI workflows your association owns — renewal campaigns, conference marketing, chapter toolkits. June 8, $500.">
+    <title>Agency State — Coming soon.</title>
+    <meta name="description" content="Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team. The first cohort is in development.">
     <link rel="canonical" href="https://agencystate.ai/associations/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agencystate.ai/associations/">
-    <meta property="og:title" content="Claude for Associations 101 — Agency State">
-    <meta property="og:description" content="Claude for Associations 101 — a four-session Agency State cohort for association marketing teams. Build Claude-powered AI workflows your association owns. June 8, $500.">
+    <meta property="og:title" content="Agency State — Coming soon.">
+    <meta property="og:description" content="Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team. The first cohort is in development.">
     <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude for Associations 101 — Agency State">
-    <meta name="twitter:description" content="Claude for Associations 101 — a four-session Agency State cohort for association marketing teams. June 8, $500.">
+    <meta name="twitter:title" content="Agency State — Coming soon.">
+    <meta name="twitter:description" content="Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team.">
     <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
     <link rel="icon" type="image/svg+xml" href="../assets/agency-state-mark-orange.svg">
     <link rel="apple-touch-icon" href="../assets/agency-state-mark-orange.svg">
@@ -30,17 +30,14 @@
 
         :root {
             --bg: #FAF9F7;
-            --card-bg: #FFFFFF;
-            --card-hover: #F5F4F2;
             --text: #1A1A1A;
             --text-secondary: #5C5C5C;
             --accent: #D4602A;
-            --accent-hover: #B8521F;
             --border: #E0DFDC;
             --font: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
-        html { scroll-behavior: smooth; font-size: 16px; }
+        html { font-size: 16px; }
 
         body {
             font-family: var(--font);
@@ -51,17 +48,16 @@
             background: var(--bg);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-
-        /* ---- Layout ---- */
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
-        /* ---- Typography utilities ---- */
 
         .micro {
             font-family: var(--font);
@@ -71,26 +67,6 @@
             text-transform: uppercase;
             color: var(--accent);
         }
-
-        .micro-muted {
-            font-family: var(--font);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-        }
-
-        .prose {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 1.125rem;
-            line-height: 1.65;
-            color: var(--text);
-            max-width: 60ch;
-        }
-
-        .prose + .prose { margin-top: 1rem; }
 
         /* ---- Nav ---- */
 
@@ -127,48 +103,13 @@
             display: block;
         }
 
-        .nav-cta {
-            font-family: var(--font);
-            font-size: 0.8125rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: var(--accent);
-            text-decoration: none;
-            padding: 0.5rem 0;
-            border-bottom: 1.5px solid var(--accent);
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-cta:hover { opacity: 0.65; }
-
         /* ---- Hero ---- */
 
+        main { flex: 1; }
+
         .hero {
-            padding: 7.5rem 0 2.5rem;
+            padding: 8.5rem 0 5rem;
             position: relative;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: start;
-            width: 100%;
-            justify-items: start;
-        }
-
-        .hero-grid > div:first-child {
-            margin-left: 0;
-            padding-left: 0;
-            min-width: 0;
-        }
-
-        @media (min-width: 920px) {
-            .hero-grid {
-                grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
-                gap: 3rem;
-            }
         }
 
         .hero-label { margin-bottom: 1.5rem; }
@@ -181,350 +122,37 @@
             letter-spacing: -0.03em;
             margin-bottom: 1.75rem;
             color: var(--text);
-        }
-
-        .hero-headline em {
-            font-style: normal;
-            font-weight: 700;
-            color: var(--accent);
-            background-image: linear-gradient(var(--accent), var(--accent));
-            background-repeat: no-repeat;
-            background-size: 0% 0.08em;
-            background-position: 0 100%;
-            padding-bottom: 0.1em;
-        }
-
-        @keyframes draw-underline {
-            from { background-size: 0% 0.08em; }
-            to   { background-size: 100% 0.08em; }
-        }
-
-        .hero-headline.visible em {
-            animation: draw-underline 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
+            max-width: 18ch;
         }
 
         .hero-body {
             font-family: var(--font);
             font-weight: 300;
-            font-size: clamp(1.0625rem, 1.4vw, 1.1875rem);
+            font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+            line-height: 1.55;
+            max-width: 58ch;
+            color: var(--text);
+        }
+
+        .holding-cta {
+            font-family: var(--font);
+            font-weight: 300;
+            font-size: 1.0625rem;
             line-height: 1.6;
-            max-width: 560px;
             color: var(--text);
+            margin-top: 1.75rem;
+            max-width: 58ch;
         }
 
-        /* ---- Offer card ---- */
-
-        .offer-card {
-            background: var(--card-bg);
-            padding: 1.75rem;
-            position: relative;
-            border: 1px solid var(--border);
-            margin-top: 2.75rem;
-        }
-
-        .offer-card::before {
-            content: '';
-            position: absolute;
-            top: -1px; left: -1px;
-            width: 16px; height: 16px;
-            border-top: 2px solid var(--accent);
-            border-left: 2px solid var(--accent);
-        }
-
-        .offer-card::after {
-            content: '';
-            position: absolute;
-            bottom: -1px; right: -1px;
-            width: 16px; height: 16px;
-            border-bottom: 2px solid var(--accent);
-            border-right: 2px solid var(--accent);
-        }
-
-        .offer-card-head {
-            margin-bottom: 1.25rem;
-            padding-bottom: 1.25rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .offer-card-title {
-            font-family: var(--font);
-            font-weight: 700;
-            font-size: 1.25rem;
-            line-height: 1.2;
-            letter-spacing: -0.015em;
-            color: var(--text);
-            margin-bottom: 0.5rem;
-        }
-
-        .offer-card-date {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 0.9375rem;
-            color: var(--text-secondary);
-        }
-
-        .offer-details {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            column-gap: 1.5rem;
-            row-gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .offer-details dt {
-            font-family: var(--font);
-            font-weight: 700;
-            font-size: 0.6875rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-            align-self: center;
-        }
-
-        .offer-details dd {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 0.9375rem;
-            color: var(--text);
-        }
-
-        .offer-cta {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.95rem 1.15rem;
-            background: var(--accent);
-            color: #FFFFFF;
-            font-family: var(--font);
-            font-size: 0.8125rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
+        .holding-cta a {
+            color: var(--accent);
             text-decoration: none;
-            transition: background 0.2s ease;
-        }
-
-        .offer-cta:hover { background: var(--accent-hover); }
-
-        .offer-cta:hover .arrow { transform: translateX(3px); }
-
-        .arrow {
-            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-            display: inline-block;
-            font-weight: 400;
-        }
-
-        /* ---- Section rhythm ---- */
-
-        .section {
-            padding: 3rem 0 4rem;
-            border-top: 1px solid var(--border);
-            position: relative;
-        }
-
-
-        .section-header {
-            margin-bottom: 2rem;
-        }
-
-        .section-heading {
-            font-family: var(--font);
-            font-weight: 700;
-            font-size: clamp(1.75rem, 3.25vw, 2.5rem);
-            line-height: 1.05;
-            letter-spacing: -0.028em;
-            color: var(--text);
-        }
-
-        .section-heading em {
-            font-style: normal;
-            font-weight: 700;
-            color: var(--accent);
-        }
-
-        /* ---- Curriculum ---- */
-
-        .sessions {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
-        }
-
-        @media (min-width: 700px) {
-            .sessions { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
-        }
-
-        @media (min-width: 1300px) {
-            .sessions { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-        }
-
-        .session {
-            border-top: 1.5px solid var(--text);
-            padding-top: 1.25rem;
-            position: relative;
-        }
-
-        .session-number {
-            font-family: var(--font);
-            font-size: 0.6875rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .session-title {
-            font-family: var(--font);
-            font-weight: 700;
-            font-size: 1.25rem;
-            line-height: 1.15;
-            letter-spacing: -0.015em;
-            margin-bottom: 0.75rem;
-            color: var(--text);
-        }
-
-        .session-desc {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 0.9375rem;
-            line-height: 1.6;
-            color: var(--text-secondary);
-        }
-
-        .take-with-you {
-            margin-top: 2rem;
-            padding: 1.75rem 2rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            max-width: 720px;
-        }
-
-        .take-with-you-label {
-            font-family: var(--font);
-            font-size: 0.6875rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 0.65rem;
-        }
-
-        .take-with-you-text {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text);
-        }
-
-        /* ---- Instructor ---- */
-
-        /* ---- Book (final CTA + instructor) ---- */
-
-        .book {
-            padding: 5rem 0 6.5rem;
-            border-top: 1px solid var(--border);
-            position: relative;
-        }
-
-
-        .book-label { margin-bottom: 1.25rem; }
-
-        .book-headline {
-            font-family: var(--font);
-            font-weight: 700;
-            font-size: clamp(2rem, 4.25vw, 3rem);
-            line-height: 1.02;
-            letter-spacing: -0.03em;
-            color: var(--text);
-            margin-bottom: 3rem;
-        }
-
-        .book-headline em {
-            font-style: normal;
-            font-weight: 700;
-            color: var(--accent);
-        }
-
-        .book-inner {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
-            align-items: start;
-        }
-
-        @media (min-width: 820px) {
-            .book-inner {
-                grid-template-columns: 1fr 1fr;
-                gap: 4rem;
-            }
-        }
-
-        .book-inner .micro { margin-bottom: 0.9rem; }
-
-        .book-meta {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            column-gap: 1.5rem;
-            row-gap: 0.75rem;
-            margin-bottom: 1.75rem;
-        }
-
-        .book-meta dt {
-            font-family: var(--font);
-            font-size: 0.6875rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-            align-self: center;
-        }
-
-        .book-meta dd {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 1rem;
-            color: var(--text);
-        }
-
-        .book-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1.1rem 2rem;
-            background: var(--accent);
-            color: #FFFFFF;
-            font-family: var(--font);
-            font-size: 0.8125rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: background 0.2s ease;
-        }
-
-        .book-cta:hover { background: var(--accent-hover); }
-
-        .book-cta:hover .arrow { transform: translateX(4px); }
-
-        .book-email {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 0.9375rem;
-            color: var(--text-secondary);
-            margin-top: 1.25rem;
-        }
-
-        .book-email a {
-            color: var(--accent);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            text-decoration-thickness: 1px;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 1px;
             transition: opacity 0.2s ease;
         }
 
-        .book-email a:hover { opacity: 0.65; }
+        .holding-cta a:hover { opacity: 0.7; }
 
         /* ---- Footer ---- */
 
@@ -568,32 +196,11 @@
 
         .footer-meta { font-size: 0.75rem; opacity: 0.75; }
 
-        /* ---- Reveal animations ---- */
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(14px);
-            transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .d1 { transition-delay: 0.05s; }
-        .d2 { transition-delay: 0.15s; }
-        .d3 { transition-delay: 0.25s; }
-        .d4 { transition-delay: 0.38s; }
-        .d5 { transition-delay: 0.5s; }
-
         /* ---- Responsive ---- */
 
         @media (max-width: 600px) {
             .container { padding: 0 1.25rem; }
-            .hero { padding: 7rem 0 3.5rem; min-height: auto; }
-            .section, .book { padding: 4rem 0; }
-            .book { padding-bottom: 6rem; }
+            .hero { padding: 6rem 0 3rem; }
             nav .container { height: 56px; }
             .nav-wordmark .nav-type { width: 130px; }
         }
@@ -611,90 +218,12 @@
 
     <main>
 
-        <!-- HERO -->
         <section class="hero">
             <div class="container">
-                <div class="hero-grid">
-                    <div>
-                        <p class="micro hero-label reveal d1">Claude for Associations 101 &mdash; Starts June 8</p>
-                        <h1 class="hero-headline reveal d2">Own the work.<br>Build <em>agency.</em></h1>
-                        <p class="hero-body reveal d3">A four-session live cohort for association marketing teams. Build a Claude-powered workflow for the recurring work &mdash; a knowledge base of your brand and data, content in your voice, the method to keep building.</p>
-                    </div>
-
-                    <aside class="offer-card reveal d4">
-                        <div class="offer-card-head">
-                            <h2 class="offer-card-title">Claude for Associations 101</h2>
-                            <p class="offer-card-date">Starts June 8, 2026</p>
-                        </div>
-                        <dl class="offer-details">
-                            <dt>Format</dt>
-                            <dd>Live online</dd>
-                            <dt>Schedule</dt>
-                            <dd>Mon + Tue, 2 weeks</dd>
-                            <dt>Sessions</dt>
-                            <dd>4 &middot; 10am ET</dd>
-                            <dt>Seats</dt>
-                            <dd>10</dd>
-                            <dt>Price</dt>
-                            <dd>$500</dd>
-                        </dl>
-                        <a href="https://buy.stripe.com/4gMbJ0bCs1BcbDfaZ22Nq00" target="_blank" rel="noopener" class="offer-cta" onclick="plausible('Register: hero')">
-                            <span>Register</span>
-                            <span class="arrow">&rarr;</span>
-                        </a>
-                    </aside>
-                </div>
-            </div>
-        </section>
-
-        <!-- CURRICULUM -->
-        <section class="section" id="curriculum" aria-labelledby="curriculum-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-heading reveal" id="curriculum-heading">Four sessions. <em>Four builds.</em></h2>
-                </div>
-                <div class="sessions">
-                    <article class="session reveal">
-                        <p class="session-number">Session 01</p>
-                        <h3 class="session-title">Your knowledge base</h3>
-                        <p class="session-desc">Build a Claude knowledge base using simulated data &mdash; a generic association or one modeled on yours. Learn the method before applying it to live work.</p>
-                    </article>
-                    <article class="session reveal d1">
-                        <p class="session-number">Session 02</p>
-                        <h3 class="session-title">The work that repeats</h3>
-                        <p class="session-desc">Pick your most time-eating recurring work. Build a Claude-powered workflow for it. Renewal. Conference. Chapter. Committee.</p>
-                    </article>
-                    <article class="session reveal d2">
-                        <p class="session-number">Session 03</p>
-                        <h3 class="session-title">Content in your voice</h3>
-                        <p class="session-desc">Teach Claude your association&rsquo;s voice, audiences, and rules. Build on-brand member emails, newsletters, speaker outreach &mdash; not generic AI.</p>
-                    </article>
-                    <article class="session reveal d3">
-                        <p class="session-number">Session 04</p>
-                        <h3 class="session-title">Demo day</h3>
-                        <p class="session-desc">Present the workflows and outputs you built for your actual work. Peer feedback. You leave capable of doing this alone.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- BOOK (with instructor) -->
-        <section class="book" id="contact">
-            <div class="container">
-                <p class="micro book-label reveal">June 8 cohort</p>
-                <h2 class="book-headline reveal">Now <em>forming.</em></h2>
-                <div class="book-inner">
-                    <div>
-                        <p class="prose reveal d1">I led marketing at The American Institute of Architects from 2014 to 2023, where I built the team and led its technology transformation. Before AIA, I spent two decades agency and brand-side at Y&amp;R, Designory, and Grafik, on brands including Lincoln, Nissan/Infiniti, and Bacardi Global Brands.</p>
-                    </div>
-                    <div>
-                        <a href="https://buy.stripe.com/4gMbJ0bCs1BcbDfaZ22Nq00" target="_blank" rel="noopener" class="book-cta reveal d1" onclick="plausible('Register: final')">
-                            <span>Register</span>
-                            <span class="arrow">&rarr;</span>
-                        </a>
-                        <p class="book-email reveal d2">Questions? Email <a href="#" id="book-email">greg@agencystate.ai</a>.</p>
-                    </div>
-                </div>
+                <p class="micro hero-label">Coming soon</p>
+                <h1 class="hero-headline">Build the operational systems your team has been waiting for.</h1>
+                <p class="hero-body">Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team &mdash; workflows that absorb recurring work, planning tools that turn strategy into operations, content pipelines that scale without dilution. Each cohort is anchored to a specific operational pipeline that participants ship and run for their own organization.</p>
+                <p class="holding-cta">Email <a href="#" id="holding-email">greg@agencystate.ai</a> to be notified when the first cohort opens.</p>
             </div>
         </section>
 
@@ -718,24 +247,6 @@
             nav.classList.toggle('scrolled', window.scrollY > 16);
         }, { passive: true });
 
-        const reveals = document.querySelectorAll('.reveal, .section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
-
-        reveals.forEach(el => observer.observe(el));
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.hero .reveal').forEach(el => {
-                el.classList.add('visible');
-            });
-        });
-
         // Email obfuscation — assemble address at runtime
         (function () {
             var u = 'greg';
@@ -743,10 +254,15 @@
             var t = 'ai';
             var addr = u + String.fromCharCode(64) + d + '.' + t;
 
-            var email = document.getElementById('book-email');
+            var email = document.getElementById('holding-email');
             if (email) {
-                email.href = 'mailto:' + addr + '?subject=Agency%20State%20cohort%20question';
+                email.href = 'mailto:' + addr;
                 email.textContent = addr;
+                email.addEventListener('click', function () {
+                    if (typeof plausible === 'function') {
+                        plausible('Holding page email');
+                    }
+                });
             }
         })();
     </script>
