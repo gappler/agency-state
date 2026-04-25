@@ -11,7 +11,7 @@ The site is on a holding page. Cohort 1 of the Annual Planning Cohort is being p
 ## Repo Layout
 
 - `index.html` — single-page marketing site
-- `assets/` — wordmark, mark, and og-image files (`.svg`, `.png`); Illustrator source files in `assets/illustrator files/`
+- `assets/` — wordmark, mark, and og-image files (`.svg`, `.png`)
 - `CNAME` — GitHub Pages custom domain
 
 ## Brand
