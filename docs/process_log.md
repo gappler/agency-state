@@ -10,6 +10,36 @@ Append entries at the top. Each entry: date, what changed, why, and any notable 
 
 ---
 
+## 2026-04-27 — Deploy workflow clarified; cohort-v1-paused branch deleted; CLAUDE.md updated
+
+**What changed**
+
+- `CLAUDE.md` — *Current state* paragraph rewritten to reflect the new live-page set (homepage + `/workflow-automation-sprint/` engagement page; `/associations/` separately as a holding page) and to drop the holding-page line and the `cohort-v1-paused` branch reference. New *Deploy Workflow* section added after *Git Discipline* documenting the production-first workflow explicitly.
+- `cohort-v1-paused` branch deleted from local and remote (`origin`). Tip commit was `6b77d4e` ("Add welcome page (post-purchase)"); reachable from `main` history via merge ancestry. `git log --all` and `git reflog` retain the commits.
+
+**Deploy workflow now codified**
+
+> Local preview → commit → push to main → verify on the live URL.
+
+No staging branch, no staging environment, no preview deploys. Production-first deploys are appropriate because the site is small, traffic is low, and `git log` covers rollback. Future sessions are explicitly told not to re-introduce staging.
+
+CLAUDE.md also names the production-first complexities so future sessions can plan around them: GitHub Pages publish latency (30s–3min, silent build failures), OG-card cache on social platforms, Plausible captures verification pageviews.
+
+**Why**
+
+Verification before the homepage push surfaced that the workflow had drifted toward implicit "stage in publishing repo, then ship to public repo" thinking, with the `cohort-v1-paused` branch sitting around as if it were a staged-work artifact. Neither was actually a deploy-staging environment, but the language and the dangling branch made it ambiguous. The CLAUDE.md update closes the ambiguity: the public repo deploys directly from `main`, the publishing repo's `site-copy/` is a copy-review pause (drafts, not staging), and there is no preview environment by design.
+
+**Cross-repo ripples**
+
+- `agency-state-publishing/CLAUDE.md` and `docs/process_log.md` updated in lockstep with this commit. The `site-copy/` line is reworded from "staging" to "drafts reviewed before applying to the public repo" — a copy-review pause, explicitly not a deploy environment.
+- `agency-state-curriculum/CLAUDE.md` updated to remove the same `cohort-v1-paused` reference and to reword "stage the revised copy" → "draft the revised copy for review."
+
+**Stale references noticed but not fixed in this pass**
+
+- `agency-state/CLAUDE.md` (existing line, untouched in this commit) references `agency-state-curriculum/strategy/agency-state-brief-v2.md`. The current canonical brief is `agency-state-brief-v3.md`. Flagged for a separate cleanup pass.
+
+---
+
 ## 2026-04-27 — Footer LinkedIn link rolled back from homepage and engagement page
 
 **What changed**
