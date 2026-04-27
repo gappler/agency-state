@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agency State — Coming soon.</title>
-    <meta name="description" content="Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team. The first cohort is in development.">
+    <title>Agency State</title>
+    <meta name="description" content="I help senior marketing leaders automate the operational work that crowds out strategy. A 1:1 four-week sprint built on Claude and Claude Code.">
     <link rel="canonical" href="https://agencystate.ai/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agencystate.ai/">
-    <meta property="og:title" content="Agency State — Coming soon.">
-    <meta property="og:description" content="Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team. The first cohort is in development.">
+    <meta property="og:title" content="Agency State">
+    <meta property="og:description" content="I help senior marketing leaders automate the operational work that crowds out strategy. A 1:1 four-week sprint built on Claude and Claude Code.">
     <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agency State — Coming soon.">
-    <meta name="twitter:description" content="Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team.">
+    <meta name="twitter:title" content="Agency State">
+    <meta name="twitter:description" content="I help senior marketing leaders automate the operational work that crowds out strategy. A 1:1 four-week sprint built on Claude and Claude Code.">
     <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
     <link rel="icon" type="image/svg+xml" href="assets/agency-state-mark-orange.svg">
     <link rel="apple-touch-icon" href="assets/agency-state-mark-orange.svg">
@@ -32,8 +32,11 @@
             --bg: #FAF9F7;
             --text: #1A1A1A;
             --text-secondary: #5C5C5C;
-            --accent: #D4602A;
+            --card-bg: #FFFFFF;
+            --card-hover: #F5F4F2;
             --border: #E0DFDC;
+            --accent: #D4602A;
+            --accent-hover: #B8521F;
             --font: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
@@ -103,48 +106,62 @@
             display: block;
         }
 
-        /* ---- Hero ---- */
+        /* ---- Section rhythm ---- */
 
         main { flex: 1; }
 
-        .hero {
-            padding: 8.5rem 0 5rem;
-            position: relative;
+        /* ---- Section 1: Bio ---- */
+
+        .bio-section {
+            padding: 8.5rem 0 4rem;
         }
 
-        .hero-label { margin-bottom: 1.5rem; }
-
-        .hero-headline {
+        .bio-greeting {
             font-family: var(--font);
-            font-weight: 700;
-            font-size: clamp(2.5rem, 6.5vw, 4.75rem);
-            line-height: 1.02;
+            font-weight: 300;
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            line-height: 1.1;
             letter-spacing: -0.03em;
+            color: var(--text);
             margin-bottom: 1.75rem;
-            color: var(--text);
-            max-width: 18ch;
         }
 
-        .hero-body {
+        .bio-lead {
             font-family: var(--font);
             font-weight: 300;
-            font-size: clamp(1.125rem, 1.5vw, 1.25rem);
-            line-height: 1.55;
-            max-width: 58ch;
+            font-size: 1.125rem;
+            line-height: 1.65;
             color: var(--text);
+            max-width: 60ch;
+            text-wrap: pretty;
+            margin-bottom: 1.75rem;
         }
 
-        .holding-cta {
+        .bio-signoff {
+            font-family: var(--font);
+            font-size: 0.9375rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        /* ---- Section 2: Current offer (prose, inline link) ---- */
+
+        .offer-section {
+            padding: 0 0 1rem;
+        }
+
+        .offer-prose {
             font-family: var(--font);
             font-weight: 300;
-            font-size: 1.0625rem;
-            line-height: 1.6;
+            font-size: 1.125rem;
+            line-height: 1.65;
             color: var(--text);
-            margin-top: 1.75rem;
-            max-width: 58ch;
+            max-width: 60ch;
+            text-wrap: pretty;
         }
 
-        .holding-cta a {
+        .offer-prose a {
             color: var(--accent);
             text-decoration: none;
             border-bottom: 1px solid var(--accent);
@@ -152,20 +169,44 @@
             transition: opacity 0.2s ease;
         }
 
-        .holding-cta a:hover { opacity: 0.7; }
+        .offer-prose a:hover { opacity: 0.65; }
+
+        /* ---- Section 3: Contact ---- */
+
+        .contact-section {
+            padding: 5rem 0 7rem;
+        }
+
+        .contact-line {
+            font-family: var(--font);
+            font-weight: 300;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 60ch;
+        }
+
+        .contact-line a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 1px;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-line a:hover { opacity: 0.65; }
 
         /* ---- Footer ---- */
 
         footer {
             padding: 2.5rem 0;
-            border-top: 1px solid var(--border);
         }
 
         footer .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
@@ -196,13 +237,35 @@
 
         .footer-meta { font-size: 0.75rem; opacity: 0.75; }
 
+        /* ---- Reveal animations ---- */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .d1 { transition-delay: 0.05s; }
+        .d2 { transition-delay: 0.15s; }
+        .d3 { transition-delay: 0.25s; }
+        .d4 { transition-delay: 0.38s; }
+
         /* ---- Responsive ---- */
 
         @media (max-width: 600px) {
             .container { padding: 0 1.25rem; }
-            .hero { padding: 6rem 0 3rem; }
+            .bio-section { padding: 6rem 0 2rem; }
+            .offer-section { padding: 0 0 2.5rem; }
+            .contact-section { padding: 3rem 0 4.5rem; }
             nav .container { height: 56px; }
             .nav-wordmark .nav-type { width: 130px; }
+            footer .container { gap: 1rem; }
+            .footer-right { align-items: flex-start; text-align: left; }
         }
     </style>
 </head>
@@ -218,12 +281,26 @@
 
     <main>
 
-        <section class="hero">
+        <!-- Section 1: Bio -->
+        <section class="bio-section">
             <div class="container">
-                <p class="micro hero-label">Coming soon</p>
-                <h1 class="hero-headline">Build the operational systems your team has been waiting for.</h1>
-                <p class="hero-body">Agency State runs small cohorts for senior marketing leaders who want to build operational systems for their team &mdash; workflows that absorb recurring work, planning tools that turn strategy into operations, content pipelines that scale without dilution. Each cohort is anchored to a specific operational pipeline that participants ship and run for their own organization.</p>
-                <p class="holding-cta">Email <a href="#" id="holding-email">greg@agencystate.ai</a> to be notified when the first cohort opens.</p>
+                <h1 class="bio-greeting reveal d1">Hi.</h1>
+                <p class="bio-lead reveal d2">I&rsquo;ve spent over two decades in agency and in-house marketing &mdash; most recently a decade running marketing at the American Institute of Architects. I know what gets in the way of senior teams doing their best work. Now I help them automate the operational work that crowds out strategy. That&rsquo;s Agency State.</p>
+                <p class="bio-signoff reveal d3">&mdash; Greg Appler</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Current offer (single inline-link sentence) -->
+        <section class="offer-section">
+            <div class="container">
+                <p class="offer-prose reveal">Right now the way to engage is the <a href="/workflow-automation-sprint" id="homepage-offer-link">Workflow Automation Sprint</a> &mdash; a 1:1 sprint to automate one marketing workflow over four weeks.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Contact -->
+        <section class="contact-section">
+            <div class="container">
+                <p class="contact-line reveal">If I can help you think through a workflow, answer a question, or just talk shop, email <a href="#" id="homepage-email">greg@agencystate.ai</a> or find me on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
             </div>
         </section>
 
@@ -247,6 +324,48 @@
             nav.classList.toggle('scrolled', window.scrollY > 16);
         }, { passive: true });
 
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+
+        reveals.forEach(el => observer.observe(el));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.bio-section .reveal').forEach(el => {
+                el.classList.add('visible');
+            });
+        });
+
+        // Offer link click tracking
+        (function () {
+            var ol = document.getElementById('homepage-offer-link');
+            if (ol) {
+                ol.addEventListener('click', function () {
+                    if (typeof plausible === 'function') {
+                        plausible('Homepage offer link');
+                    }
+                });
+            }
+        })();
+
+        // LinkedIn click tracking (in-section link)
+        (function () {
+            var li = document.getElementById('homepage-linkedin');
+            if (li) {
+                li.addEventListener('click', function () {
+                    if (typeof plausible === 'function') {
+                        plausible('Homepage LinkedIn');
+                    }
+                });
+            }
+        })();
+
         // Email obfuscation — assemble address at runtime
         (function () {
             var u = 'greg';
@@ -254,13 +373,13 @@
             var t = 'ai';
             var addr = u + String.fromCharCode(64) + d + '.' + t;
 
-            var email = document.getElementById('holding-email');
+            var email = document.getElementById('homepage-email');
             if (email) {
                 email.href = 'mailto:' + addr;
                 email.textContent = addr;
                 email.addEventListener('click', function () {
                     if (typeof plausible === 'function') {
-                        plausible('Holding page email');
+                        plausible('Homepage email');
                     }
                 });
             }
