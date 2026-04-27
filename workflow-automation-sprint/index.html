@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Automation Sprint &mdash; Agency State</title>
+    <meta name="description" content="A 1:1 sprint to automate a marketing workflow that's getting in the way of your best work. Four weeks, twice-weekly sessions, your solution as focus.">
+    <link rel="canonical" href="https://agencystate.ai/workflow-automation-sprint">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agencystate.ai/workflow-automation-sprint">
+    <meta property="og:title" content="Workflow Automation Sprint &mdash; Agency State">
+    <meta property="og:description" content="A 1:1 sprint to automate a marketing workflow that's getting in the way of your best work. Four weeks, twice-weekly sessions, your solution as focus.">
+    <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Workflow Automation Sprint &mdash; Agency State">
+    <meta name="twitter:description" content="A 1:1 sprint to automate a marketing workflow that's getting in the way of your best work. Four weeks, twice-weekly sessions, your solution as focus.">
+    <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/agency-state-mark-orange.svg">
+    <link rel="apple-touch-icon" href="../assets/agency-state-mark-orange.svg">
+    <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #FAF9F7;
+            --text: #1A1A1A;
+            --text-secondary: #5C5C5C;
+            --card-bg: #FFFFFF;
+            --card-hover: #F5F4F2;
+            --border: #E0DFDC;
+            --accent: #D4602A;
+            --accent-hover: #B8521F;
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        html { font-size: 16px; }
+
+        body {
+            font-family: var(--font);
+            font-weight: 300;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .prose {
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.65;
+            max-width: 60ch;
+            color: var(--text);
+        }
+
+        .prose + .prose { margin-top: 1rem; }
+
+        /* ---- Nav ---- */
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 50;
+            background: rgba(250, 249, 247, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav.scrolled { border-bottom-color: var(--border); }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            gap: 2rem;
+        }
+
+        .nav-wordmark {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-wordmark .nav-type {
+            height: auto;
+            width: 160px;
+            display: block;
+        }
+
+        /* ---- Section rhythm ---- */
+
+        main { flex: 1; }
+
+        .section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-heading {
+            font-family: var(--font);
+            font-weight: 400;
+            font-size: clamp(1.75rem, 3.25vw, 2.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.028em;
+            color: var(--text);
+            margin-bottom: 2.5rem;
+            max-width: 22ch;
+        }
+
+        /* ---- Hero ---- */
+
+        .hero {
+            padding: 7.5rem 0 2.5rem;
+            position: relative;
+        }
+
+        .hero-headline {
+            font-family: var(--font);
+            font-weight: 300;
+            font-size: clamp(2rem, 4.5vw, 3.5rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            text-wrap: balance;
+            margin-bottom: 1.75rem;
+            color: var(--text);
+            max-width: 18ch;
+        }
+
+        .hero-subhead {
+            font-family: var(--font);
+            font-weight: 300;
+            font-size: clamp(1.0625rem, 1.4vw, 1.1875rem);
+            line-height: 1.6;
+            max-width: 60ch;
+            color: var(--text);
+            margin-bottom: 2.5rem;
+        }
+
+        /* ---- CTA button (shared by hero + final CTA) ---- */
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.1rem 2rem;
+            background: var(--accent);
+            color: #FFFFFF;
+            font-family: var(--font);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .button:hover { background: var(--accent-hover); }
+
+        .button .arrow {
+            display: inline-block;
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .button:hover .arrow { transform: translateX(4px); }
+
+        /* ---- Value bridge (Section 2) ---- */
+
+        .value-heading {
+            font-family: var(--font);
+            font-weight: 400;
+            font-size: clamp(1.75rem, 3.25vw, 2.5rem);
+            line-height: 1.1;
+            letter-spacing: -0.028em;
+            color: var(--text);
+            margin-bottom: 2rem;
+            max-width: 22ch;
+        }
+
+        /* ---- How we work (Section 3) ---- */
+
+        .how-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        @media (min-width: 820px) {
+            .how-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        /* ---- Outcomes (Section 4) ---- */
+
+        .outcomes {
+            list-style: none;
+            counter-reset: outcome;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 60ch;
+        }
+
+        .outcome {
+            counter-increment: outcome;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 1.5rem;
+            align-items: baseline;
+        }
+
+        .outcome::before {
+            content: counter(outcome, decimal-leading-zero);
+            font-family: var(--font);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            line-height: 1.65;
+        }
+
+        .outcome p {
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.65;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .outcome strong {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        /* ---- The details (Section 5) ---- */
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            max-width: 60ch;
+        }
+
+        .detail {
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.65;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .detail strong {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        /* ---- Final CTA (Section 6) ---- */
+
+        .final-cta {
+            padding: 5rem 0 6.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .final-cta-question {
+            font-family: var(--font);
+            font-weight: 400;
+            font-size: clamp(2rem, 4.25vw, 3rem);
+            line-height: 1.02;
+            letter-spacing: -0.03em;
+            color: var(--text);
+            margin-bottom: 2.5rem;
+            max-width: 22ch;
+        }
+
+        .qualifier {
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.65;
+            max-width: 60ch;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .qualifier-email {
+            font-family: var(--font);
+            font-size: 1.0625rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 60ch;
+            margin-bottom: 2rem;
+        }
+
+        .qualifier-email a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 1px;
+            transition: opacity 0.2s ease;
+        }
+
+        .qualifier-email a:hover { opacity: 0.7; }
+
+        /* ---- Footer ---- */
+
+        footer {
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-wordmark-img {
+            height: auto;
+            width: 130px;
+            display: block;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.35rem;
+            font-family: var(--font);
+            font-size: 0.8125rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            text-align: right;
+        }
+
+        .footer-right p { margin: 0; }
+
+        .footer-signature {
+            font-size: 0.9375rem;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-meta { font-size: 0.75rem; opacity: 0.75; }
+
+        /* ---- Reveal animations ---- */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .d1 { transition-delay: 0.05s; }
+        .d2 { transition-delay: 0.15s; }
+        .d3 { transition-delay: 0.25s; }
+        .d4 { transition-delay: 0.38s; }
+        .d5 { transition-delay: 0.5s; }
+
+        /* ---- Responsive ---- */
+
+        @media (max-width: 600px) {
+            .container { padding: 0 1.25rem; }
+            .hero { padding: 6rem 0 2rem; }
+            .final-cta { padding: 3.5rem 0 5rem; }
+            nav .container { height: 56px; }
+            .nav-wordmark .nav-type { width: 130px; }
+            .button { padding: 1rem 1.75rem; font-size: 0.75rem; }
+            .outcome { column-gap: 1rem; }
+            footer .container { gap: 1rem; }
+            .footer-right { align-items: flex-start; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-wordmark" aria-label="Agency State">
+                <img src="../assets/wordmark-black-on-white.svg" alt="Agency State" class="nav-type">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Section 1: Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-headline reveal d1">One workflow. Four weeks. Running on your terms.</h1>
+                <p class="hero-subhead reveal d2">A 1:1 sprint to automate a marketing workflow that's getting in the way of your best work. Four weeks. Two sessions a week, two hours each. Your solution is the focus. We'll use Claude and Claude Code to get there.</p>
+                <a href="https://calendly.com/agencystate/30min" target="_blank" rel="noopener" class="button reveal d3" onclick="plausible('Discovery call: hero')">
+                    <span>Schedule a discovery call</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: Value bridge -->
+        <section class="section">
+            <div class="container">
+                <h2 class="value-heading reveal">Pick the one that's been on your list too long.</h2>
+                <p class="prose reveal d1">You know which workflow it is. The one you keep meaning to fix &mdash; the recurring report, the planning cycle, the content review, the status pull. The work that drags you out of strategy and into the day-to-day. AI was supposed to help, and mostly didn't. The Workflow Automation Sprint is four weeks of hands-on work to automate that workflow.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: How we work together -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading reveal">How we work together</h2>
+                <div class="how-grid">
+                    <div class="how-col">
+                        <p class="prose reveal d1">Twice a week we meet for two hours &mdash; to scope, review, refine, decide. Between sessions, I build. You're welcome to build alongside me. Early sessions lean toward direction-setting. Later sessions lean toward integration and handover. The four-week container is fixed; what happens inside it is shaped by your workflow.</p>
+                        <p class="prose reveal d2">I do the construction. You do the strategic and judgment work &mdash; defining scope, evaluating outputs, making the decisions only you can make. You don't have to write code.</p>
+                        <p class="prose reveal d3">Throughout, I show what I'm building and how. Every prompt, every pattern, every decision is documented as we go.</p>
+                    </div>
+                    <div class="how-col">
+                        <p class="prose reveal d1">The workflow runs on Claude, Claude Code, and lightweight automation &mdash; whatever fits your stack &mdash; so it keeps running after the engagement ends.</p>
+                        <p class="prose reveal d2">Some installation is usually involved. That definitely includes Claude Code on your local machine(s). Depending on the workflow, that might also mean an automation tool like n8n or Zapier, scheduled scripts running where it fits your stack, or API connections to your existing marketing tools. We scope what's needed during the discovery call.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: What you walk away with -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading reveal">What you have at the end of week four</h2>
+                <ol class="outcomes reveal d1">
+                    <li class="outcome"><p><strong>A workflow that works.</strong> A workflow running in your stack, producing real outputs your team uses.</p></li>
+                    <li class="outcome"><p><strong>The build, documented.</strong> The pipeline, the prompts, and the reasoning behind every decision &mdash; written in plain language for your team to read and extend.</p></li>
+                    <li class="outcome"><p><strong>A handover.</strong> Final sessions walk your team through the workflow &mdash; how it runs in your stack, how to extend it, what to do when something breaks.</p></li>
+                    <li class="outcome"><p><strong>The artifacts and the knowledge to attempt the next one.</strong> If your team wants to extend the workflow or build the next one, they have what they need to try.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Section 5: The details -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading reveal">The details</h2>
+                <div class="details reveal d1">
+                    <p class="detail"><strong>Pricing.</strong> $12,500 for the four-week engagement. $6,000 for an optional follow-on month &mdash; additional support, an additional workflow, or coaching as your team adopts.</p>
+                    <p class="detail"><strong>Format.</strong> Sessions are remote by default, via video. On-site sessions are possible when the engagement calls for it; travel and accommodations are billed at cost.</p>
+                    <p class="detail"><strong>The discovery call.</strong> On the call, we'll talk through your workflow &mdash; what it does, what's painful about it, who it touches, what tools it lives in. We'll figure out together whether the engagement is the right shape for what you need. If it is, an engagement letter follows with scope, timeline, and price. If it isn't, you'll leave the call with a clearer picture of what would help.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Qualifier and final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2 class="final-cta-question reveal">Is this right for you?</h2>
+                <p class="qualifier reveal d1">Built for the marketing leader who personally owns a workflow they want to automate &mdash; Director of Marketing, Head of Marketing, Director of Project Management, Senior Account Director &mdash; with budget and decision-making authority over the workflow they bring. You'll come in with a real automation need you have authority to redesign, the data you need available in a form we can work with, and four hours a week for working sessions.</p>
+                <p class="qualifier-email reveal d2">Questions before scheduling? Email <a href="#" id="engagement-email">greg@agencystate.ai</a>.</p>
+                <a href="https://calendly.com/agencystate/30min" target="_blank" rel="noopener" class="button reveal d3" onclick="plausible('Discovery call: final')">
+                    <span>Let's talk through your workflow</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="/" aria-label="Agency State">
+                <img src="../assets/wordmark-black-on-white.svg" alt="Agency State" class="footer-wordmark-img">
+            </a>
+            <div class="footer-right">
+                <p class="footer-signature">&copy; 2026 Agency State, LLC. All rights reserved.</p>
+                <p class="footer-meta">Built with Claude Code</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 16);
+        }, { passive: true });
+
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+
+        reveals.forEach(el => observer.observe(el));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.hero .reveal').forEach(el => {
+                el.classList.add('visible');
+            });
+        });
+
+        // Email obfuscation — assemble address at runtime
+        (function () {
+            var u = 'greg';
+            var d = 'agencystate';
+            var t = 'ai';
+            var addr = u + String.fromCharCode(64) + d + '.' + t;
+
+            var email = document.getElementById('engagement-email');
+            if (email) {
+                email.href = 'mailto:' + addr;
+                email.textContent = addr;
+                email.addEventListener('click', function () {
+                    if (typeof plausible === 'function') {
+                        plausible('Engagement page email');
+                    }
+                });
+            }
+        })();
+    </script>
+
+</body>
+</html>
