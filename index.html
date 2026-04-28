@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agency State</title>
-    <meta name="description" content="I help senior marketing leaders automate the operational work that crowds out strategy. A 1:1 four-week sprint built on Claude and Claude Code.">
+    <meta name="description" content="Agency State builds workflows for marketing leaders with Claude and Claude Code.">
     <link rel="canonical" href="https://agencystate.ai/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agencystate.ai/">
     <meta property="og:title" content="Agency State">
-    <meta property="og:description" content="I help senior marketing leaders automate the operational work that crowds out strategy. A 1:1 four-week sprint built on Claude and Claude Code.">
+    <meta property="og:description" content="">
     <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Agency State">
-    <meta name="twitter:description" content="I help senior marketing leaders automate the operational work that crowds out strategy. A 1:1 four-week sprint built on Claude and Claude Code.">
+    <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
     <link rel="icon" type="image/svg+xml" href="assets/agency-state-mark-orange.svg">
     <link rel="apple-touch-icon" href="assets/agency-state-mark-orange.svg">
@@ -139,9 +139,9 @@
 
         .bio-signoff {
             font-family: var(--font);
-            font-size: 0.9375rem;
+            font-size: 1.0625rem;
             font-weight: 300;
-            color: var(--text-secondary);
+            color: var(--text);
             letter-spacing: 0.02em;
             margin-bottom: 3rem;
         }
@@ -166,12 +166,12 @@
         .offer-prose a {
             color: var(--accent);
             text-decoration: none;
-            border-bottom: 1px solid var(--accent);
-            padding-bottom: 1px;
-            transition: opacity 0.2s ease;
+            transition: color 0.2s ease;
         }
 
-        .offer-prose a:hover { opacity: 0.65; }
+        .offer-prose a:visited { color: var(--accent); }
+
+        .offer-prose a:hover { color: var(--accent-hover); }
 
         /* ---- Section 3: Contact ---- */
 
@@ -191,12 +191,12 @@
         .contact-line a {
             color: var(--accent);
             text-decoration: none;
-            border-bottom: 1px solid var(--accent);
-            padding-bottom: 1px;
-            transition: opacity 0.2s ease;
+            transition: color 0.2s ease;
         }
 
-        .contact-line a:hover { opacity: 0.65; }
+        .contact-line a:visited { color: var(--accent); }
+
+        .contact-line a:hover { color: var(--accent-hover); }
 
         /* ---- Footer ---- */
 
@@ -289,22 +289,21 @@
         <section class="bio-section">
             <div class="container">
                 <h1 class="bio-greeting reveal d1">Hi.</h1>
-                <p class="bio-lead reveal d2">I&rsquo;ve spent over two decades in agency and brand-side marketing &mdash; most recently a decade running the team at The American Institute of Architects. I know what gets in the way of senior leaders doing their best work. Now I help them automate the operational work that crowds out strategy.</p>
-                <p class="bio-signoff reveal d3">&mdash; Greg Appler</p>
+                <p class="bio-lead reveal d2">I&rsquo;ve spent two decades in agency and brand-side marketing &mdash; most recently a decade leading the team at The American Institute of Architects. I know the work that rides alongside strategy: the unexpected demands, the recurring requests, the reporting no one else can build, the work that can&rsquo;t wait. I use Claude and Claude Code to build workflows that take that work off your desk.</p>
             </div>
         </section>
 
-        <!-- Section 2: Current offer (single inline-link sentence) -->
+        <!-- Section 2: Offer + contact (single paragraph) -->
         <section class="offer-section">
             <div class="container">
-                <p class="offer-prose reveal">Right now, I&rsquo;m taking on engagements to automate the work that&rsquo;s eating your team&rsquo;s time. The <a href="/workflow-automation-sprint" id="homepage-offer-link">Workflow Automation Sprint</a> is a four-week 1:1.</p>
+                <p class="offer-prose reveal">I&rsquo;m currently booking <a href="/workflow-automation-sprint" id="homepage-offer-link">Workflow Automation Sprints</a> for marketing leaders. If I can answer a question or you want to talk shop, email <a href="#" id="homepage-email">Email Greg</a> or find me on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
             </div>
         </section>
 
-        <!-- Section 3: Contact -->
+        <!-- Section 3: Signoff -->
         <section class="contact-section">
             <div class="container">
-                <p class="contact-line reveal">If I can answer a question, help you think through a workflow, or you just want to talk shop, email <a href="#" id="homepage-email">greg@agencystate.ai</a> or find me on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
+                <p class="bio-signoff reveal">&mdash; Greg Appler</p>
             </div>
         </section>
 
