@@ -2,8 +2,8 @@
 
 This is the **public** repo for the Agency State marketing site (agencystate.ai). It is served by GitHub Pages and anything committed here is publicly visible.
 
-Internal content lives in private companion repos and the Obsidian vault:
-- Brand book, brand guidelines, and the strategic brief: Obsidian vault (paths below)
+Internal content lives in private companion repos:
+- Brand book, brand guidelines, and the strategic brief: [`agency-state-practice`](https://github.com/gappler/agency-state-practice) (paths below)
 - Outbound comms drafts: [`agency-state-publishing`](https://github.com/gappler/agency-state-publishing)
 - Practice-level working docs and engagement playbooks: [`agency-state-practice`](https://github.com/gappler/agency-state-practice)
 - The agent system: [`agency-state-agents`](https://github.com/gappler/agency-state-agents)
@@ -22,11 +22,11 @@ Two pages are live: the homepage at `/` (umbrella personal-statement page) and `
 
 ## Brand and Strategy — read before writing copy
 
-The canonical brand book, brand guidelines, and strategic brief live in the Obsidian vault:
+The canonical brand book, brand guidelines, and strategic brief live in the `agency-state-practice` repo:
 
-- Brand book: /Users/gregappler/Documents/Obsidian/GregoryLee/01 Agency State/01 Brand/brand-book.md
-- Brand guidelines: /Users/gregappler/Documents/Obsidian/GregoryLee/01 Agency State/01 Brand/brand-guidelines.md
-- Brief: /Users/gregappler/Documents/Obsidian/GregoryLee/01 Agency State/02 Strategy/brief.md
+- Brand book: `/Users/gregappler/Claude Code Projects/agency-state-practice/brand/brand-book.md`
+- Brand guidelines: `/Users/gregappler/Claude Code Projects/agency-state-practice/brand/brand-guidelines.md`
+- Brief: `/Users/gregappler/Claude Code Projects/agency-state-practice/strategy/brief.md`
 
 **Read these directly before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand book is the voice and copy tiebreaker; the brand guidelines settle visual identity questions; the brief settles audience, offer, and pricing language.
 
@@ -40,7 +40,7 @@ Do not restate brand or strategy rules in this repo.
 
 ## Git Discipline
 
-- **This repo is public.** Never commit internal content here. Brand and strategy live in the Obsidian vault; outbound drafts in `agency-state-publishing`; practice docs in `agency-state-practice`; agents in `agency-state-agents`.
+- **This repo is public.** Never commit internal content here. Brand, strategy, and practice docs live in `agency-state-practice`; outbound drafts in `agency-state-publishing`; agents in `agency-state-agents`.
 - Commit in focused, descriptive units. Don't let unrelated changes pile up in one commit.
 - Write commit messages that explain the *why*, not just the *what*.
 - Don't commit `.DS_Store` or other macOS cruft (already in `.gitignore`).
