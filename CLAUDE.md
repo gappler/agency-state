@@ -1,12 +1,18 @@
-            # Project Rules — agency-state
+# Project Rules — agency-state
 
 This is the **public** repo for the Agency State marketing site (agencystate.ai). It is served by GitHub Pages and anything committed here is publicly visible.
 
-Internal content lives in three private companion repos: curriculum, pricing, research, and strategy in [`agency-state-curriculum`](https://github.com/gappler/agency-state-curriculum); brand resources (brand book, brand guidelines, illustrator files) in [`agency-state-practice`](https://github.com/gappler/agency-state-practice); and outbound comms in [`agency-state-publishing`](https://github.com/gappler/agency-state-publishing). If you need to read or edit brand rules, session designs, pricing strategy, or internal research, work in the appropriate private repo — not this one.
+Internal content lives in private companion repos and the Obsidian vault:
+- Brand book, brand guidelines, and the strategic brief: Obsidian vault (paths below)
+- Outbound comms drafts: [`agency-state-publishing`](https://github.com/gappler/agency-state-publishing)
+- Practice-level working docs and engagement playbooks: [`agency-state-practice`](https://github.com/gappler/agency-state-practice)
+- The agent system: [`agency-state-agents`](https://github.com/gappler/agency-state-agents)
 
-## Current state (April 2026)
+If you need to read or edit brand rules, strategic decisions, or internal research, work in the appropriate location — not this public repo.
 
-Two pages are live: the homepage at `/` (umbrella personal-statement page) and `/workflow-automation-sprint/` (the current 1:1 engagement). `/associations/` is a separate coming-soon holding page, not in active development. Cohort 1 of the Annual Planning Cohort is being prepared for the week of July 13, 2026; previous cohort page work lives in `git log` history.
+## Current state (May 2026)
+
+Two pages are live: the homepage at `/` (umbrella personal-statement page) and `/workflow-automation-sprint/` (the current 1:1 engagement). Cohort 1 of the Annual Planning Cohort is being prepared for the week of July 13, 2026; previous cohort and associations page work lives in `git log` history.
 
 ## Repo Layout
 
@@ -14,13 +20,17 @@ Two pages are live: the homepage at `/` (umbrella personal-statement page) and `
 - `assets/` — wordmark, mark, and og-image files (`.svg`, `.png`)
 - `CNAME` — GitHub Pages custom domain
 
-## Brand
+## Brand and Strategy — read before writing copy
 
-Brand decisions are settled by the brand book in `agency-state-practice/brand/brand-book.md`. The visual system is settled by the brand guidelines in `agency-state-practice/brand/brand-guidelines.md`. Read both before writing or editing copy or styles on this site. Do not restate brand rules here.
+The canonical brand book, brand guidelines, and strategic brief live in the Obsidian vault:
 
-## Strategy
+- Brand book: /Users/gregappler/Documents/Obsidian/GregoryLee/01 Agency State/01 Brand/brand-book.md
+- Brand guidelines: /Users/gregappler/Documents/Obsidian/GregoryLee/01 Agency State/01 Brand/brand-guidelines.md
+- Brief: /Users/gregappler/Documents/Obsidian/GregoryLee/01 Agency State/02 Strategy/brief.md
 
-Strategic decisions — audience, offer, format, pricing — are settled by `agency-state-curriculum/strategy/agency-state-brief-v2.md`. Read it before editing site copy related to the cohort offer.
+**Read these directly before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand book is the voice and copy tiebreaker; the brand guidelines settle visual identity questions; the brief settles audience, offer, and pricing language.
+
+Do not restate brand or strategy rules in this repo.
 
 ## Document Conventions
 
@@ -30,7 +40,7 @@ Strategic decisions — audience, offer, format, pricing — are settled by `age
 
 ## Git Discipline
 
-- **This repo is public.** Never commit internal content here. Curriculum, pricing, and research live in `agency-state-curriculum`; brand resources live in `agency-state-practice`; outbound drafts live in `agency-state-publishing`.
+- **This repo is public.** Never commit internal content here. Brand and strategy live in the Obsidian vault; outbound drafts in `agency-state-publishing`; practice docs in `agency-state-practice`; agents in `agency-state-agents`.
 - Commit in focused, descriptive units. Don't let unrelated changes pile up in one commit.
 - Write commit messages that explain the *why*, not just the *what*.
 - Don't commit `.DS_Store` or other macOS cruft (already in `.gitignore`).
