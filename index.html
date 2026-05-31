@@ -150,6 +150,29 @@
 
         .offer-prose a:hover { color: var(--accent-hover); }
 
+        /* ---- Capabilities (practice section) ---- */
+
+        .practice-section { padding: 2.5rem 0 0; }
+
+        .capabilities {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            max-width: 60ch;
+            margin-bottom: 1.75rem;
+        }
+
+        .capability {
+            font-family: var(--font);
+            font-weight: 300;
+            font-size: 1.125rem;
+            line-height: 1.65;
+            color: var(--text);
+            text-wrap: pretty;
+        }
+
+        .capability strong { font-weight: 700; }
+
         /* ---- Footer (no top border) ---- */
 
         footer {
@@ -221,6 +244,7 @@
         .d1 { transition-delay: 0.05s; }
         .d2 { transition-delay: 0.15s; }
         .d3 { transition-delay: 0.25s; }
+        .d4 { transition-delay: 0.35s; }
 
         /* ---- Responsive ---- */
 
@@ -247,12 +271,27 @@
 
     <main>
 
-        <!-- Hero: tagline-variant H1, bio, inline offer mention -->
+        <!-- Hero: tagline H1, the shift, bio -->
         <section class="hero-section">
             <div class="container">
                 <h1 class="hero-tagline reveal d1">Enabling human/AI marketing teams</h1>
-                <p class="bio-lead reveal d2">I&rsquo;m Greg Appler. I help marketing teams produce work in their existing stack, at a scale and quality they couldn&rsquo;t reach on their own. That&rsquo;s what I do as Agency State.</p>
-                <p class="offer-prose reveal d3">To connect: <a href="https://calendly.com/agencystate/30min" target="_blank" rel="noopener" id="homepage-schedule-call">schedule a call</a> or <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
+                <p class="bio-lead reveal d2">Claude Code, Codex, n8n, and other tools are changing how marketing teams operate, letting them orchestrate autonomous AI agents and workflows through custom integrations. Instead of the prompt-and-response chat box, marketers use these tools to automate high-level work like audience segmentation, funnel analysis, and campaign strategy &mdash; and to scale the repetitive production that eats a team&rsquo;s time: content drafting, ad variations, and reporting.</p>
+                <p class="bio-lead reveal d3">I&rsquo;m Greg Appler, a career marketer for brands including Nissan North America, Bacardi Global Brands, and most recently a decade leading the marketing team at The American Institute of Architects, a $65M, 100,000-member, 250-chapter professional association. Systems, processes, and technology have always been an interest, and I started Agency State to help marketing teams deploy AI to deliver work at a scale and quality they couldn&rsquo;t reach on their own.</p>
+            </div>
+        </section>
+
+        <!-- What that looks like in practice -->
+        <section class="practice-section">
+            <div class="container">
+                <p class="bio-lead reveal d1">Here&rsquo;s what that looks like in practice:</p>
+                <div class="capabilities reveal d2">
+                    <p class="capability"><strong>A team of agents, not a single chatbot.</strong> Distinct AI roles that work together across a campaign &mdash; one scrapes trends, one analyzes them, one drafts, one reviews. They run independently and keep context between runs.</p>
+                    <p class="capability"><strong>Audits and plans in minutes.</strong> The system reviews a URL and returns health scores, prioritized actions, and a 90-day plan &mdash; the kind of work that used to take a strategist days.</p>
+                    <p class="capability"><strong>Your standards, built in.</strong> Your SOPs, brand voice, and the rules for what ships and who signs off get written down once, so the work comes out to your standard without re-explaining it every time.</p>
+                    <p class="capability"><strong>Connected to your live data.</strong> A direct link to your ad platforms and CRM &mdash; Meta, Google Ads, HubSpot &mdash; pulls real numbers the agents can act on. And publish your brand and other standards with MCP, and every tool and workflow you run has access.</p>
+                </div>
+                <p class="bio-lead reveal d3">None of this is plug-and-play, and the work of Agency State is helping you build the operating framework and the capability to run it. It starts by mapping the repeatable parts of your marketing, writing down the context the system needs to sound and act like you, and connecting it to your data &mdash; then building it out. That&rsquo;s Agency State.</p>
+                <p class="offer-prose reveal d4">To connect: <a href="https://calendly.com/agencystate/30min" target="_blank" rel="noopener" id="homepage-schedule-call">schedule a call</a> or find me on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
             </div>
         </section>
 
