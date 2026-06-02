@@ -11,31 +11,26 @@ Internal content lives in private companion repos:
 
 If you need to read or edit brand rules, strategic decisions, or internal research, work in the appropriate location — not this public repo.
 
-## Current state (June 2026)
-
-One page is live: the homepage at `/` (umbrella personal-statement page). The retired `/workflow-automation-sprint/` engagement page was moved out to `agency-state-practice/website/retired/` — this repo now serves a single page. Cohort 1 of the Annual Planning Cohort is being prepared for the week of July 13, 2026; previous cohort and associations page work lives in `git log` history.
-
 ## Repo Layout
 
 - `index.html` — single-page marketing site
 - `assets/` — only the files the site actually serves: `wordmark-black-on-white.svg` (logo), `agency-state-mark-black.svg` (favicon), `og-image.png` (OG/Twitter card). Keep this folder limited to served files. Canonical brand marks live in `agency-state-brand/assets/`; OG-image source templates and demo-card renders live in `agency-state-practice/website/`.
 - `CNAME` — GitHub Pages custom domain
 
-## Brand and Strategy — read before writing copy
+## Brand — read before writing copy
 
-The canonical brand platform and guidelines live in the `agency-state-brand` repo; strategic working notes live in `agency-state-practice`. The repos are siblings, so these paths resolve from this repo's root:
+The canonical brand platform and guidelines live in the `agency-state-brand` repo. The repos are siblings, so these paths resolve from this repo's root:
 
 - Brand platform: `../agency-state-brand/brand-platform.md`
 - Brand guidelines: `../agency-state-brand/brand-guidelines.md`
-- Strategic working notes: `../agency-state-practice/strategy/working-notes.md`
 
-**Read these directly before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand platform is the voice and copy tiebreaker; the brand guidelines settle visual identity questions; the working notes settle audience, offer, and pricing language.
+**Read these directly before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand platform is the voice and copy tiebreaker; the brand guidelines settle visual identity questions.
 
-Do not restate brand or strategy rules in this repo.
+Do not restate brand rules in this repo.
 
 ## Git Discipline
 
-- **This repo is public.** Never commit internal content here. Brand, strategy, and practice docs live in `agency-state-practice`; outbound drafts in `agency-state-publishing`; agents in `agency-state-agents`.
+- **This repo is public.** Never commit internal content here. Brand lives in `agency-state-brand`; practice docs in `agency-state-practice`; outbound drafts in `agency-state-publishing`; agents in `agency-state-agents`.
 - Commit in focused, descriptive units. Don't let unrelated changes pile up in one commit.
 - Write commit messages that explain the *why*, not just the *what*.
 - Don't commit `.DS_Store` or other macOS cruft (already in `.gitignore`).
