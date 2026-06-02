@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found — Agency State</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="/assets/agency-state-mark-black.svg">
+    <link rel="apple-touch-icon" href="/assets/agency-state-mark-black.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --text: #1A1A1A;
+            --text-secondary: #5C5C5C;
+            --bg: #FAF9F7;
+            --accent: #D4602A;
+            --accent-hover: #B8521F;
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        html { font-size: 16px; }
+
+        body {
+            font-family: var(--font);
+            font-weight: 300;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .wordmark { width: 180px; height: auto; margin-bottom: 3.5rem; }
+
+        .code {
+            font-size: 0.875rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            max-width: 18ch;
+            text-wrap: balance;
+            margin-bottom: 1.25rem;
+        }
+
+        p {
+            font-size: 1.0625rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 38ch;
+            margin-bottom: 2.5rem;
+        }
+
+        .home-link {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .home-link:hover { color: var(--accent-hover); border-bottom-color: var(--accent-hover); }
+    </style>
+</head>
+<body>
+    <a href="/"><img class="wordmark" src="/assets/wordmark-black-on-white.svg" alt="Agency State"></a>
+    <div class="code">404</div>
+    <h1>This page isn&rsquo;t here.</h1>
+    <p>The page you were looking for has moved or is no longer live.</p>
+    <a class="home-link" href="/">Back to the homepage &rarr;</a>
+</body>
+</html>

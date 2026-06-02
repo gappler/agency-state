@@ -3,40 +3,35 @@
 This is the **public** repo for the Agency State marketing site (agencystate.ai). It is served by GitHub Pages and anything committed here is publicly visible.
 
 Internal content lives in private companion repos:
-- Brand book, brand guidelines, and the strategic brief: [`agency-state-practice`](https://github.com/gappler/agency-state-practice) (paths below)
+- Brand platform, brand guidelines, and visual identity: [`agency-state-brand`](https://github.com/gappler/agency-state-brand) (paths below)
+- Strategic working notes (offers, pricing, positioning): [`agency-state-practice`](https://github.com/gappler/agency-state-practice)
 - Outbound comms drafts: [`agency-state-publishing`](https://github.com/gappler/agency-state-publishing)
 - Practice-level working docs and engagement playbooks: [`agency-state-practice`](https://github.com/gappler/agency-state-practice)
 - The agent system: [`agency-state-agents`](https://github.com/gappler/agency-state-agents)
 
 If you need to read or edit brand rules, strategic decisions, or internal research, work in the appropriate location — not this public repo.
 
-## Current state (May 2026)
+## Current state (June 2026)
 
-Two pages are live: the homepage at `/` (umbrella personal-statement page) and `/workflow-automation-sprint/` (the current 1:1 engagement). Cohort 1 of the Annual Planning Cohort is being prepared for the week of July 13, 2026; previous cohort and associations page work lives in `git log` history.
+One page is live: the homepage at `/` (umbrella personal-statement page). The retired `/workflow-automation-sprint/` engagement page was moved out to `agency-state-practice/website/retired/` — this repo now serves a single page. Cohort 1 of the Annual Planning Cohort is being prepared for the week of July 13, 2026; previous cohort and associations page work lives in `git log` history.
 
 ## Repo Layout
 
 - `index.html` — single-page marketing site
-- `assets/` — wordmark, mark, and og-image files (`.svg`, `.png`)
+- `assets/` — only the files the site actually serves: `wordmark-black-on-white.svg` (logo), `agency-state-mark-black.svg` (favicon), `og-image.png` (OG/Twitter card). Keep this folder limited to served files. Canonical brand marks live in `agency-state-brand/assets/`; OG-image source templates and demo-card renders live in `agency-state-practice/website/`.
 - `CNAME` — GitHub Pages custom domain
 
 ## Brand and Strategy — read before writing copy
 
-The canonical brand book, brand guidelines, and strategic brief live in the `agency-state-practice` repo:
+The canonical brand platform and guidelines live in the `agency-state-brand` repo; strategic working notes live in `agency-state-practice`. The repos are siblings, so these paths resolve from this repo's root:
 
-- Brand book: `/Users/gregappler/Claude Code Projects/agency-state-practice/brand/brand-book.md`
-- Brand guidelines: `/Users/gregappler/Claude Code Projects/agency-state-practice/brand/brand-guidelines.md`
-- Brief: `/Users/gregappler/Claude Code Projects/agency-state-practice/strategy/brief.md`
+- Brand platform: `../agency-state-brand/brand-platform.md`
+- Brand guidelines: `../agency-state-brand/brand-guidelines.md`
+- Strategic working notes: `../agency-state-practice/strategy/working-notes.md`
 
-**Read these directly before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand book is the voice and copy tiebreaker; the brand guidelines settle visual identity questions; the brief settles audience, offer, and pricing language.
+**Read these directly before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand platform is the voice and copy tiebreaker; the brand guidelines settle visual identity questions; the working notes settle audience, offer, and pricing language.
 
 Do not restate brand or strategy rules in this repo.
-
-## Document Conventions
-
-- Generated markdown documents should include a YAML frontmatter header (title, date, version, status) per global preferences.
-- Track versions inside files via frontmatter, not in filenames.
-- New files: prefer lowercase with hyphens.
 
 ## Git Discipline
 
