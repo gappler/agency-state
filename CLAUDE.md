@@ -19,12 +19,9 @@ If you need to read or edit brand rules, strategic decisions, or internal resear
 
 ## Brand — read before writing copy
 
-The canonical brand platform and guidelines live in the `agency-state-brand` repo. The repos are siblings, so these paths resolve from this repo's root:
+Pull brand voice/positioning via the **brand MCP** (`get_brand_voice` / `get_full_platform`) — always current. **Do this before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand platform is the voice/copy tiebreaker; the guidelines settle visual identity.
 
-- Brand platform: `../agency-state-brand/brand-platform.md`
-- Brand guidelines: `../agency-state-brand/brand-guidelines.md`
-
-**Read these directly before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand platform is the voice and copy tiebreaker; the brand guidelines settle visual identity questions.
+If the MCP isn't connected, fall back to the canonical files in the sibling `agency-state-brand` repo: `../agency-state-brand/brand-platform.md` and `../agency-state-brand/brand-guidelines.md`.
 
 Do not restate brand rules in this repo.
 
