@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code for marketing teams — Agency State</title>
+<meta name="description" content="A free six-part guide to building, connecting, running, and governing marketing work with AI. Written for marketing teams, grounded in the official Claude Code docs.">
+<link rel="canonical" href="https://agencystate.ai/claude-code-for-marketing/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agencystate.ai/claude-code-for-marketing/">
+<meta property="og:title" content="Claude Code for marketing teams">
+<meta property="og:description" content="A free six-part guide to building, connecting, running, and governing marketing work with AI.">
+<meta property="og:image" content="https://agencystate.ai/assets/og-claude-code-for-marketing.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Code for marketing teams">
+<meta name="twitter:description" content="A free six-part guide to building, connecting, running, and governing marketing work with AI.">
+<meta name="twitter:image" content="https://agencystate.ai/assets/og-claude-code-for-marketing.png">
+<link rel="icon" type="image/svg+xml" href="../assets/agency-state-mark-orange.svg">
+<link rel="apple-touch-icon" href="../assets/agency-state-mark-orange.svg">
+<script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --text:#1A1A1A; --text-secondary:#5C5C5C; --bg:#FAF9F7; --card-bg:#FFFFFF;
+  --card-hover:#F5F4F2; --border:#E0DFDC; --accent:#D4602A; --accent-hover:#B8521F;
+  --on-accent:#FFFFFF;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+}
+html{font-size:16px;scroll-behavior:smooth;}
+body{font-family:var(--font);font-weight:300;font-size:1.0625rem;line-height:1.6;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,249,247,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:border-color .3s ease;}
+nav.scrolled{border-bottom-color:var(--border);}
+nav .container{display:flex;align-items:center;height:64px;}
+.wordmark{display:flex;align-items:center;text-decoration:none;}
+.nav-type{width:160px;display:block;}
+
+.cta{display:inline-block;background:none;color:var(--accent);font-size:1.0625rem;font-weight:700;letter-spacing:.01em;text-decoration:none;padding:1rem 2rem;border:1.5px solid var(--accent);border-radius:8px;cursor:pointer;font-family:var(--font);transition:background .2s ease,color .2s ease;}
+.cta:hover{background:var(--accent);color:var(--on-accent);}
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);column-gap:4rem;align-items:start;padding:8.5rem 0 4rem;
+  grid-template-areas:"hero panel" "inside panel" "author panel";}
+.hero-text{grid-area:hero;}
+.panel{grid-area:panel;position:sticky;top:88px;}
+.inside{grid-area:inside;margin-top:4rem;}
+.author{grid-area:author;margin-top:4rem;}
+
+.hero-text h1{font-size:clamp(2.5rem,5.4vw,4.25rem);font-weight:700;line-height:1.02;letter-spacing:-.035em;max-width:15ch;text-wrap:balance;margin-bottom:1.75rem;}
+.hero-text h1 em{color:var(--accent);font-style:normal;}
+.hero-text .dek{font-size:1.25rem;font-weight:300;line-height:1.5;color:var(--text-secondary);max-width:46ch;text-wrap:pretty;margin-bottom:1.5rem;}
+.hero-text .dek strong{font-weight:700;color:var(--text);}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
+
+.panel-cover[hidden],.panel-form[hidden],.panel-thanks[hidden]{display:none;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+.panel-cover:not([hidden]),.panel-form:not([hidden]),.panel-thanks:not([hidden]){animation:fadeUp .35s cubic-bezier(.22,1,.36,1);}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+.cover{background:var(--card-bg);border:1px solid var(--border);border-radius:4px;padding:2rem;aspect-ratio:8.5/11;display:flex;flex-direction:column;}
+.cover .cw{width:140px;display:block;margin-bottom:auto;}
+.cover .mark{width:34px;height:34px;display:block;margin-bottom:1.25rem;}
+.cover .ct{font-size:1.75rem;font-weight:700;line-height:1.08;letter-spacing:-.02em;margin-bottom:.75rem;}
+.cover .cd{font-size:.9375rem;font-weight:300;color:var(--text-secondary);line-height:1.5;margin-bottom:1.25rem;}
+.cover .cmeta{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);}
+.cover .cmeta .pdf{color:var(--accent);}
+.panel-cover .cta{width:100%;text-align:center;margin-top:1.25rem;}
+
+.lead-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:2.5rem;}
+.back{font-size:.8125rem;font-weight:700;color:var(--text-secondary);background:none;border:none;cursor:pointer;font-family:var(--font);padding:0;margin-bottom:1rem;}
+.back:hover{color:var(--accent);}
+.lead-card h2{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lead-card .fsub{font-size:.9375rem;font-weight:300;color:var(--text-secondary);margin-bottom:1.5rem;}
+.field{margin-bottom:1rem;}
+.field label{display:block;font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:.5rem;}
+.field input,.field select{width:100%;font-family:var(--font);font-size:1rem;font-weight:300;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem;transition:border-color .2s ease;}
+.field input:focus,.field select:focus{outline:none;border-color:var(--accent);}
+.consent{display:flex;gap:.5rem;align-items:flex-start;margin:1rem 0 1.25rem;font-size:.875rem;font-weight:300;color:var(--text-secondary);line-height:1.45;}
+.consent input{margin-top:.25rem;flex-shrink:0;}
+.lead-card .cta{width:100%;text-align:center;}
+.form-note{font-size:.8125rem;color:var(--text-secondary);text-align:center;margin-top:1rem;}
+
+
+.arc{margin-top:2rem;display:flex;flex-direction:column;gap:1.75rem;}
+.arc-title{font-size:1.4375rem;font-weight:400;letter-spacing:-.01em;margin-bottom:.5rem;}
+.arc-num{color:var(--accent);font-weight:400;margin-right:.75rem;}
+.arc-desc{font-size:1.0625rem;font-weight:300;color:var(--text-secondary);max-width:60ch;line-height:1.55;}
+
+.author p{font-size:1.1875rem;font-weight:300;line-height:1.65;color:var(--text);margin-top:1.25rem;}
+.author .ph{color:var(--accent);font-weight:400;}
+
+footer{padding:2.5rem 0;}
+footer .container{display:flex;flex-direction:column;gap:1.5rem;}
+.footer-services{font-family:var(--font);font-weight:300;font-size:.8125rem;line-height:1.6;color:var(--text-secondary);max-width:60ch;text-wrap:pretty;}
+.footer-bar{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.footer-wordmark-img{height:auto;width:130px;display:block;}
+.footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;font-family:var(--font);font-size:.8125rem;font-weight:300;color:var(--text-secondary);text-align:right;}
+.footer-right p{margin:0;}
+.footer-signature{font-size:.9375rem;letter-spacing:.02em;}
+
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;grid-template-areas:"hero" "panel" "inside" "author";padding:6.5rem 0 3rem;}
+  .panel{position:static;margin:2.5rem auto 0;max-width:420px;}
+  .inside,.author{margin-top:3rem;}
+  .cover{max-width:380px;margin:0 auto;}
+}
+@media(max-width:600px){
+  .container{padding:0 1.25rem;}
+  nav .container{height:56px;}
+  .lead-card{padding:1.75rem;}
+  footer .container{gap:1rem;}
+  .footer-right{align-items:flex-start;text-align:left;}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.panel-cover,.panel-form{animation:none!important;}}
+</style>
+</head>
+<body>
+
+<nav><div class="container">
+  <a href="/" class="wordmark" aria-label="Agency State"><img src="../assets/wordmark-black-on-white.svg" alt="Agency State" class="nav-type"></a>
+</div></nav>
+
+<main>
+  <div class="container">
+    <div class="layout">
+
+      <div class="hero-text">
+        <h1>Claude Code for <em>marketing</em> teams</h1>
+        <p class="dek">A <strong>free</strong> six-part guide to building, connecting, running, and governing marketing work with AI. Written for marketers, grounded in the official Claude Code docs, and meant to be read in an afternoon.</p>
+      </div>
+
+      <aside class="panel" id="get">
+        <div class="panel-cover">
+          <div class="cover" aria-hidden="true">
+            <img class="cw" src="../assets/wordmark-black-on-white.svg" alt="Agency State">
+            <img class="mark" src="../assets/agency-state-mark-orange.svg" alt="">
+            <div class="ct">Claude Code for marketing teams</div>
+            <div class="cd">A six-part guide to building, connecting, running, and governing marketing work.</div>
+            <div class="cmeta"><span class="pdf">PDF</span> &middot; June 2026</div>
+          </div>
+          <button class="cta js-get">Get the guide</button>
+        </div>
+        <div class="panel-form lead-card" hidden>
+          <button class="back js-back" type="button">&larr; Back</button>
+          <form id="lead-form" novalidate>
+            <h2>Get the guide</h2>
+            <p class="fsub">Free PDF. Tell me where to send it.</p>
+            <div class="field"><label for="lf-email">Email</label><input id="lf-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
+            <div class="field"><label for="lf-org">Type of organization</label><select id="lf-org" name="org_type"><option>Agency</option><option>In-house / brand marketing team</option><option>Freelancer / solo</option><option>Other</option></select></div>
+            <div class="field"><label for="lf-title">Title</label><input id="lf-title" name="title" type="text" placeholder="e.g. Marketing Director"></div>
+            <label class="consent"><input name="consent" type="checkbox"> Send me occasional notes from Agency State. Unsubscribe anytime.</label>
+            <div class="hp" aria-hidden="true"><label>Company URL<input name="company_url" tabindex="-1" autocomplete="off"></label></div>
+            <button class="cta" type="submit">Send me the guide</button>
+            <p class="form-note" id="lf-note">One email with the guide. No spam.</p>
+          </form>
+        </div>
+        <div class="panel-thanks lead-card" hidden>
+          <h2>Check your inbox.</h2>
+          <p class="fsub">The guide is on its way. If it's not there in a minute, check spam.</p>
+        </div>
+      </aside>
+
+      <div class="inside">
+        <h2 class="eyebrow">What's inside</h2>
+        <div class="arc">
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">01</span>Build reusable marketing workflows</h3><div class="arc-desc">Turn a process you repeat — briefs, copy QA, recaps — into a system anyone on the team runs the same way every time.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">02</span>Connect AI to your tools</h3><div class="arc-desc">Put your CMS, analytics, drive, and project tools in reach, so the work happens where your data already lives.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">03</span>Run it hands-off</h3><div class="arc-desc">Weekly audits, competitor digests, monthly reports — recurring work that's done before you open your laptop.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">04</span>Put it in non-coders' hands</h3><div class="arc-desc">The desktop app, no terminal, approve every change — the on-ramp a non-technical marketer actually uses.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">05</span>Govern it</h3><div class="arc-desc">Where your data goes, what the agent can do, what it costs — the answers a client's security team asks first.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">06</span>Roll it out to a team</h3><div class="arc-desc">Shared skills, enforced guardrails, and visibility — one governed system instead of a few clever solo setups.</div></div>
+        </div>
+      </div>
+
+      <div class="author">
+        <h2 class="eyebrow">The part that matters</h2>
+        <p>Claude Code may sound like a coding tool, but for a marketing team, that framing buries the part that matters: it's a system for building and governing AI that does the work marketers repeat — briefs, brand content, campaign analysis — the same way every time. This document shows you how.</p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer><div class="container">
+  <p class="footer-services">Agency State is a marketing consulting practice. I help marketing teams build workflows, integrations, documentation, and the processes to put AI to work.</p>
+  <div class="footer-bar">
+    <a href="/" aria-label="Agency State"><img src="../assets/wordmark-black-on-white.svg" alt="Agency State" class="footer-wordmark-img"></a>
+    <div class="footer-right">
+      <p class="footer-signature">&copy; 2026 Agency State, LLC. All rights reserved.</p>
+    </div>
+  </div>
+</div></footer>
+
+<script>
+  const panel=document.getElementById('get');
+  const cover=panel.querySelector('.panel-cover');
+  const formPanel=panel.querySelector('.panel-form');
+  const thanks=panel.querySelector('.panel-thanks');
+  const leadForm=document.getElementById('lead-form');
+
+  // After `supabase functions deploy submit-lead`, set this to the function URL:
+  // https://<project-ref>.supabase.co/functions/v1/submit-lead
+  const ENDPOINT="https://rxpnisokhhlviopukfie.supabase.co/functions/v1/submit-lead";
+
+  function showForm(scroll){
+    cover.hidden=true; thanks.hidden=true; formPanel.hidden=false;
+    if(scroll) panel.scrollIntoView({behavior:'smooth',block:'center'});
+    const email=formPanel.querySelector('input[type=email]');
+    setTimeout(()=>email&&email.focus(),scroll?350:0);
+  }
+  function showCover(){ formPanel.hidden=true; thanks.hidden=true; cover.hidden=false; }
+  document.querySelectorAll('.js-get').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();showForm(true);}));
+  document.querySelector('.js-back').addEventListener('click',showCover);
+
+  leadForm.addEventListener('submit',async (e)=>{
+    e.preventDefault();
+    const note=document.getElementById('lf-note');
+    const btn=leadForm.querySelector('button[type=submit]');
+    const fd=new FormData(leadForm);
+    const data={
+      email:(fd.get('email')||'').toString().trim(),
+      org_type:(fd.get('org_type')||'').toString(),
+      title:(fd.get('title')||'').toString(),
+      consent:leadForm.querySelector('[name=consent]').checked,
+      company_url:(fd.get('company_url')||'').toString()
+    };
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email)){ note.textContent="Please enter a valid email address."; return; }
+    btn.disabled=true; note.textContent="Sending…";
+    try{
+      const r=await fetch(ENDPOINT,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});
+      if(!r.ok) throw new Error('bad_response');
+      formPanel.hidden=true; thanks.hidden=false;
+    }catch(_){ btn.disabled=false; note.textContent="Something went wrong — please try again."; }
+  });
+
+  const navEl=document.querySelector('nav');
+  window.addEventListener('scroll',()=>{navEl.classList.toggle('scrolled',window.scrollY>16);},{passive:true});
+</script>
+
+</body>
+</html>
