@@ -274,25 +274,10 @@
         <!-- Hero: tagline H1, the shift, bio -->
         <section class="hero-section">
             <div class="container">
-                <h1 class="hero-tagline reveal d1">Enabling human/AI marketing teams</h1>
-                <p class="bio-lead reveal d2">Claude Code, Codex, n8n, and other tools are changing how marketing teams operate, letting them orchestrate autonomous AI agents and workflows through custom integrations. Instead of the prompt-and-response chat box, marketers use these tools to automate high-level work like audience segmentation, funnel analysis, and campaign strategy &mdash; and to scale repetitive production that eats a team&rsquo;s time: first drafts, ad variations, and reporting.</p>
-                <p class="bio-lead reveal d3">I&rsquo;m Greg Appler, a career marketer for brands including Nissan North America, Bacardi Global Brands, and most recently a decade leading the marketing team at The American Institute of Architects, a $65M, 100,000-member, 250-chapter professional association. Marketing systems and tech have always been an interest, and I started Agency State to help teams deploy AI to deliver work at a scale and quality they couldn&rsquo;t reach on their own.</p>
-            </div>
-        </section>
-
-        <!-- What that looks like in practice -->
-        <section class="practice-section">
-            <div class="container">
-                <p class="bio-lead reveal d1">Here&rsquo;s what that looks like in practice:</p>
-                <div class="capabilities reveal d2">
-                    <p class="capability"><strong>A team of agents.</strong> Distinct AI roles that work together across a campaign &mdash; one scrapes trends, one analyzes them, one drafts, one reviews. They run independently and keep context between runs.</p>
-                    <p class="capability"><strong>Audits and plans in minutes.</strong> The system reviews a URL and returns health scores, prioritized actions, and a 90-day plan &mdash; the kind of work that used to take a strategist days.</p>
-                    <p class="capability"><strong>Your standards, built in.</strong> Your SOPs, brand voice, and the rules for what ships and who signs off get written down once, so the work comes out to your standard without re-explaining it every time.</p>
-                    <p class="capability"><strong>Connected to your live data.</strong> A direct link to your ad platforms and CRM &mdash; Meta, Google Ads, HubSpot &mdash; pulls real numbers the agents can act on.</p>
-                </div>
-                <p class="bio-lead reveal d3">None of this is plug-and-play, and the work of Agency State is helping you build the operating framework and the capability to run it. It starts by mapping the repeatable parts of your marketing, codifying the context the system needs to sound and act like you, and connecting it to your data &mdash; then building it out.</p>
-                <p class="bio-lead reveal d3">That&rsquo;s Agency State.</p>
-                <p class="offer-prose reveal d4">To connect: <a href="https://calendly.com/agencystate/30min" target="_blank" rel="noopener" id="homepage-schedule-call">schedule a call</a> or find me on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
+                <h1 class="hero-tagline reveal d1">I help marketing teams put AI to work.</h1>
+                <p class="bio-lead reveal d2">Agency State is my marketing consulting practice. I help teams get AI to take on their marketing work &mdash; at a scale and quality they couldn&rsquo;t reach on their own, and to their own standard.</p>
+                <p class="offer-prose reveal d3">New to building this way? My free six-part guide, <a href="/claude-code-for-marketing/" id="homepage-guide">Claude Code for marketing teams</a>, walks it end to end &mdash; start there.</p>
+                <p class="offer-prose reveal d4">To talk, <a href="mailto:greg@agencystate.ai" id="homepage-email">email me</a>. More on my background on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
             </div>
         </section>
 
@@ -300,8 +285,6 @@
 
     <footer>
         <div class="container">
-            <!-- Brand-definition / identity text (provisional — pending trademark attorney review) -->
-            <p class="footer-services">Agency State is a marketing consulting practice. I help marketing teams build workflows, integrations, documentation, and the processes to put AI to work.</p>
             <div class="footer-bar">
                 <a href="/" aria-label="Agency State">
                     <img src="assets/wordmark-black-on-white.svg" alt="Agency State" class="footer-wordmark-img">
@@ -338,13 +321,25 @@
             });
         });
 
-        // Schedule-a-call click tracking
+        // Email click tracking
         (function () {
-            var sc = document.getElementById('homepage-schedule-call');
-            if (sc) {
-                sc.addEventListener('click', function () {
+            var em = document.getElementById('homepage-email');
+            if (em) {
+                em.addEventListener('click', function () {
                     if (typeof plausible === 'function') {
-                        plausible('Homepage schedule call');
+                        plausible('Homepage email');
+                    }
+                });
+            }
+        })();
+
+        // Guide click tracking
+        (function () {
+            var gd = document.getElementById('homepage-guide');
+            if (gd) {
+                gd.addEventListener('click', function () {
+                    if (typeof plausible === 'function') {
+                        plausible('Homepage guide click');
                     }
                 });
             }
