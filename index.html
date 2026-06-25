@@ -119,6 +119,8 @@
             margin-bottom: 1.75rem;
         }
 
+        .hero-tagline em { color: var(--accent); font-style: normal; }
+
         .bio-lead {
             font-family: var(--font);
             font-weight: 300;
@@ -274,10 +276,10 @@
         <!-- Hero: tagline H1, the shift, bio -->
         <section class="hero-section">
             <div class="container">
-                <h1 class="hero-tagline reveal d1">Helping marketing teams put AI to work.</h1>
+                <h1 class="hero-tagline reveal d1">Helping marketing teams put <em>AI</em> to work.</h1>
                 <p class="bio-lead reveal d2">Agency State is a marketing consulting practice that helps teams implement AI to produce work at a scale and quality they couldn&rsquo;t reach on their own.</p>
-                <p class="offer-prose reveal d3">New to marketing AI? Get started with the free guide, <a href="/claude-code-for-marketing/" id="homepage-guide">Claude Code for marketing teams</a>.</p>
-                <p class="offer-prose reveal d4">To connect with Greg Appler, Principal, <a href="mailto:greg@agencystate.ai" id="homepage-email">send an email</a> or find him on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
+                <p class="offer-prose reveal d3">New to AI? Get started with the free guide, <a href="/claude-code-for-marketing/" id="homepage-guide">Claude Code for marketing teams</a>.</p>
+                <p class="offer-prose reveal d4">To connect with Greg, <a href="#" id="homepage-email">send an email</a> or find him on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
             </div>
         </section>
 
@@ -321,10 +323,12 @@
             });
         });
 
-        // Email click tracking
+        // Email: assemble the address in JS so the raw mailto isn't in the page source (spam guard) + click tracking
         (function () {
             var em = document.getElementById('homepage-email');
             if (em) {
+                var user = 'greg', domain = 'agencystate.ai';
+                em.setAttribute('href', 'mailto:' + user + '@' + domain);
                 em.addEventListener('click', function () {
                     if (typeof plausible === 'function') {
                         plausible('Homepage email');
