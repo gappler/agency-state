@@ -65,10 +65,10 @@ nav .container{display:flex;align-items:center;height:64px;}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
 
 .cover{background:var(--card-bg);border:1px solid var(--border);border-radius:4px;padding:2rem;aspect-ratio:8.5/11;display:flex;flex-direction:column;}
-.cover .cw{width:140px;display:block;margin-bottom:auto;}
-.cover .mark{width:34px;height:34px;display:block;margin-bottom:1.25rem;}
+.cover .cw{width:140px;display:block;}
+.cover .mark{width:34px;height:34px;display:block;margin-top:auto;margin-bottom:1.25rem;}
 .cover .ct{font-size:1.75rem;font-weight:700;line-height:1.08;letter-spacing:-.02em;margin-bottom:.75rem;}
-.cover .cd{font-size:.9375rem;font-weight:300;color:var(--text-secondary);line-height:1.5;margin-bottom:1.25rem;}
+.cover .cd{font-size:.9375rem;font-weight:300;color:var(--text-secondary);line-height:1.5;margin-bottom:auto;}
 .cover .cmeta{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-secondary);}
 .cover .cmeta .pdf{color:var(--accent);}
 .panel-cover .cta{width:100%;text-align:center;margin-top:1.25rem;}
@@ -171,18 +171,18 @@ footer .container{display:flex;flex-direction:column;gap:1.5rem;}
       <div class="inside">
         <h2 class="eyebrow">What's inside</h2>
         <div class="arc">
-          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">01</span>Build reusable marketing workflows</h3><div class="arc-desc">Turn a process you repeat — briefs, copy QA, recaps — into a system anyone on the team runs the same way every time.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">01</span>Build reusable marketing workflows</h3><div class="arc-desc">Turn a process you repeat (briefs, copy QA, recaps) into a system anyone on the team runs the same way every time.</div></div>
           <div class="arc-item"><h3 class="arc-title"><span class="arc-num">02</span>Connect AI to your tools</h3><div class="arc-desc">Put your CMS, analytics, drive, and project tools in reach, so the work happens where your data already lives.</div></div>
-          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">03</span>Run it hands-off</h3><div class="arc-desc">Weekly audits, competitor digests, monthly reports — recurring work that's done before you open your laptop.</div></div>
-          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">04</span>Put it in non-coders' hands</h3><div class="arc-desc">The desktop app, no terminal, approve every change — the on-ramp a non-technical marketer actually uses.</div></div>
-          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">05</span>Govern it</h3><div class="arc-desc">Where your data goes, what the agent can do, what it costs — the answers a client's security team asks first.</div></div>
-          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">06</span>Roll it out to a team</h3><div class="arc-desc">Shared skills, enforced guardrails, and visibility — one governed system instead of a few clever solo setups.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">03</span>Run it hands-off</h3><div class="arc-desc">Weekly audits, competitor digests, monthly reports. Recurring work that's done before you open your laptop.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">04</span>Put it in non-coders' hands</h3><div class="arc-desc">The desktop app, no terminal, approve every change. The on-ramp a non-technical marketer actually uses.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">05</span>Govern it</h3><div class="arc-desc">Where your data goes, what the agent can do, what it costs. The questions a client's security team asks first.</div></div>
+          <div class="arc-item"><h3 class="arc-title"><span class="arc-num">06</span>Roll it out to a team</h3><div class="arc-desc">Shared skills, enforced guardrails, and visibility. One governed system instead of a few clever solo setups.</div></div>
         </div>
       </div>
 
       <div class="author">
         <h2 class="eyebrow">The part that matters</h2>
-        <p>Claude Code may sound like a coding tool, but for a marketing team, that framing buries the part that matters: it's a system for building and governing AI that does marketers' work — briefs, brand content, campaign analysis. This document shows you how.</p>
+        <p>Claude Code may sound like a coding tool, but for a marketing team, that framing buries the part that matters: it's a system for building and governing AI that does marketers' work (briefs, brand content, campaign analysis). This document shows you how.</p>
       </div>
 
     </div>
@@ -238,7 +238,7 @@ footer .container{display:flex;flex-direction:column;gap:1.5rem;}
       const r=await fetch(ENDPOINT,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});
       if(!r.ok) throw new Error('bad_response');
       formPanel.hidden=true; thanks.hidden=false;
-    }catch(_){ btn.disabled=false; note.textContent="Something went wrong — please try again."; }
+    }catch(_){ btn.disabled=false; note.textContent="Something went wrong. Please try again."; }
   });
 
   const navEl=document.querySelector('nav');
