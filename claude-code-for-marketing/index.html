@@ -156,12 +156,12 @@ footer .container{display:flex;flex-direction:column;gap:1.5rem;}
             <h2>Get the guide</h2>
             <p class="fsub">Free PDF. Tell me where to send it.</p>
             <div class="field"><label for="lf-email">Email</label><input id="lf-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
-            <div class="field"><label for="lf-org">Type of organization</label><select id="lf-org" name="org_type"><option>Agency</option><option>In-house / brand marketing team</option><option>Freelancer / solo</option><option>Other</option></select></div>
+            <div class="field"><label for="lf-org">Type of organization</label><select id="lf-org" name="org_type"><option value="" disabled selected>Select one</option><option>In-house marketing team</option><option>Agency</option><option>Freelancer / solo</option><option>Other</option></select></div>
             <div class="field"><label for="lf-title">Title</label><input id="lf-title" name="title" type="text" placeholder="e.g. Marketing Director"></div>
-            <label class="consent"><input name="consent" type="checkbox"> Send me occasional notes from Agency State. Unsubscribe anytime.</label>
+            <label class="consent"><input name="consent" type="checkbox"> Send me new guides when they're out. Unsubscribe anytime.</label>
             <div class="hp" aria-hidden="true"><label>Company URL<input name="company_url" tabindex="-1" autocomplete="off"></label></div>
             <button class="cta" type="submit">Send me the guide</button>
-            <p class="form-note" id="lf-note">One email with the guide. No spam.</p>
+            <p class="form-note" id="lf-note"></p>
           </form>
         </div>
         <div class="panel-thanks lead-card" hidden>
