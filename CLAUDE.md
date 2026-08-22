@@ -14,7 +14,7 @@ If you need to read or edit brand rules, strategic decisions, or internal resear
 ## Repo Layout
 
 - `index.html` — single-page marketing site
-- `assets/` — only the files the site actually serves: `wordmark-black-on-white.svg` (logo), `agency-state-mark-black.svg` (favicon), `og-image.png` (OG/Twitter card). Keep this folder limited to served files. Canonical brand marks live in `agency-state-brand/assets/`; OG-image source templates and demo-card renders live in `agency-state-practice/website/`.
+- `assets/` — only the files the site actually serves: `wordmark-black-on-white.svg` (logo), `agency-state-mark-black.svg` (favicon), `og-image.png` (OG/Twitter card). Keep this folder limited to served files. Canonical brand marks live in `agency-state-brand/assets/`; OG-image source templates and demo-card renders live in `agency-state-practice/projects/website/`.
 - `CNAME` — GitHub Pages custom domain
 
 ## Brand — read before writing copy
