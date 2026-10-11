@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serving the brand with MCP - Agency State</title>
+  <meta name="description" content="A brand MCP is a serving layer for a codified brand: the source lives in one place, served to AI tools while the work is happening.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Serving the brand with MCP">
+  <meta property="og:description" content="A brand MCP is a serving layer for a codified brand: the source lives in one place, served to AI tools while the work is happening.">
+  <link rel="canonical" href="https://agencystate.ai/brand-mcp.html">
+  <meta property="og:url" content="https://agencystate.ai/brand-mcp.html">
+  <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
+  <meta property="og:site_name" content="Agency State">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Serving the brand with MCP">
+  <meta name="twitter:description" content="A brand MCP is a serving layer for a codified brand: the source lives in one place, served to AI tools while the work is happening.">
+  <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
+  <link rel="icon" href="assets/agency-state-mark-orange.svg" type="image/svg+xml">
+  <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Libre+Franklin:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-link" href="index.html" aria-label="Agency State home">
+        <img src="assets/agency-state-mark-orange.svg" alt="">
+        <img src="assets/wordmark-black-on-white.svg" alt="Agency State">
+      </a>
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="index.html#practice">The practice</a>
+        <a href="index.html#notes">Notes</a>
+        <a href="index.html#stack">Stack</a>
+      </nav>
+    </div>
+    <div class="site-meta">
+      <span id="time">--:--</span>
+      <span>Washington, DC</span>
+      <button type="button" onclick="copyEmail()">copy email</button>
+      <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener">linkedin</a>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <div class="hero-container">
+      <header class="hero">
+        <p class="identity-line">The practice</p>
+        <h1 class="hero-name">Serving the brand with MCP</h1>
+        <p class="hero-title">A brand MCP is a serving layer for a codified brand: the source lives in one place, served to AI tools while the work is happening.</p>
+      </header>
+    </div>
+
+    <div class="section-container">
+      <article class="section">
+        <div class="section-content">
+          <div class="about-text">
+            <p>MCP is usually discussed in relation to repositories, databases, tickets, docs, and tools. Brand belongs in that conversation. A brand team has source material, product facts, approved language, visual constraints, and review logic. That is operating material.</p>
+            <p>The useful question is what the brand needs to answer while the work is happening.</p>
+          </div>
+          <div class="code-panel">Which voice rules apply to this channel?
+What source supports this product fact?
+Can this claim be used without a condition?
+Which phrases are banned, discouraged, or approved?
+What visual rules apply to this surface?
+What needs human review?</div>
+          <div class="about-text">
+            <p>The server does not create those answers by itself. The brand has to be shaped first. The source needs to be structured, reviewed, and maintained so the server can return something useful when a tool asks.</p>
+
+            <h3>Source and server</h3>
+            <p>The Agency State example has two parts.</p>
+            <p>The source lives in <code>agency-state-brand</code>. That repo holds the brand platform and visual guidelines. It is the canonical place for the approved brand, not a draft space and not an application.</p>
+            <p>The server lives in <code>agency-state-brand-mcp</code>. It reads from the source and exposes the brand through tools such as:</p>
+          </div>
+          <div class="code-panel">get_identity
+get_positioning
+get_audience
+get_brand_voice
+get_vocabulary
+get_never_say
+get_proof
+get_boundaries
+get_competencies
+get_full_platform
+get_visual_identity</div>
+          <div class="about-text">
+            <p>That split matters. The brand source can stay clean, governed, and readable by humans. The MCP server can handle the serving behavior: what tools exist, what each tool returns, how the content is cached, and how clients connect to it.</p>
+            <p>In this example, the server is deployed on Railway because MCP clients need a reachable endpoint. Railway gives the server a public <code>/mcp</code> URL without turning the brand source itself into an app. When the brand source changes, the server can pick up the new content from the repo without a redeploy. When the server behavior changes, the MCP repo changes and Railway redeploys it.</p>
+
+            <h3>What the server looks like</h3>
+            <p>For Agency State, Claude Code built a small Python server with FastMCP. The shape is simple:</p>
+          </div>
+          <div class="code-panel">source: agency-state-brand
+server: agency-state-brand-mcp
+host: Railway
+clients: Claude Code, n8n</div>
+          <div class="about-text">
+            <p>The server knows where the source lives, reads the current brand files, keeps a short cache, and registers each useful section as a tool. In plain terms:</p>
+          </div>
+          <div class="code-panel">1. Fetch brand-platform.md and brand-guidelines.md.
+2. Use a bundled fallback if the fetch fails.
+3. Slice the brand platform by section.
+4. Return one useful section when a tool asks for it.
+5. Run at a reachable /mcp endpoint.</div>
+          <div class="about-text">
+            <p>That is enough to prove the pattern. The technical build matters, but the larger design decision is the tool list. A brand server becomes useful when it exposes the questions the work actually asks.</p>
+
+            <h3>How a tool uses it</h3>
+            <p>A tool asks for the slice of the brand that applies to the work in front of it.</p>
+            <p>For Agency State, a writing workflow can ask for voice guidance and never-say language before drafting. A page build can ask for the visual identity. A review workflow can ask for boundaries, proof, or vocabulary before checking the work.</p>
+            <p>In a more developed codified brand, the tools move from document sections to work patterns:</p>
+          </div>
+          <div class="code-panel">get_voice(channel: "paid search")
+get_claim_rules(topic: "ice retention")
+get_product_facts(product: "Yowie 35QT")
+get_review_criteria(format: "landing page")
+get_visual_rules(surface: "web page")</div>
+          <div class="about-text">
+            <p>That is the design work: deciding which brand decisions the work needs access to, and how the server should expose them.</p>
+
+            <h3>Implementation path</h3>
+            <p>A practical brand MCP starts before the server.</p>
+            <p>First, gather the source material: brand books, websites, product facts, voice guidance, and review patterns.</p>
+            <p>Then extract the brand into structured files a team can read, correct, approve, and improve. In the Agency State example, the server serves the hand-maintained brand platform and guidelines directly, which is enough to show the serving pattern. For client work, the stronger pattern is fuller codification before serving. Agency State's BrandBuilder fits there: it turns decided brand material into reviewable source files before they become the source the system uses. The source needs provenance where facts and claims are involved, and ownership where judgment is involved.</p>
+            <p>After that, design the server around the work. Some tools may return whole sections. Others may answer narrower questions. The right shape depends on where the brand is being used: drafting, review, campaign planning, or workflow automation.</p>
+            <p>Then connect the server to the tools doing the work. For Agency State, Railway hosts the reachable <code>/mcp</code> endpoint. Claude Code can call the brand tools, and an n8n workflow consumes the same server. For a client, the same pattern could run locally, in a team environment, or behind a managed endpoint. The hosting choice follows the privacy, permissions, and partner access requirements.</p>
+            <p>The maintenance model is part of the implementation. Someone has to own source updates, approve changes, manage access, and decide when the server's answers need to change.</p>
+
+            <h3>Why it matters</h3>
+            <p>Without a serving layer, brand context tends to scatter. One copy lives in a prompt. Another lives in a custom assistant. Another gets uploaded to a tool. Another sits in an agency deck. Each copy can drift.</p>
+            <p>Every tool, workflow, and check reads from the same brand source instead of keeping its own copy. That matters for drafting, but it matters even more for review: the same source that helps a model write can also help the system check what the model made.</p>
+            <p>A brand MCP is buildable. The hard part is shaping the source and giving the tools doing the work a stable connection to it.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-container">
+      <nav class="article-next" aria-label="Related links">
+        <a class="article-back about-link" href="index.html#practice">Back to The practice</a>
+        <div class="article-more">
+          <span>More</span>
+          <div class="article-more-links">
+            <a class="about-link" href="brand-os.html">What is Brand OS?</a>
+            <a class="about-link" href="context-is-not-control.html">Context is not control</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">(c) 2026 Agency State, LLC. All rights reserved.</p>
+    <p class="footer-text"><a class="about-link" href="index.html">Back home</a></p>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

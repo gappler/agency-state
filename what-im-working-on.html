@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What I'm working on - Agency State</title>
+  <meta name="description" content="A short Agency State note on the three threads shaping the practice now: Brand OS, automating the seams, and portable working context.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What I'm working on">
+  <meta property="og:description" content="A short Agency State note on the three threads shaping the practice now: Brand OS, automating the seams, and portable working context.">
+  <link rel="canonical" href="https://agencystate.ai/what-im-working-on.html">
+  <meta property="og:url" content="https://agencystate.ai/what-im-working-on.html">
+  <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
+  <meta property="og:site_name" content="Agency State">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What I'm working on">
+  <meta name="twitter:description" content="A short Agency State note on the three threads shaping the practice now: Brand OS, automating the seams, and portable working context.">
+  <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
+  <link rel="icon" href="assets/agency-state-mark-orange.svg" type="image/svg+xml">
+  <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Libre+Franklin:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-link" href="index.html" aria-label="Agency State home">
+        <img src="assets/agency-state-mark-orange.svg" alt="">
+        <img src="assets/wordmark-black-on-white.svg" alt="Agency State">
+      </a>
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="index.html#practice">The practice</a>
+        <a href="index.html#notes">Notes</a>
+        <a href="index.html#stack">Stack</a>
+      </nav>
+    </div>
+    <div class="site-meta">
+      <span id="time">--:--</span>
+      <span>Washington, DC</span>
+      <button type="button" onclick="copyEmail()">copy email</button>
+      <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener">linkedin</a>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <div class="hero-container">
+      <header class="hero">
+        <p class="identity-line">Notes</p>
+        <h1 class="hero-name">What I'm working on</h1>
+        <p class="hero-title">Right now, most of my work sits under Brand OS, but not all of it looks like brand.</p>
+      </header>
+    </div>
+
+    <div class="section-container">
+      <article class="section">
+        <div class="section-content">
+          <div class="about-text">
+            <h3>Brand OS</h3>
+            <p>I continue to extend my practice by testing tools and approaches on Agency State and on demo brands I created for this purpose.</p>
+            <p>One of those tools is Agency State's BrandBuilder. It turns decided brand material, including brand books, websites, product facts, voice guidance, visual rules, and other source material, into structured brand files a team can review and revise before they become the source the system uses. Once that source exists, it can be served into the work. I am serving Agency State and Yowie over MCP. Yowie is a demo outdoor-gear brand I built for this work. And MCP serves the brand from one source to the people and tools doing the work, from internal teams and agency partners to chats, editors, and review workflows.</p>
+            <p>Once the brand is served into the system and the work can be checked, the different feedback flows need to be managed: rule issues, source issues, human review decisions, repeated corrections, and team habits. I am working on the workflow around that feedback: how it gets routed, who owns the decision, and how the Brand OS gets updated without turning review into another bottleneck.</p>
+
+            <h3>Automating the seams</h3>
+            <p>AI can make work faster, but the speed disappears if every handoff still depends on a person receiving the work, routing it, processing feedback, and carrying it into the next piece of work.</p>
+            <p>In an ideal world, a request comes in with the right brief: the goal, audience, guardrails, and constraints for the work, plus the brand context it needs, including voice, product facts, and claim rules. The output gets checked against what the brand already knows, and the decisions a machine cannot settle go to a person. The correction then makes its way back into the source, the rule set, or the review path.</p>
+            <p>Today, I think too much of that seam still gets carried by hand. I am interested in how much of that handoff layer can be made explicit and automated, so a system can run end to end with a human checking one artifact at each gate, not trapped inside every task.</p>
+            <p>I built a structured experiment to test this: a single-campaign engine that runs a campaign through nine phases from intake to close, with me sitting at the gates. At each gate, I review the artifact, approve it, redirect it, or send it back for another pass before the next phase starts. It is a sandbox, not a client system. I will keep running campaigns through it, refining the gates, artifacts, and feedback loops, and adapting what proves useful for client work.</p>
+
+            <h3>Portable working context</h3>
+            <p>My workspace has become unwieldy for the same reason a lot of AI work becomes unwieldy: the useful context keeps accumulating. Brand files, style rules, skills, agents, review panels, handoff notes, drafts, experiments, product work, and project history all start to matter. If they stay scattered, every tool has to rediscover the work.</p>
+            <p>I am working on making that shared layer easier to navigate, easier to observe, and easier to use across Claude Code, Codex, Obsidian, VS Code, Cursor, and whatever comes next. Some of the skills I use now were built in Claude Code, but Codex inspects them, applies them, and helps improve them when they live in the shared workspace.</p>
+            <p>That also means paying attention to the infrastructure around the work: GitHub, the website, reusable product code, model choice, token use, and the tools clients may bring into the workflow. The question is how to keep the work portable and reliable as the tool stack keeps changing. After the new website goes live, I am going to hit this hard.</p>
+
+            <h3>What my focus is</h3>
+            <p>Brand OS is where these threads come together: the brand source, the workflow around it, and the working environment that lets the system keep improving. That is the center of my practice.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-container">
+      <nav class="article-next" aria-label="Related links">
+        <a class="article-back about-link" href="index.html#notes">Back to Notes</a>
+        <div class="article-more">
+          <span>More</span>
+          <div class="article-more-links">
+            <a class="about-link" href="claude-code-for-marketing-teams.html">Claude Code for marketing teams</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">(c) 2026 Agency State, LLC. All rights reserved.</p>
+    <p class="footer-text"><a class="about-link" href="index.html">Back home</a></p>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

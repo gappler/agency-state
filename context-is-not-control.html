@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Context is not control - Agency State</title>
+  <meta name="description" content="AI can have the brand context and still ship unsupported claims. This piece shows why Brand OS needs source checks, rule checks, and human routing.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Context is not control">
+  <meta property="og:description" content="AI can have the brand context and still ship unsupported claims. This piece shows why Brand OS needs source checks, rule checks, and human routing.">
+  <link rel="canonical" href="https://agencystate.ai/context-is-not-control.html">
+  <meta property="og:url" content="https://agencystate.ai/context-is-not-control.html">
+  <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
+  <meta property="og:site_name" content="Agency State">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Context is not control">
+  <meta name="twitter:description" content="AI can have the brand context and still ship unsupported claims. This piece shows why Brand OS needs source checks, rule checks, and human routing.">
+  <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
+  <link rel="icon" href="assets/agency-state-mark-orange.svg" type="image/svg+xml">
+  <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Libre+Franklin:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-link" href="index.html" aria-label="Agency State home">
+        <img src="assets/agency-state-mark-orange.svg" alt="">
+        <img src="assets/wordmark-black-on-white.svg" alt="Agency State">
+      </a>
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="index.html#practice">The practice</a>
+        <a href="index.html#notes">Notes</a>
+        <a href="index.html#stack">Stack</a>
+      </nav>
+    </div>
+    <div class="site-meta">
+      <span id="time">--:--</span>
+      <span>Washington, DC</span>
+      <button type="button" onclick="copyEmail()">copy email</button>
+      <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener">linkedin</a>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <div class="hero-container">
+      <header class="hero">
+        <p class="identity-line">The practice</p>
+        <h1 class="hero-name">Context is not control</h1>
+        <p class="hero-title">A passing brand check only helps if you know what it checked.</p>
+      </header>
+    </div>
+
+    <div class="section-container">
+      <article class="section">
+        <h2 class="section-label">The green light I couldn't trust</h2>
+        <div class="section-content">
+          <div class="about-text">
+            <p>I handed an AI the full product catalog for Yowie, a demo outdoor-gear brand: the voice, the rules, the specs, the prices, everything you are told to give it. Then I asked for ordinary marketing copy.</p>
+            <p>The voice came back clean: plainspoken, dry, no banned words, no exclamation points. Nothing looked obviously off-brand.</p>
+            <p>The facts were where it broke.</p>
+            <p>Asked for a product page, it promised a cooler was "Built to sit in the sun on a tailgate for a decade," a durability claim the catalog did not support. It stamped "Tested, not estimated" under a claim nobody had tested. Asked for a paid-search headline, it took the one claim the brand was strict about, ice retention, which the product data gave as "5+ days at 90F," and shortened it to "Cooler Holds Ice 5 Days," dropping the condition that made the number usable.</p>
+            <p>Those were not the failures I had been bracing for. I expected the AI to sound wrong. It didn't. Supported and unsupported claims arrived in the same register, and the unsupported ones sounded like the brand too.</p>
+            <p>Then the rule check passed them.</p>
+            <p>The rule check was simple by design. It read finished copy and tested it against mechanical rules: banned words, exclamation points, formatting habits. If the brand bans a phrase, did the draft use it? If the voice guide says no exclamation points, are any there?</p>
+            <p>Those checks matter, and they catch real misses. But they only know what they are built to know. A rule can tell you whether a claim has the right shape. It cannot tell you whether the source actually supports the claim. A claim can look compliant and still drop the condition that makes the number usable. A sentence can avoid every banned word and still invent proof.</p>
+            <p>That is the distinction I kept circling around: brand documentation is context. Brand reliability is a control problem.</p>
+            <p>Context helps the model write. It gives the system something to serve into a specific task. It makes the brand easier to serve into the work. But context is still material handed to a model. It is not proof that the model used it. It is not proof that the output matches it. It is not proof that the green light underneath the draft means what you think it means.</p>
+            <p>I tested the next question with 241 marketing requests, the brand and product catalog served every time. Then I read the outputs two ways: first with the rule check, the one that looks for mechanical brand rules, and then with one source check, a narrower check that asks only whether the product named in the copy exists in the catalog.</p>
+            <p>That second question is basic in the same way a good human review is basic: look up the product name, check the spec, make sure the claim is in the file before it ships. The useful part is turning that manual lookup into a check the system can run on every draft.</p>
+            <p>I would not treat that run as a benchmark. It was Yowie, one model, one setup. But it clarified the job, and the first thing it clarified was that serving the catalog helped a lot. When 36 bad briefs pushed the model toward products that did not exist, it genuinely sold the fake product only 3 times. The other 33 times, it caught the bad brief, used a real product, or named no product at all. Context did not fail. It made the model right most of the time.</p>
+            <p>The trouble was the green light. The rule check passed 225 of the 241 drafts, including all 3 that really did sell a product that was not in the catalog. The same green light sat under clean copy and under fake copy. By reading the draft, I could not tell which ones to doubt. By reading the rules, the system could not either.</p>
+            <p>The source check gave me the short list. It flagged all 3 fake-product drafts and flagged zero of the 148 correct-brief drafts that named a real product. It also flagged other drafts where the model was doing the right thing, naming the fake product only to reject it, which is why I do not treat the flag as a verdict. The check did not tell me which drafts were wrong. It told me which 25 drafts named something not on file.</p>
+            <p>The source check did not give me automatic truth or automatic brand compliance. It gave me a shorter, better review queue.</p>
+            <p>It also exposes the limit. The opening failures are the harder class: a real product with a false or unsupported claim attached. The source check I just described would not catch a made-up warranty or a false price. That is where a spec check would earn its keep, and the first version I built did not. It caught real errors, but it also tripped over correct copy, reading a shipping fee or a rounded comparison price as if it were a product spec. So I routed that class to a person instead of pretending the check was ready.</p>
+            <p>The harder you look at this, the more the work splits in two. Some brand rules have a source a machine can check. A product either appears in the catalog or it does not. A color is either in the palette or it is not. A banned phrase either appears or it does not.</p>
+            <p>Other decisions still need human judgment. Is the claim worth making? Is the comparison fair? Is the warranty actually approved? Does this sound like us in a way that matters?</p>
+            <p>Voice is the hard one. A recent marketing-voice study makes the problem sharper: models bring structural habits of their own, and those habits can remain even when the model is instructed to imitate a brand. The tells are not always the obvious words people ban. They live in rhythm, structure, formatting, and the way sentences are built.</p>
+            <p>That matches what I saw in practice. The copy could sound fine at a glance. It could pass the rule checks. It could still carry a machine habit or an unsupported claim. The answer is not to ask another AI to judge the voice. That just moves the uncertainty into another model. The answer is to separate what the system can settle from what a person has to own.</p>
+            <p>A person owning a decision is not the same as a person reading everything. Reading everything becomes harder as AI takes over the writing, then floods the review queue with more plausible copy than one person can responsibly inspect by feel.</p>
+            <p>Control is the system around generation: serve the right source, check the rules that can be checked, compare claims to the file where the comparison is reliable, route the rest to a person, and feed repeated corrections back into the source. That is one piece of what I mean by Brand OS.</p>
+            <p>I do not mean a better brand book, or a promise that codifying the brand makes the model obey. I mean a brand made explicit enough that the system knows what to serve, what to check, what to doubt, and what to hand back.</p>
+            <p>Context gets the model most of the way. Control is knowing where "most of the way" is not enough.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-container">
+      <nav class="article-next" aria-label="Related links">
+        <a class="article-back about-link" href="index.html#practice">Back to The practice</a>
+          <div class="article-more">
+            <span>More</span>
+            <div class="article-more-links">
+            <a class="about-link" href="brand-os.html">What is Brand OS?</a>
+            <a class="about-link" href="brand-mcp.html">Serving the brand with MCP</a>
+            </div>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">(c) 2026 Agency State, LLC. All rights reserved.</p>
+    <p class="footer-text"><a class="about-link" href="index.html">Back home</a></p>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

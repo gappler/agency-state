@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From brand book to working system - Agency State</title>
+  <meta name="description" content="How a brand book becomes source, checks, routing, and operating habits a brand marketing team can use with AI.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="From brand book to working system">
+  <meta property="og:description" content="How a brand book becomes source, checks, routing, and operating habits a brand marketing team can use with AI.">
+  <link rel="canonical" href="https://agencystate.ai/from-brand-book-to-working-system.html">
+  <meta property="og:url" content="https://agencystate.ai/from-brand-book-to-working-system.html">
+  <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
+  <meta property="og:site_name" content="Agency State">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="From brand book to working system">
+  <meta name="twitter:description" content="How a brand book becomes source, checks, routing, and operating habits a brand marketing team can use with AI.">
+  <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
+  <link rel="icon" href="assets/agency-state-mark-orange.svg" type="image/svg+xml">
+  <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Libre+Franklin:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-link" href="index.html" aria-label="Agency State home">
+        <img src="assets/agency-state-mark-orange.svg" alt="">
+        <img src="assets/wordmark-black-on-white.svg" alt="Agency State">
+      </a>
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="index.html#practice">The practice</a>
+        <a href="index.html#notes">Notes</a>
+        <a href="index.html#stack">Stack</a>
+      </nav>
+    </div>
+    <div class="site-meta">
+      <span id="time">--:--</span>
+      <span>Washington, DC</span>
+      <button type="button" onclick="copyEmail()">copy email</button>
+      <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener">linkedin</a>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <div class="hero-container">
+      <header class="hero">
+        <p class="identity-line">The practice</p>
+        <h1 class="hero-name">From brand book to working system</h1>
+        <p class="hero-title">A brand book can guide a person, but AI needs a system.</p>
+      </header>
+    </div>
+
+    <div class="section-container">
+      <article class="section">
+        <h2 class="section-label">One rule, end to end</h2>
+        <div class="section-content">
+          <div class="about-text">
+            <p>A brand book might say the brand never uses hype: no "ultimate," no "game-changing," no exclamation points. The rule is clear on paper, but no one can tell whether a machine followed it until it becomes something the checks can catch.</p>
+            <p>So the failure looks like this:</p>
+          </div>
+          <div class="code-panel">Conquer the backcountry with our ultimate, game-changing pack!</div>
+          <div class="about-text proof-note">
+            <p>The same rule, made checkable:</p>
+          </div>
+          <div class="code-panel">never_say:
+  - ultimate
+  - game-changing
+
+formatting:
+  - no-exclamation</div>
+          <div class="about-text proof-note">
+            <p>Run the draft through the rule check and it reports back in plain English:</p>
+          </div>
+          <div class="code-panel">[block] ultimate is on the never-say list
+[block] game-changing is on the never-say list
+[block] exclamation points are not allowed</div>
+          <div class="about-text proof-note">
+            <p>A sentence in the brand book becomes a rule the system can check against the work.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-container">
+      <section class="section">
+        <h2 class="section-label">Step 1: Assess readiness</h2>
+        <div class="section-content">
+          <div class="about-text">
+            <p>The work starts with the existing documents: the brand book, the site, the design system, and the campaigns, plus the people who own the brand. The assessment sorts all of that into what a machine can take as settled and what still needs a person: which rules are current and sourced, which visual decisions live in examples and should become stated rules, which approvals belong to someone and should say so.</p>
+            <p>That sorting is the readiness call. If the brand itself is still being decided, brand strategy comes first.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container">
+      <section class="section">
+        <h2 class="section-label">Step 2: Codify the source</h2>
+        <div class="section-content">
+          <div class="about-text">
+            <p>When there is enough to work from, the brand becomes source a machine can read and the team can govern.</p>
+            <p>Agency State's BrandBuilder reads the team's documents and produces the codified brand in two forms. The team reviews and revises the source files; the system runs on the compiled contracts:</p>
+          </div>
+          <div class="code-panel">.brand/
+  source/
+    brand.yaml
+    voice.yaml
+    visual.yaml
+    positioning.yaml
+    architecture.yaml
+    rules.yaml
+    products.yaml
+    narrative.md
+  needs-review.yaml
+  brand-runtime.json
+  interaction-policy.json
+  tokens.json</div>
+          <div class="about-text proof-note">
+            <p>The source files hold the structured extraction: voice, visual identity, positioning, rules, product facts. The <code>needs-review</code> file lists the inferences codification made, the conflicts it found, and the decisions left for a person. The compiled contracts come after that review: the brand runtime is the fast version the machine reads before it writes, the interaction policy is the subset of rules the checks use, and design tokens carry exact values for color and type.</p>
+            <p>The file format matters less than the discipline underneath it. If a value came from the brand book, the source should say where. If a rule was inferred, it should be labeled as inferred. If the source is silent, the question goes to a person instead of the machine quietly inventing an answer and calling it the brand.</p>
+            <p>Extraction pulls structure from what already exists; judgment decides what the brand means when the source is stale or in conflict.</p>
+            <p>BrandBuilder checks that discipline by asking whether the source labels are accurate: if a rule says it came verbatim from the brand book, did that language actually appear there? If a citation points to a section, does that section exist?</p>
+          </div>
+          <div class="code-panel">rule: "No exclamation points."
+source: "brand-book, Boundaries"
+basis: verbatim</div>
+          <div class="about-text proof-note">
+            <p>An invented source label goes back to a person before the rule enters the system.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container">
+      <section class="section">
+        <h2 class="section-label">Step 3: Serve, check, route</h2>
+        <div class="section-content">
+          <div class="about-text">
+            <p>Once the source is reviewed and compiled, the brand starts showing up in the work, and the system begins to feel like infrastructure.</p>
+            <p>Before a draft starts, the system serves the machine the parts of the brand the task needs: the voice guidance, the product facts, and the interaction policy. Every model and tool the team uses reads from the same source.</p>
+            <p>Giving the model the right source helps, often a lot, but it does not prove the output matches the source. So after the work exists, the checks run on what the brand has already settled, and everything that needs judgment routes to the person who owns the decision.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container">
+      <section class="section">
+        <h2 class="section-label">Step 4: Close the loop</h2>
+        <div class="section-content">
+          <div class="about-text">
+            <p>By the time work reaches review, the checks have caught the banned words, the off-palette colors, and the wrong fonts. Attention only goes where it is needed.</p>
+            <p>A fix the reviewer keeps making turns into a rule the check catches from then on, and a fact the copy keeps getting wrong is fixed once, in the source the machine reads. That loop keeps the system current as the brand, the products, and the team's tolerance change. That is a Brand OS, and it runs on an operating habit: update the source, recompile, improve the checks, so the team works from the same place.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container">
+      <section class="section">
+        <h2 class="section-label">The result</h2>
+        <div class="section-content">
+          <div class="about-text">
+            <p>Run the four steps and the brand book becomes a working system: source the team governs, compiled contracts the machine reads, checks on the settled decisions, routes that put a person where judgment is needed, and a loop that keeps all of it current. The Brand OS build map lays out that system.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container">
+      <nav class="article-next" aria-label="Related links">
+        <a class="article-back about-link" href="index.html#practice">Back to The practice</a>
+        <div class="article-more">
+          <span>More</span>
+          <div class="article-more-links">
+            <a class="about-link" href="brand-os.html">What is Brand OS?</a>
+            <a class="about-link" href="context-is-not-control.html">Context is not control</a>
+            <a class="about-link" href="brand-os-build-map.html">The Brand OS build map</a>
+            <a class="about-link" href="brand-mcp.html">Serving the brand with MCP</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">(c) 2026 Agency State, LLC. All rights reserved.</p>
+    <p class="footer-text"><a class="about-link" href="index.html">Back home</a></p>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

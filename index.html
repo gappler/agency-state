@@ -1,375 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agency State</title>
-    <meta name="description" content="A marketing consulting practice that helps marketing teams implement AI to produce work at a scale and quality they couldn't reach on their own.">
-    <link rel="canonical" href="https://agencystate.ai/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://agencystate.ai/">
-    <meta property="og:title" content="Agency State">
-    <meta property="og:description" content="A marketing consulting practice that helps marketing teams implement AI to produce work at a scale and quality they couldn't reach on their own.">
-    <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agency State">
-    <meta name="twitter:description" content="A marketing consulting practice that helps marketing teams implement AI to produce work at a scale and quality they couldn't reach on their own.">
-    <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
-    <link rel="icon" type="image/svg+xml" href="assets/agency-state-mark-black.svg">
-    <link rel="apple-touch-icon" href="assets/agency-state-mark-black.svg">
-    <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
-    <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --text: #1A1A1A;
-            --text-secondary: #5C5C5C;
-            --bg: #FAF9F7;
-            --card-bg: #FFFFFF;
-            --card-hover: #F5F4F2;
-            --border: #E0DFDC;
-            --accent: #D4602A;
-            --accent-hover: #B8521F;
-            --font: 'Inter', system-ui, -apple-system, sans-serif;
-        }
-
-        html { font-size: 16px; }
-
-        body {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 1.0625rem;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* ---- Nav (wordmark only, no CTA) ---- */
-
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 50;
-            background: rgba(250, 249, 247, 0.9);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-
-        nav.scrolled { border-bottom-color: var(--border); }
-
-        nav .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 64px;
-            gap: 2rem;
-        }
-
-        .nav-wordmark {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .nav-wordmark .nav-type {
-            height: auto;
-            width: 180px;
-            display: block;
-        }
-
-        /* ---- Section rhythm — whitespace only, no rules ---- */
-
-        main { flex: 1; }
-
-        /* ---- Hero: tagline-variant H1 + bio + offer mention ---- */
-
-        .hero-section {
-            padding: 8.5rem 0 0;
-        }
-
-        .hero-tagline {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: clamp(1.875rem, 4vw, 3rem);
-            line-height: 1.1;
-            letter-spacing: -0.025em;
-            color: var(--text);
-            max-width: 24ch;
-            text-wrap: balance;
-            margin-bottom: 1.75rem;
-        }
-
-        .hero-tagline em { color: var(--accent); font-style: normal; }
-
-        .bio-lead {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 1.125rem;
-            line-height: 1.65;
-            color: var(--text);
-            max-width: 60ch;
-            text-wrap: pretty;
-            margin-bottom: 1.75rem;
-        }
-
-        .offer-prose {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 1.125rem;
-            line-height: 1.65;
-            color: var(--text);
-            max-width: 60ch;
-            text-wrap: pretty;
-        }
-
-        .offer-prose a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .offer-prose a:visited { color: var(--accent); }
-
-        .offer-prose a:hover { color: var(--accent-hover); }
-
-        .bio-lead a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
-        .bio-lead a:hover { color: var(--accent-hover); }
-
-        .offer-prose.connect {
-            color: var(--text-secondary);
-            margin-top: 2rem;
-        }
-
-        /* ---- Capabilities (practice section) ---- */
-
-        .practice-section { padding: 0.5rem 0 0; }
-
-        .capabilities {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            max-width: 60ch;
-            margin-bottom: 1.75rem;
-        }
-
-        .capability {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 1.125rem;
-            line-height: 1.65;
-            color: var(--text);
-            text-wrap: pretty;
-        }
-
-        .capability strong { font-weight: 700; }
-
-        /* ---- Footer (no top border) ---- */
-
-        footer {
-            padding: 2.5rem 0;
-        }
-
-        footer .container {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .footer-services {
-            font-family: var(--font);
-            font-weight: 300;
-            font-size: 0.8125rem;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            max-width: 60ch;
-            text-wrap: pretty;
-        }
-
-        .footer-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-wordmark-img {
-            height: auto;
-            width: 130px;
-            display: block;
-        }
-
-        .footer-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 0.5rem;
-            font-family: var(--font);
-            font-size: 0.8125rem;
-            font-weight: 300;
-            color: var(--text-secondary);
-            text-align: right;
-        }
-
-        .footer-right p { margin: 0; }
-
-        .footer-signature {
-            font-size: 0.9375rem;
-            letter-spacing: 0.02em;
-        }
-
-        /* ---- Reveal animations ---- */
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(14px);
-            transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .d1 { transition-delay: 0.05s; }
-        .d2 { transition-delay: 0.15s; }
-        .d3 { transition-delay: 0.25s; }
-        .d4 { transition-delay: 0.35s; }
-
-        /* ---- Responsive ---- */
-
-        @media (max-width: 600px) {
-            .container { padding: 0 1.25rem; }
-            .hero-section { padding: 6rem 0 0; }
-            .hero-tagline { margin-bottom: 1.5rem; }
-            nav .container { height: 56px; }
-            .nav-wordmark .nav-type { width: 146px; }
-            footer .container { gap: 1rem; }
-            .footer-right { align-items: flex-start; text-align: left; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greg Appler - Agency State</title>
+  <meta name="description" content="Greg Appler runs Agency State, an AI Enablement practice for brand marketing teams building Brand OS systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Greg Appler - Agency State">
+  <meta property="og:description" content="Greg Appler runs Agency State, an AI Enablement practice for brand marketing teams building Brand OS systems.">
+  <link rel="canonical" href="https://agencystate.ai/">
+  <meta property="og:url" content="https://agencystate.ai/">
+  <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
+  <meta property="og:site_name" content="Agency State">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Greg Appler - Agency State">
+  <meta name="twitter:description" content="Greg Appler runs Agency State, an AI Enablement practice for brand marketing teams building Brand OS systems.">
+  <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
+  <link rel="icon" href="assets/agency-state-mark-orange.svg" type="image/svg+xml">
+  <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Libre+Franklin:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-link" href="index.html" aria-label="Agency State home">
+        <img src="assets/agency-state-mark-orange.svg" alt="">
+        <img src="assets/wordmark-black-on-white.svg" alt="Agency State">
+      </a>
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="#practice">The practice</a>
+        <a href="#notes">Notes</a>
+        <a href="#stack">Stack</a>
+      </nav>
+    </div>
+    <div class="site-meta">
+      <span id="time">--:--</span>
+      <span>Washington, DC</span>
+      <button type="button" onclick="copyEmail()">copy email</button>
+      <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener">linkedin</a>
+    </div>
+  </header>
+  <div class="page-wrapper">
+    <div class="hero-container">
+      <header class="hero">
+        <h1 class="hero-name">Greg Appler</h1>
+        <p class="availability">AI Enablement for brand marketing teams.</p>
+      </header>
+    </div>
 
-    <nav>
-        <div class="container">
-            <a href="/" class="nav-wordmark" aria-label="Agency State">
-                <img src="assets/wordmark-black-on-white.svg" alt="Agency State" class="nav-type">
+    <div class="section-container">
+      <section class="section">
+        <div class="section-label">Agency State</div>
+        <div class="section-content">
+          <div class="about-text">
+            <p>Agency State is my practice. I help marketing leaders who are building their brand marketing workspace with Claude Code, Codex, and their own agents. Of course these tools don't know a brand until they do, and that's the work: getting the written and visual brand into one source that the team owns, the whole stack works from, and every decision improves. I call this Brand OS.</p>
+            <p>The published research and my own testing agree: no model follows a brand on its own. A person stays in the loop, and the system's job is to spend human attention only where it's needed. The practice pages in the next section discuss my approach.</p>
+            <p>I've worked at the intersection of brand marketing, operations, and martech for more than two decades. Most recently, a decade at The American Institute of Architects as Managing Director of Brand & Strategic Marketing, where I modernized marketing operations, built a 12-person team, and was business owner for a brand redesign adopted at the national organization and across the chapter network, with messaging strategy by marketing staff and visual identity in collaboration with Pentagram. Earlier brands include Nissan, Infiniti, and Bacardi Global Brands. See my <a class="about-link" href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener">LinkedIn</a> for details.</p>
+            <p>Interested in Brand OS on your team? Reach me at the email in the header.</p>
+            <p>Greg</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container">
+      <section class="section" id="practice">
+        <div class="section-label">The practice</div>
+        <div class="section-content">
+          <div class="card-list">
+            <a class="work-card" href="brand-os.html">
+              <div class="work-icon">01</div>
+              <div class="work-info">
+                <h2 class="work-title">What is Brand OS?</h2>
+                <p class="work-desc">The brand at work in AI production: one source the team owns, automations and agents working from it, and checks that keep the work on brand.</p>
+              </div>
             </a>
+            <a class="work-card" href="context-is-not-control.html">
+              <div class="work-icon">02</div>
+              <div class="work-info">
+                <h2 class="work-title">Context is not control</h2>
+                <p class="work-desc">Context helps AI sound closer to the brand, but control requires verification.</p>
+              </div>
+            </a>
+            <a class="work-card" href="brand-mcp.html">
+              <div class="work-icon">03</div>
+              <div class="work-info">
+                <h2 class="work-title">Serving the brand with MCP</h2>
+                <p class="work-desc">How MCP serves the brand source to tools and workflows when they need it.</p>
+              </div>
+            </a>
+            <a class="work-card" href="what-goes-into-a-codified-brand.html">
+              <div class="work-icon">04</div>
+              <div class="work-info">
+                <h2 class="work-title">What goes into a codified brand</h2>
+                <p class="work-desc">The working inventory: what the source holds, tier by tier, and what stays out on purpose.</p>
+              </div>
+            </a>
+          </div>
         </div>
-    </nav>
+      </section>
+    </div>
 
-    <main>
-
-        <!-- Hero: tagline H1, the shift, bio -->
-        <section class="hero-section">
-            <div class="container">
-                <h1 class="hero-tagline reveal d1">Helping marketing teams put <em>AI</em> to work.</h1>
-                <p class="bio-lead reveal d2">Agency State is a marketing consulting practice that helps teams implement AI to produce work at a scale and quality they couldn&rsquo;t reach on their own. New to AI? Get started with the free guide, <a href="/claude-code-for-marketing/" id="homepage-guide">Claude Code for marketing teams</a>.</p>
-                <p class="offer-prose connect reveal d3">To connect with Greg, <a href="#" id="homepage-email">send an email</a> or find him on <a href="https://www.linkedin.com/in/gappler/" target="_blank" rel="noopener" id="homepage-linkedin">LinkedIn</a>.</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-bar">
-                <a href="/" aria-label="Agency State">
-                    <img src="assets/wordmark-black-on-white.svg" alt="Agency State" class="footer-wordmark-img">
-                </a>
-                <div class="footer-right">
-                    <p class="footer-signature">&copy; 2026 Agency State, LLC. All rights reserved.</p>
-                </div>
-            </div>
+    <div class="section-container">
+      <section class="section" id="notes">
+        <div class="section-label">Notes</div>
+        <div class="section-content">
+          <div class="note-list">
+            <a class="note-item" href="what-im-working-on.html">
+              <div class="card-meta">Working note</div>
+              <div class="note-copy">
+                <h2 class="card-title">What I'm working on</h2>
+                <p class="card-desc">The three threads shaping the practice now: Brand OS, automating the seams, and portable working context.</p>
+              </div>
+            </a>
+            <a class="note-item" href="claude-code-for-marketing-teams.html">
+              <div class="card-meta">Guide</div>
+              <div class="note-copy">
+                <h2 class="card-title">Claude Code for marketing teams</h2>
+                <p class="card-desc">A practical guide for non-engineering teams using Claude Code to make real marketing work.</p>
+              </div>
+            </a>
+          </div>
         </div>
-    </footer>
+      </section>
+    </div>
 
-    <script>
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 16);
-        }, { passive: true });
+    <div class="section-container">
+      <section class="section" id="stack">
+        <div class="section-label">Stack</div>
+        <div class="section-content">
+          <div class="stack-grid">
+            <a class="stack-card" href="https://claude.com/claude-code" target="_blank" rel="noopener" data-role="agent work">
+              <div class="stack-icon"><img src="assets/anthropic.svg" alt=""></div>
+              <span class="stack-name">Claude Code</span>
+            </a>
+            <a class="stack-card" href="https://openai.com/codex/" target="_blank" rel="noopener" data-role="builds">
+              <div class="stack-icon"><img src="assets/codex.svg" alt=""></div>
+              <span class="stack-name">Codex</span>
+            </a>
+            <a class="stack-card" href="https://cursor.com/" target="_blank" rel="noopener" data-role="editor">
+              <div class="stack-icon"><img src="assets/cursor.svg" alt=""></div>
+              <span class="stack-name">Cursor</span>
+            </a>
+            <a class="stack-card" href="https://github.com/" target="_blank" rel="noopener" data-role="source">
+              <div class="stack-icon"><img src="assets/github.svg" alt=""></div>
+              <span class="stack-name">GitHub</span>
+            </a>
+            <a class="stack-card" href="https://linear.app/" target="_blank" rel="noopener" data-role="planning">
+              <div class="stack-icon"><img src="assets/linear.svg" alt=""></div>
+              <span class="stack-name">Linear</span>
+            </a>
+            <a class="stack-card" href="https://obsidian.md/" target="_blank" rel="noopener" data-role="notes">
+              <div class="stack-icon"><img src="assets/obsidian.svg" alt=""></div>
+              <span class="stack-name">Obsidian</span>
+            </a>
+            <a class="stack-card" href="https://wisprflow.ai/" target="_blank" rel="noopener" data-role="voice">
+              <div class="stack-icon"><img src="assets/wisprflow.svg" alt=""></div>
+              <span class="stack-name">Wispr Flow</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
 
-        const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+  <footer class="footer">
+    <p class="footer-text">(c) 2026 Agency State, LLC. All rights reserved.</p>
+  </footer>
 
-        reveals.forEach(el => observer.observe(el));
-
-        // Hero reveals forced visible on load (no scroll needed)
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.hero-section .reveal').forEach(el => {
-                el.classList.add('visible');
-            });
-        });
-
-        // Email: assemble the address in JS so the raw mailto isn't in the page source (spam guard) + click tracking
-        (function () {
-            var em = document.getElementById('homepage-email');
-            if (em) {
-                var user = 'greg', domain = 'agencystate.ai';
-                em.setAttribute('href', 'mailto:' + user + '@' + domain);
-                em.addEventListener('click', function () {
-                    if (typeof plausible === 'function') {
-                        plausible('Homepage email');
-                    }
-                });
-            }
-        })();
-
-        // Guide click tracking
-        (function () {
-            var gd = document.getElementById('homepage-guide');
-            if (gd) {
-                gd.addEventListener('click', function () {
-                    if (typeof plausible === 'function') {
-                        plausible('Homepage guide click');
-                    }
-                });
-            }
-        })();
-
-        // LinkedIn click tracking
-        (function () {
-            var li = document.getElementById('homepage-linkedin');
-            if (li) {
-                li.addEventListener('click', function () {
-                    if (typeof plausible === 'function') {
-                        plausible('Homepage LinkedIn');
-                    }
-                });
-            }
-        })();
-    </script>
-
+  <script src="site.js"></script>
 </body>
 </html>
