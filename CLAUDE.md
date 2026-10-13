@@ -46,7 +46,7 @@ The site deploys via GitHub Pages directly from `main`. The workflow is:
 
 No staging branch. No staging environment. No preview deploy URL. No deploy gate. Local preview (`python3 -m http.server` from the repo root, or any static server) covers the iteration phase. Production-first deploys are appropriate here because the site is small, traffic is low, and `git log` covers rollback (`git revert <sha>` and push for fast rollback; the previous version is back live within a few minutes of the next Pages build).
 
-**Do not introduce a staging branch, a staging environment, or a long-lived preview branch.** If a future change ever needs review-before-live, use a short-lived feature branch that merges straight back to `main` and deploys; do not maintain it as a separate environment.
+**Do not introduce a staging branch, a staging environment, or a long-lived preview branch.** If a future change ever needs review-before-live, ask Greg first (the global rule is main-only, no branches without asking); if he agrees, use a short-lived feature branch that merges straight back to `main` and deploys, and do not maintain it as a separate environment.
 
 **GitHub Pages publish latency.** Pushes take 30 seconds to a few minutes to go live. Verify on the live URL (`https://agencystate.ai/...`) — not just on local preview — before considering a deploy complete. Pages build failures are silent; if the live URL doesn't update, check the Pages settings tab in GitHub for the build status.
 
