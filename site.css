@@ -274,7 +274,6 @@ a {
 }
 
 .availability {
-  max-width: 430px;
   color: var(--gray-500);
   font-size: 15px;
   line-height: 1.55;
