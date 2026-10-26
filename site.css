@@ -589,6 +589,10 @@ a {
   animation-delay: 270ms;
 }
 
+.motion-ready .stack-grid.is-visible .stack-card:nth-child(8) {
+  animation-delay: 315ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .motion-ready .section {
     opacity: 1;
