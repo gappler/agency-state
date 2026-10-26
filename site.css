@@ -273,6 +273,10 @@ a {
   margin-bottom: 4px;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .availability {
   color: var(--gray-500);
   font-size: 15px;
