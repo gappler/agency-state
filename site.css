@@ -159,6 +159,14 @@ body::before {
   color: var(--gray-700);
 }
 
+code,
+kbd,
+samp,
+pre {
+  font-family: "DM Mono", monospace;
+  font-size: .92em;
+}
+
 button {
   font: inherit;
   background: none;
@@ -599,8 +607,11 @@ a {
     transform: none;
   }
 
-  .stack-card {
+  .stack-card,
+  .motion-ready .stack-card {
     animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
 
