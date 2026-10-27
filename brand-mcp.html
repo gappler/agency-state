@@ -62,7 +62,7 @@
         <h2 class="section-label">The job</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>MCP gives the source a serving layer. The brand stays in one governed place. Tools ask for the part they need: voice, vocabulary, claims, product facts, visual rules, review criteria, or the full platform.</p>
+            <p>MCP serves tools the brand material they need for the task, from voice guidance to the full platform.</p>
           </div>
           <div class="code-panel">serving layer:
   source stays governed
@@ -80,8 +80,8 @@
         <div class="section-content">
           <div class="about-text">
             <p>The source and the server are different things.</p>
-            <p>The source is the approved brand material: structured files, provenance, rules, decisions, and review notes. The server reads that source and exposes useful answers to the tools doing the work.</p>
-            <p>That split keeps the brand maintainable. The team can govern the source as brand material. The MCP server can focus on access, caching, tool names, response shapes, and connections.</p>
+            <p>The source is approved brand material, including structured files, provenance, rules, decisions, and review notes. The server reads it and answers requests from tools.</p>
+            <p>The team governs the brand material. The server handles access, caching, tool names, response formats, and connections.</p>
           </div>
           <div class="code-panel">pattern:
   brand source:
@@ -103,8 +103,8 @@
         <h2 class="section-label">What tools ask for</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>A useful brand server is designed around the work. A writing task may need the voice and never-say list. A review task may need claims, proof, and product facts. A page build may need visual rules. A workflow may need the decision owner so it knows who should review an exception.</p>
-            <p>The useful pattern is scoped serving: the relevant source appears at the moment it is needed. Connecting a server makes its tools available, but it doesn't make an agent ask for the right part. The workflow has to say what to request and when.</p>
+            <p>Writing, review, and page builds each call for different brand material. A workflow handling an exception can request the decision owner.</p>
+            <p>Connecting a server makes its tools available, but an agent still needs instructions to request the right part. The workflow says what to request and when.</p>
           </div>
           <div class="code-panel">requests by task:
   writing:     voice, never-say list
@@ -120,9 +120,9 @@
         <h2 class="section-label">How it works here</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>The Agency State version is small. The brand source lives in the brand repo. The MCP server reads from that source and returns whole sections of the platform and the visual identity as tools.</p>
-            <p>Claude Code and Codex call those tools while writing or reviewing site copy. The important part is the shared connection: the same source supports drafting and checking.</p>
-            <p>The server keeps what it reads for about 60 seconds. If it can't reach the source, it answers from a bundled copy, which can be older. A shared connection makes the latest version available; it doesn't guarantee every answer has it.</p>
+            <p>Agency State's server reads the brand repo and serves whole sections of the platform and visual identity through its tools.</p>
+            <p>Claude Code and Codex use those tools to draft and review site copy against the same source.</p>
+            <p>The server caches what it reads for about 60 seconds. If the source is unavailable, it uses a bundled copy that can be older. Answers can therefore lag behind source updates.</p>
           </div>
           <div class="code-panel">Agency State example:
   source:  agency-state-brand
@@ -151,8 +151,8 @@ current tools:
         <h2 class="section-label">More specific requests</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>The more specific version starts with codification. Agency State's BrandBuilder turns the brand material into structured brand files, shows gaps and conflicts, and gives the team something to review. Once that source is approved, BrandBuilder's own server can serve it into production.</p>
-            <p>At that point the tools can become more specific. They can return voice guidance, including channel guidance, the facts for one product, the approved claims for one product with their conditions, visual rules, or the owner of one class of decision. Agency State's own brand hasn't moved to that format yet.</p>
+            <p>Agency State's BrandBuilder turns brand material into structured files, identifies gaps and conflicts, and gives the team a source to review. Once approved, BrandBuilder's server can serve it into production.</p>
+            <p>These tools return more specific answers, such as one product's facts and approved claims with their conditions. Voice guidance includes channel guidance. The tools also return visual rules and decision owners. Agency State's own brand hasn't moved to that format yet.</p>
           </div>
           <div class="code-panel">BrandBuilder requests:
   get_voice:            voice guidance
@@ -177,9 +177,9 @@ current tools:
         <h2 class="section-label">Why it matters</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>Without a serving layer, brand context scatters. One copy lives in a prompt. Another lives in a custom assistant. Another sits in an agency deck. Each copy can age differently.</p>
-            <p>Serving the source keeps the work connected. The system can draft from the same material it checks against. People can update one source while automations and agents use the brand without each becoming a separate brand repository.</p>
-            <p>MCP handles the connection. The brand work is deciding what the source contains, how it should be served, and who decides when the source has no answer.</p>
+            <p>Brand copies in prompts, custom assistants, and agency decks can age differently.</p>
+            <p>Serving one source lets people update the brand material that automations and agents use for both drafting and checking.</p>
+            <p>MCP handles the connection. The brand work is deciding what the source contains, how to serve it, and who answers questions the source leaves open.</p>
           </div>
         </div>
       </article>
