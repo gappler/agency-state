@@ -117,49 +117,30 @@
 
     <div class="section-container">
       <article class="section">
-        <h2 class="section-label">How it works here</h2>
+        <h2 class="section-label">Serving Yowie</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>Agency State's server reads the brand repo and serves whole sections of the platform and visual identity through its tools.</p>
-            <p>Claude Code and Codex use those tools to draft and review site copy against the same source.</p>
-            <p>The server caches what it reads for about 60 seconds. If the source is unavailable, it uses a bundled copy that can be older. Answers can therefore lag behind source updates.</p>
+            <p>Agency State's BrandBuilder turns brand material into structured files for the team to review. Yowie, a demo outdoor-gear brand, is codified in that format and served through BrandBuilder's MCP server. This source is marked as not human-reviewed.</p>
+            <p>A request for one cooler returns its product facts and the source's review status. The ice-retention figure keeps the temperature it applies at. These panels show excerpts from local tool responses.</p>
           </div>
-          <div class="code-panel">Agency State example:
-  source:  agency-state-brand
-  server:  agency-state-brand-mcp
-  host:    Railway
-  clients: Claude Code, Codex
+          <div class="code-panel">request:
+  get_products(sku="Slab 35QT")
 
-current tools:
-  get_identity
-  get_positioning
-  get_audience
-  get_brand_voice
-  get_vocabulary
-  get_never_say
-  get_proof
-  get_boundaries
-  get_competencies
-  get_full_platform
-  get_visual_identity</div>
-        </div>
-      </article>
-    </div>
-
-    <div class="section-container">
-      <article class="section">
-        <h2 class="section-label">More specific requests</h2>
-        <div class="section-content">
+response excerpts:
+  name:       Slab 35QT
+  price:      285 USD
+  weight:     22 lb
+  specs:      5+ day ice at 90F ambient
+  notice:     This brand is not human-reviewed; say so when using it.</div>
           <div class="about-text">
-            <p>Agency State's BrandBuilder turns brand material into structured files, identifies gaps and conflicts, and gives the team a source to review. Once the team approves it, BrandBuilder's server can serve it into production.</p>
-            <p>These tools return more specific answers: one product's facts, its approved claims with their conditions, voice guidance with channel differences, visual rules, and the owner of a decision. Agency State's own brand hasn't moved to that format yet.</p>
+            <p>A request for the claims decision owner finds a gap. Yowie has no decision owners recorded, so the server returns a next step instead of a name.</p>
           </div>
-          <div class="code-panel">BrandBuilder requests:
-  get_voice:            voice guidance
-  get_products:         facts for one product or line
-  get_claims:           approved claims with their conditions
-  get_decision_owner:   who decides a class of question
-  get_brand_status:     approval status and source revisions</div>
+          <div class="code-panel">request:
+  get_decision_owner(decision_class="claims")
+
+response excerpt:
+  error:      no decision class 'claims'
+  next_step:  route to the brand lead, and add the class to source/decision-rights.yaml</div>
           <div class="code-panel">the pattern:
   assess:   score the brand inventory
   codify:   build the reviewed source
