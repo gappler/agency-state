@@ -332,6 +332,13 @@ a {
   border-color: var(--gray-500);
 }
 
+.email-cta {
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  border-bottom: 1px solid var(--gray-300);
+}
+
 .article-next {
   width: 100%;
   max-width: var(--content-width);

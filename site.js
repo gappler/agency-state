@@ -11,11 +11,15 @@
     }).format(new Date());
   }
 
-  function copyEmail() {
+  function copyEmail(trigger) {
     var address = 'greg' + '@' + 'agencystate.ai';
     var buttons = document.querySelectorAll('.site-meta button');
 
     function showFeedback() {
+      if (trigger && trigger.classList.contains('email-cta')) {
+        trigger.textContent = 'email address copied';
+        return;
+      }
       buttons.forEach(function (button) {
         button.textContent = 'copied';
       });
