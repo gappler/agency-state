@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Serving the brand source - Agency State</title>
-  <meta name="description" content="How a brand source gets served into AI tools and workflows through MCP: the source stays governed, and tools ask for the right slice while the work is happening.">
+  <title>How AI tools reach your brand - Agency State</title>
+  <meta name="description" content="How AI tools request the part of the brand they need through MCP, while the brand stays in one maintained source.">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Serving the brand source">
-  <meta property="og:description" content="How a brand source gets served into AI tools and workflows through MCP: the source stays governed, and tools ask for the right slice while the work is happening.">
+  <meta property="og:title" content="How AI tools reach your brand">
+  <meta property="og:description" content="How AI tools request the part of the brand they need through MCP, while the brand stays in one maintained source.">
   <link rel="canonical" href="https://agencystate.ai/brand-mcp.html">
   <meta property="og:url" content="https://agencystate.ai/brand-mcp.html">
   <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
   <meta property="og:site_name" content="Agency State">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Serving the brand source">
-  <meta name="twitter:description" content="How a brand source gets served into AI tools and workflows through MCP: the source stays governed, and tools ask for the right slice while the work is happening.">
+  <meta name="twitter:title" content="How AI tools reach your brand">
+  <meta name="twitter:description" content="How AI tools request the part of the brand they need through MCP, while the brand stays in one maintained source.">
   <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
   <link rel="icon" href="assets/agency-state-mark-orange.svg" type="image/svg+xml">
   <script async src="https://plausible.io/js/pa-vw1RCpq_0eKsUpTuUVVSi.js"></script>
@@ -52,7 +52,7 @@
     <div class="hero-container">
       <header class="hero">
         <p class="identity-line">The practice</p>
-        <h1 class="hero-name">Serving the brand source</h1>
+        <h1 class="hero-name">How AI tools reach your brand</h1>
         <p class="hero-title">MCP is one way to give AI tools the right part of the brand while the work is happening.</p>
       </header>
     </div>
@@ -62,7 +62,7 @@
         <h2 class="section-label">The job</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>A codified brand is useful only when the tools doing the work can reach it. The source can be well structured, reviewed, and owned, but if every agent gets a pasted copy, a stale upload, or a rewritten summary, the brand starts to drift again.</p>
+            <p>A codified brand is useful only when the tools doing the work can reach it. The source can be well structured and reviewed, but if every agent gets a pasted copy, a stale upload, or a rewritten summary, the brand starts to drift again.</p>
             <p>MCP gives the source a serving layer. The brand stays in one governed place. Tools ask for the part they need: voice, vocabulary, claims, product facts, visual rules, review criteria, or the full platform.</p>
           </div>
           <div class="code-panel">serving layer:
@@ -86,7 +86,7 @@
           </div>
           <div class="code-panel">pattern:
   brand source:
-    - owned by the team
+    - maintained by the team
     - reviewed and versioned
     - structured for drafting and checks
 
@@ -104,16 +104,14 @@
         <h2 class="section-label">What tools ask for</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>A useful brand server is designed around the work. A writing task may need the voice and never-say list. A review task may need claims, proof, and product facts. A page build may need visual rules. A workflow may need decision rights so it knows who should review an exception.</p>
-            <p>The useful pattern is scoped serving: the relevant source appears at the moment it is needed.</p>
+            <p>A useful brand server is designed around the work. A writing task may need the voice and never-say list. A review task may need claims, proof, and product facts. A page build may need visual rules. A workflow may need the decision owner so it knows who should review an exception.</p>
+            <p>The useful pattern is scoped serving: the relevant source appears at the moment it is needed. Connecting a server makes its tools available, but it doesn't make an agent ask for the right part. The workflow has to say what to request and when.</p>
           </div>
-          <div class="code-panel">example requests:
-  get_voice(channel: "email")
-  get_never_say()
-  get_product_facts(product: "Yowie 35QT")
-  get_claim_rules(topic: "ice retention")
-  get_visual_rules(surface: "landing page")
-  get_review_route(issue: "legal exception")</div>
+          <div class="code-panel">requests by task:
+  writing:     voice, never-say list
+  review:      claims, proof, product facts
+  page build:  visual rules
+  exception:   the decision owner</div>
         </div>
       </article>
     </div>
@@ -123,14 +121,15 @@
         <h2 class="section-label">How it works here</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>The Agency State version is small, but it proves the pattern. The brand source lives in the brand repo. The MCP server reads from that source and exposes slices of the platform and visual identity as tools.</p>
-            <p>Claude Code can call those tools while writing or reviewing site copy. Workflows can call the same source. The important part is the shared connection: the same source supports drafting and checking.</p>
+            <p>The Agency State version is small. The brand source lives in the brand repo. The MCP server reads from that source and returns whole sections of the platform and the visual identity as tools.</p>
+            <p>Claude Code and Codex call those tools while writing or reviewing site copy. The important part is the shared connection: the same source supports drafting and checking.</p>
+            <p>The server keeps what it reads for about 60 seconds. If it can't reach the source, it answers from a bundled copy, which can be older. A shared connection makes the latest version available; it doesn't guarantee every answer has it.</p>
           </div>
           <div class="code-panel">Agency State example:
   source:  agency-state-brand
   server:  agency-state-brand-mcp
   host:    Railway
-  clients: Claude Code, n8n
+  clients: Claude Code, Codex
 
 current tools:
   get_identity
@@ -150,20 +149,26 @@ current tools:
 
     <div class="section-container">
       <article class="section">
-        <h2 class="section-label">The stronger version</h2>
+        <h2 class="section-label">More specific requests</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>For client work, the stronger pattern starts with codification. BrandBuilder reads the existing material, builds the baseline source, shows gaps and conflicts, and gives the team something to review. Once that source is approved, MCP can serve it into production.</p>
-            <p>At that point the tools can become more specific. They can return the voice for one channel, the facts for one product, the rules for one claim, the visual constraints for one surface, or the review route for one class of question.</p>
+            <p>The more specific version starts with codification. Agency State's BrandBuilder turns the brand material into structured brand files, shows gaps and conflicts, and gives the team something to review. Once that source is approved, BrandBuilder's own server can serve it into production.</p>
+            <p>At that point the tools can become more specific. They can return voice guidance, including channel guidance, the facts for one product, the approved claims for one product with their conditions, visual rules, or the owner of one class of decision. Agency State's own brand hasn't moved to that format yet.</p>
           </div>
-          <div class="code-panel">client pattern:
+          <div class="code-panel">BrandBuilder requests:
+  get_voice:            voice guidance
+  get_products:         facts for one product or line
+  get_claims:           approved claims with their conditions
+  get_decision_owner:   who decides a class of question
+  get_brand_status:     approval status and source revisions</div>
+          <div class="code-panel">the pattern:
   assess:   score the brand inventory
   codify:   build the reviewed source
   serve:    expose the source to agents and workflows
   produce:  draft and adapt from the source
   check:    compare output to the source
-  route:    send judgment calls to the owner
-  update:   return settled corrections to the source</div>
+  route:    send judgment calls to the decision owner
+  update:   return approved corrections to the source</div>
         </div>
       </article>
     </div>
@@ -175,7 +180,7 @@ current tools:
           <div class="about-text">
             <p>Without a serving layer, brand context scatters. One copy lives in a prompt. Another lives in a custom assistant. Another sits in an agency deck. Each copy can age differently.</p>
             <p>Serving the source keeps the work connected. The system can draft from the same material it checks against. People can update one source while automations and agents use the brand without each becoming a separate brand repository.</p>
-            <p>MCP is plumbing. The brand work is deciding what the source contains, how it should be served, and who owns the decisions when the source runs out.</p>
+            <p>MCP handles the connection. The brand work is deciding what the source contains, how it should be served, and who decides when the source has no answer.</p>
           </div>
         </div>
       </article>
