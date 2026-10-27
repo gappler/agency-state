@@ -13,8 +13,11 @@ If you need to read or edit brand rules, strategic decisions, or internal resear
 
 ## Repo Layout
 
-- `index.html` — single-page marketing site
-- `assets/` — only the files the site actually serves: `wordmark-black-on-white.svg` (logo), `agency-state-mark-black.svg` (favicon), `og-image.png` (OG/Twitter card). Keep this folder limited to served files. Canonical brand marks live in `agency-state-brand/assets/`; OG-image source templates and demo-card renders live in `agency-state-practice/projects/website/`.
+- `index.html` — homepage; the More reading articles are `brand-os.html`, `context-is-not-control.html`, `what-goes-into-a-codified-brand.html`, and `brand-mcp.html`; `404.html` is the not-found page
+- `claude-code-for-marketing/` — the older guide landing page, kept in the repo but not linked from the site
+- `site.css`, `site.js` — shared styles and scripts for every page except the guide landing page
+- `assets/` — the logo, the orange mark (favicon and `apple-touch-icon.png`), `og-image.png` (OG/Twitter card), the stack icons, and brand marks and older OG cards listed in the brand guidelines' Assets section. Some of those marks have no other copy, so check the guidelines before deleting anything here. OG-image source templates and demo-card renders live in `agency-state-practice/projects/website/`.
+- `robots.txt`, `sitemap.xml` — the sitemap lists the homepage and the four articles
 - `CNAME` — GitHub Pages custom domain
 
 ## Brand — read before writing copy
