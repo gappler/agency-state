@@ -16,6 +16,9 @@
     var buttons = document.querySelectorAll('.site-meta button');
 
     function showFeedback() {
+      if (window.plausible) {
+        window.plausible('Email copied', { props: { location: trigger && trigger.classList.contains('email-cta') ? 'background' : 'header' } });
+      }
       if (trigger && trigger.classList.contains('email-cta')) {
         trigger.textContent = 'email address copied';
         return;
