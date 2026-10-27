@@ -19,7 +19,7 @@ If you need to read or edit brand rules, strategic decisions, or internal resear
 
 ## Brand — read before writing copy
 
-Pull brand voice/positioning via the **brand MCP** (`get_brand_voice` / `get_full_platform`) — always current. **Do this before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand platform is the voice/copy tiebreaker; the guidelines settle visual identity.
+Pull brand voice/positioning via the **brand MCP** `agency-state-brand-os` (`get_voice` and `get_never_say`; `get_identity` and `get_tokens` for styles; `get_context` for the whole brand), always current; if it doesn't answer, use the fallback below and say so. **Do this before writing or editing any site copy or styles** — homepage, engagement pages, OG metadata, anything publicly visible. The brand platform is the voice/copy tiebreaker; the guidelines settle visual identity.
 
 If the MCP isn't connected, fall back to the canonical files in the sibling `agency-state-brand` repo: `../agency-state-brand/brand-platform.md` and `../agency-state-brand/brand-guidelines.md`.
 
