@@ -661,6 +661,10 @@ a {
   text-indent: calc(-1 * var(--indent, 0));
 }
 
+.code-line:empty::before {
+  content: " ";
+}
+
 .code-panel strong {
   color: var(--gray-800);
   font-weight: 400;
