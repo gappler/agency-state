@@ -43,6 +43,14 @@
     window.location.href = 'mailto:' + address;
   }
 
+  // Wrap each code-panel line so a wrapped row continues under its own indent.
+  document.querySelectorAll('.code-panel').forEach(function (panel) {
+    panel.innerHTML = panel.innerHTML.split('\n').map(function (line) {
+      var indent = line.match(/^ */)[0].length;
+      return '<span class="code-line" style="--indent:' + indent + 'ch">' + line + '</span>';
+    }).join('');
+  });
+
   updateTime();
   window.setInterval(updateTime, 1000);
   window.copyEmail = copyEmail;

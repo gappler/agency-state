@@ -655,6 +655,12 @@ a {
   white-space: pre-wrap;
 }
 
+.code-line {
+  display: block;
+  padding-left: var(--indent, 0);
+  text-indent: calc(-1 * var(--indent, 0));
+}
+
 .code-panel strong {
   color: var(--gray-800);
   font-weight: 400;
