@@ -43,10 +43,17 @@
     window.location.href = 'mailto:' + address;
   }
 
-  // Wrap each code-panel line so a wrapped row continues under its own indent.
+  // Wrap each code-panel line so a wrapped row continues under its value
+  // column (the text after the last run of two or more spaces).
   document.querySelectorAll('.code-panel').forEach(function (panel) {
+    var probe = document.createElement('span');
     panel.innerHTML = panel.innerHTML.split('\n').map(function (line) {
-      var indent = line.match(/^ */)[0].length;
+      probe.innerHTML = line;
+      var text = probe.textContent;
+      var indent = text.match(/^ */)[0].length;
+      var gap = /\S {2,}(?=\S)/g;
+      var match;
+      while ((match = gap.exec(text))) indent = gap.lastIndex;
       return '<span class="code-line" style="--indent:' + indent + 'ch">' + line + '</span>';
     }).join('');
   });
