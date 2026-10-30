@@ -327,7 +327,7 @@ a {
 }
 
 .pull-quote blockquote p {
-  color: var(--gray-800);
+  color: var(--gray-500);
 }
 
 .pull-quote figcaption {
