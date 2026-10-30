@@ -870,18 +870,12 @@ a {
     --container-padding: 24px;
   }
 
-  /* Header meta line on phones: no time, no slashes, one line. */
+  /* Header meta line on phones: no time, so the line fits on one row. */
   .site-meta #time {
     display: none;
   }
 
-  .site-meta {
-    column-gap: 16px;
-  }
-
-  .site-meta span + span::before,
-  .site-meta button::before,
-  .site-meta a::before {
+  .site-meta span + span::before {
     content: none;
   }
 
