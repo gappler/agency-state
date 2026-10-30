@@ -127,11 +127,16 @@ body::before {
   max-width: 860px;
   padding-top: 9px;
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 4px 10px;
   color: var(--gray-400);
   font-family: "DM Mono", monospace;
   font-size: 12px;
   letter-spacing: .02em;
+}
+
+.site-meta > * {
+  white-space: nowrap;
 }
 
 .site-meta span + span::before,
@@ -863,6 +868,15 @@ a {
 @media (max-width: 480px) {
   :root {
     --container-padding: 24px;
+  }
+
+  /* Header meta line on phones: time and city on one line, the two links on the next. */
+  .site-meta span + span {
+    flex: 1 0 60%;
+  }
+
+  .site-meta button::before {
+    content: none;
   }
 
   .work-card {
