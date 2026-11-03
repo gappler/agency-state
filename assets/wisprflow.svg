@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wispr Flow">
-  <rect x="9" y="18" width="7" height="28" rx="3.5" fill="#505050"/>
-  <rect x="21" y="26" width="7" height="20" rx="3.5" fill="#505050"/>
-  <rect x="33" y="12" width="7" height="34" rx="3.5" fill="#505050"/>
-  <rect x="45" y="24" width="7" height="22" rx="3.5" fill="#505050"/>
-</svg>
+<svg fill="#505050" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Wispr Flow</title><rect x="1" y="1.15" width="3.1" height="21.7" rx="1.55"/><rect x="5.75" y="11.28" width="3.1" height="9.5" rx="1.55"/><rect x="10.5" y="4.79" width="3.1" height="14.4" rx="1.55"/><rect x="15.25" y="11.28" width="3.1" height="9.5" rx="1.55"/><rect x="20" y="1.15" width="3.1" height="21.7" rx="1.55"/></svg>
