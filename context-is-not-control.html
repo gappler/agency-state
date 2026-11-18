@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Context is not control - Agency State</title>
-  <meta name="description" content="Brand information shaped how Claude&#x27;s copy sounded. It didn&#x27;t keep Claude from inventing a cooler.">
+  <meta name="description" content="The brand source shaped how Claude&#x27;s copy sounded. It didn&#x27;t keep Claude from inventing a cooler.">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Context is not control">
-  <meta property="og:description" content="Brand information shaped how Claude&#x27;s copy sounded. It didn&#x27;t keep Claude from inventing a cooler.">
+  <meta property="og:description" content="The brand source shaped how Claude&#x27;s copy sounded. It didn&#x27;t keep Claude from inventing a cooler.">
   <link rel="canonical" href="https://agencystate.ai/context-is-not-control.html">
   <meta property="og:url" content="https://agencystate.ai/context-is-not-control.html">
   <meta property="og:image" content="https://agencystate.ai/assets/og-image.png">
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="Agency State">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Context is not control">
-  <meta name="twitter:description" content="Brand information shaped how Claude&#x27;s copy sounded. It didn&#x27;t keep Claude from inventing a cooler.">
+  <meta name="twitter:description" content="The brand source shaped how Claude&#x27;s copy sounded. It didn&#x27;t keep Claude from inventing a cooler.">
   <meta name="twitter:image" content="https://agencystate.ai/assets/og-image.png">
   <meta name="twitter:image:alt" content="Agency State mark and wordmark with the line: Helping brand marketing teams put AI to work.">
   <link rel="icon" href="assets/agency-state-mark-orange.svg" type="image/svg+xml">
@@ -56,7 +56,7 @@
       <header class="hero">
         <p class="identity-line">Practice</p>
         <h1 class="hero-name">Context is not control</h1>
-        <p class="hero-title">Brand information shaped how Claude's copy sounded. It didn't keep Claude from inventing a cooler.</p>
+        <p class="hero-title">The brand source shaped how Claude's copy sounded. It didn't keep Claude from inventing a cooler.</p>
       </header>
     </div>
 
@@ -77,7 +77,7 @@
         <h2 class="section-label">The test</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>In a test with Yowie, a demo outdoor-gear brand, I gave Claude Opus 5 the brand information and product catalog, then sent it marketing requests that included misleading product details.</p>
+            <p>In a test with Yowie, a demo outdoor-gear brand, I gave Claude Opus 5 the brand source, including the product catalog, then sent it marketing requests that included misleading product details.</p>
             <p>I ran two kinds of automated checks on every draft. Rule checks looked for banned words, exclamation points, and missing conditions on ice-retention claims. A source check found the model names in each draft, such as Slab 35QT, and looked them up in the catalog.</p>
             <p>Thirty-six of the requests asked for a product that wasn't in the catalog. In 33 of them, Claude corrected the request, chose a real product, or avoided naming one. That was the right response.</p>
             <p>But in three drafts, Claude went along with the request. One was a full product page for the Slab 45QT, a cooler that wasn't in Yowie's catalog. Claude invented a weight, dimensions, and a price.</p>
@@ -89,7 +89,7 @@
           <div class="about-text">
             <p>The catalog had a Slab 35QT, and Claude built the fake cooler out of it. The real 35QT weighs 22 lb and costs $285. The invented 45QT weighs 28 lb and costs $335. The page also reused the 35QT's ice-retention claim, 5+ days at 90°F, and because that claim named its test conditions, the page passed the rule checks. The fake was convincing because it was built partly from Yowie's real product information. It did leave a clue. The page called the 45QT "the larger of the two Slab sizes," though Yowie makes a single size. You'd catch that only if you knew the catalog.</p>
             <p>All three fake drafts passed the rule checks, and the source check flagged all three. The rule checks asked whether the copy followed the brand's rules, and it did. The source check asked whether the product existed, and it didn't. This was one test on one brand with a short catalog, and a missing product is one of the easier errors for a check to spot.</p>
-            <p>The brand information gave Claude context, and that context did most of the work. Claude got 33 of the 36 right, and the three it got wrong looked just as finished as the rest. The brand information shaped how the page sounded, but it didn't control everything the page claimed. To know what's been checked, you have to know what each check asked.</p>
+            <p>The brand source gave Claude context, and that context did most of the work. Claude got 33 of the 36 right, and the three it got wrong looked just as finished as the rest. The brand source shaped how the page sounded, but it didn't control everything the page claimed. To know what's been checked, you have to know what each check asked.</p>
           </div>
         </div>
       </article>
@@ -101,7 +101,7 @@
         <div class="section-content">
           <div class="about-text">
             <p>Some brand requirements are straightforward to check, such as whether a banned word appears or a color matches an approved value. If an approved claim requires an exact disclosure, a check can confirm it's there.</p>
-            <p>Other errors have nothing to be checked against. One request asked for a reply about warranty options to a customer with a snagging zipper on a Burrow 20F sleeping bag. Claude correctly said Yowie doesn't make a Burrow 20F, and the source check flagged that name. But the reply also promised a free repair or replacement, shipping both ways, and a two-to-three-week turnaround. Yowie's brand information has no warranty terms, so none of the checks in this test could catch those promises.</p>
+            <p>Other errors have nothing to be checked against. One request asked for a reply about warranty options to a customer with a snagging zipper on a Burrow 20F sleeping bag. Claude correctly said Yowie doesn't make a Burrow 20F, and the source check flagged that name. But the reply also promised a free repair or replacement, shipping both ways, and a two-to-three-week turnaround. Yowie's brand source has no warranty terms, so none of the checks in this test could catch those promises.</p>
             <p>Finding a product in the catalog doesn't mean the draft describes its performance accurately. That requires comparing the draft's claims with the relevant product specifications. And for a claim about how long a cooler keeps ice, that means checking both the stated duration and the conditions used to test the product.</p>
             <p>Some decisions need a person's judgment even when the facts are correct. A campaign can follow the vocabulary rules and still feel wrong. An approved claim can be a poor choice for a particular audience. A legal exception needs someone authorized to approve it.</p>
           </div>
@@ -114,10 +114,10 @@
         <h2 class="section-label">Where the corrections go</h2>
         <div class="section-content">
           <div class="about-text">
-            <p>A person on the team reviews each draft. Corrections to that draft can reveal problems in the brand information the AI is working from.</p>
-            <p>If an old product fact keeps appearing, check whether the brand information still contains it. If the team keeps making the same edit, decide where the fix belongs. A phrase that should never appear belongs in the rules. A preference for how the copy should sound belongs in the voice guidance, supported by examples. Exact wording the team wants reused belongs in approved material. A mistake that should be caught on every draft belongs in a check.</p>
+            <p>A person on the team reviews each draft. Corrections to that draft can reveal problems in the brand source the AI is working from.</p>
+            <p>If an old product fact keeps appearing, check whether the brand source still contains it. If the team keeps making the same edit, decide where the fix belongs. A phrase that should never appear belongs in the rules. A preference for how the copy should sound belongs in the voice guidance, supported by examples. Exact wording the team wants reused belongs in approved material. A mistake that should be caught on every draft belongs in a check.</p>
             <p>If the team keeps approving an exception to a rule, someone needs to decide when that exception is allowed and record the decision. The owner of that decision approves changes to the source, checks, or review process before future work uses them.</p>
-            <p>The brand information gives AI context. Control comes from the checks around it and the people who make the calls the checks can&rsquo;t. With Agency State&rsquo;s Brand&nbsp;OS, I build those checks and human review into the team&rsquo;s automations and agents, using the same approved brand source for production and checking.</p>
+            <p>The brand source gives AI context. Control comes from the checks around it and the people who make the calls the checks can&rsquo;t. With Agency State&rsquo;s Brand&nbsp;OS, I build those checks and human review into the team&rsquo;s automations and agents, using the same approved brand source for production and checking.</p>
           </div>
         </div>
       </article>
